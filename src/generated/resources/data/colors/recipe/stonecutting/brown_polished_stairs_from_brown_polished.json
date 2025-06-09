@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:brown_polished"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:brown_polished_stairs"
+  }
+}

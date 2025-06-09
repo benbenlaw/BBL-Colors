@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:magenta_marble"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:magenta_marble_button"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_magenta_stone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:magenta_stone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/magenta_stone_stairs_from_magenta_stone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_magenta_stone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/magenta_stone_stairs_from_magenta_stone"
+    ]
+  }
+}

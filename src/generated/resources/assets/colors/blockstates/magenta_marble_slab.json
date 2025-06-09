@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "colors:block/magenta_marble_slab"
+    },
+    "type=double": {
+      "model": "colors:block/magenta_marble"
+    },
+    "type=top": {
+      "model": "colors:block/magenta_marble_slab_top"
+    }
+  }
+}

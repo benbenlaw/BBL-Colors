@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_braid": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:green_braid"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/green_braid_button_from_green_braid"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_green_braid"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/green_braid_button_from_green_braid"
+    ]
+  }
+}

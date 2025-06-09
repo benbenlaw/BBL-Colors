@@ -1,0 +1,7 @@
+{
+  "parent": "colors:block/door/tintable_door_bottom_right",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "colors:block/bamboo_mosaic_door_bottom"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "type": "minecraft:simple_block",
+  "config": {
+    "to_place": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "data": {
+            "Name": "colors:purple_dandelion",
+            "Properties": {
+              "lit": "false"
+            }
+          },
+          "weight": 10
+        },
+        {
+          "data": {
+            "Name": "colors:purple_poppy",
+            "Properties": {
+              "lit": "false"
+            }
+          },
+          "weight": 10
+        },
+        {
+          "data": {
+            "Name": "colors:purple_short_grass",
+            "Properties": {
+              "lit": "false"
+            }
+          },
+          "weight": 40
+        },
+        {
+          "data": {
+            "Name": "colors:purple_tall_grass",
+            "Properties": {
+              "half": "lower",
+              "lit": "false"
+            }
+          },
+          "weight": 5
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:lime_prismarine_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:lime_prismarine_brick_button"
+  }
+}

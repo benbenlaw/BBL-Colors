@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_prismarine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:blue_prismarine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/blue_prismarine_button_from_blue_prismarine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blue_prismarine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/blue_prismarine_button_from_blue_prismarine"
+    ]
+  }
+}

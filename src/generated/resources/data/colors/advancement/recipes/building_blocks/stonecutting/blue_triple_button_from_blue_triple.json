@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_triple": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:blue_triple"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/blue_triple_button_from_blue_triple"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blue_triple"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/blue_triple_button_from_blue_triple"
+    ]
+  }
+}

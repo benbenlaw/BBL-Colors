@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/yellow_prismarine_wall_from_yellow_prismarine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_prismarine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:yellow_prismarine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_prismarine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/yellow_prismarine_wall_from_yellow_prismarine"
+    ]
+  }
+}

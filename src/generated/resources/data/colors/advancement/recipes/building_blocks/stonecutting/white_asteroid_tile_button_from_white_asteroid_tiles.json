@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/white_asteroid_tile_button_from_white_asteroid_tiles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_asteroid_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:white_asteroid_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white_asteroid_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/white_asteroid_tile_button_from_white_asteroid_tiles"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_brown_triple": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:brown_triple"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/brown_triple_slab_from_brown_triple"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_brown_triple"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/brown_triple_slab_from_brown_triple"
+    ]
+  }
+}

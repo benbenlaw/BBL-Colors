@@ -1,0 +1,58 @@
+Changelog BBL Colors
+
+1.2.0
+Fixed tile translations
+Fixed Double Slabs not dropping the correct amount of slabs
+Fixed Double Slabs not having a particle breaking texture
+
+1.1.4
+Fixed log maps
+
+1.1.3
+Updated to bbl core 1.2.29
+
+1.1.2
+Fixed stone to stone bricks not having a crafting recipe
+Added marble to marble bricks recipe
+Added asteroid to asteroid bricks recipe
+Added cobblestone to cobblestone bricks recipe
+Fixed names of some brick item being called "Colored Stone Brick" instead of "Colored Stone Bricks", this was a translation issue the block names are correctly named
+
+1.1.1
+Added missing tags to logs
+Fixed prismarine recipes
+
+1.1.0
+Added Asteroid, Asteroid Bricks and Asteroid Tiles sets
+
+1.0.4
+Fixed other door textures using the planks texture
+
+1.0.3
+Fixed leaves not using the shears tags for drops
+
+1.0.2
+More missing recipes added
+
+1.0.1
+Various improvements and new recipes
+
+1.0.0
+#changes from caveopolis
+
+Added compat for wands
+Added compat for JEI quick moving stack tags
+Added compat for building gadgets
+Color system now uses core color tags to define colors
+Item and Blocks now there own item
+Even easier ability to add new blocks and items inside the mod
+Improved Bone Meal handling
+
+#removed
+Removed workbench
+Removed structures (hopefully these will come back with new versions)
+
+#the same
+Tint index from Core still controls colors,
+Mod driven by a single not color texture and tint applied in same way as before
+Spray can exactly the same as before as these are created inside core

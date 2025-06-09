@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_asteroid_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:blue_asteroid_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/blue_asteroid_tile_slab_from_blue_asteroid_tiles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blue_asteroid_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/blue_asteroid_tile_slab_from_blue_asteroid_tiles"
+    ]
+  }
+}

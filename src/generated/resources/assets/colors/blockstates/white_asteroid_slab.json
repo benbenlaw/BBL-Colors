@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "colors:block/white_asteroid_slab"
+    },
+    "type=double": {
+      "model": "colors:block/white_asteroid"
+    },
+    "type=top": {
+      "model": "colors:block/white_asteroid_slab_top"
+    }
+  }
+}

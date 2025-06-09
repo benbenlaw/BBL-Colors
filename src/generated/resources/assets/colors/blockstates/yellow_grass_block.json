@@ -1,0 +1,38 @@
+{
+  "variants": {
+    "snowy=false": [
+      {
+        "model": "colors:block/yellow_grass_block"
+      },
+      {
+        "model": "colors:block/yellow_grass_block",
+        "y": 90
+      },
+      {
+        "model": "colors:block/yellow_grass_block",
+        "y": 180
+      },
+      {
+        "model": "colors:block/yellow_grass_block",
+        "y": 270
+      }
+    ],
+    "snowy=true": [
+      {
+        "model": "colors:block/yellow_grass_block_snow"
+      },
+      {
+        "model": "colors:block/yellow_grass_block_snow",
+        "y": 90
+      },
+      {
+        "model": "colors:block/yellow_grass_block_snow",
+        "y": 180
+      },
+      {
+        "model": "colors:block/yellow_grass_block_snow",
+        "y": 270
+      }
+    ]
+  }
+}

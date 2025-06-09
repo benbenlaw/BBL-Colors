@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:orange_road"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:orange_road_wall"
+  }
+}

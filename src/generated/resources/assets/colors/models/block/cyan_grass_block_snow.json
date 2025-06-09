@@ -1,0 +1,10 @@
+{
+  "parent": "colors:block/tintable_cube_bottom_top",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "colors:block/dirt",
+    "particle": "colors:block/grass_block_side_snow",
+    "side": "colors:block/grass_block_side_snow",
+    "top": "colors:block/grass_block_top_snow"
+  }
+}

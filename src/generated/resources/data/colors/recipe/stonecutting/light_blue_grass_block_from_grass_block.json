@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "minecraft:grass_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:light_blue_grass_block"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:lime_bamboo"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "colors:lime_bamboo_planks"
+  }
+}

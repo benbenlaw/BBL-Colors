@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:green_triple"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:green_triple_button"
+  }
+}

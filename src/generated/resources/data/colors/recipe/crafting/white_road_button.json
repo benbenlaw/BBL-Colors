@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:white_road"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:white_road_button"
+  }
+}

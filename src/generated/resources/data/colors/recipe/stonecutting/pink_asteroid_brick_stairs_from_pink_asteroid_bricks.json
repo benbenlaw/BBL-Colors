@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:pink_asteroid_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:pink_asteroid_brick_stairs"
+  }
+}

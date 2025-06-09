@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cyan_mosaic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:cyan_mosaic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/cyan_mosaic_slab_from_cyan_mosaic"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cyan_mosaic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/cyan_mosaic_slab_from_cyan_mosaic"
+    ]
+  }
+}

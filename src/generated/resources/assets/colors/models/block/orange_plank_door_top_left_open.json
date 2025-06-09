@@ -1,0 +1,7 @@
+{
+  "parent": "colors:block/door/tintable_door_top_left_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "top": "colors:block/plank_door_top"
+  }
+}

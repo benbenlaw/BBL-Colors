@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:brown_tiles"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:brown_tile_button"
+  }
+}

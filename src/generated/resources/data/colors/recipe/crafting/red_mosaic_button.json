@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:red_mosaic"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:red_mosaic_button"
+  }
+}

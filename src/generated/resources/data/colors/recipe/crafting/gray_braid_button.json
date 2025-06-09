@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:gray_braid"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:gray_braid_button"
+  }
+}

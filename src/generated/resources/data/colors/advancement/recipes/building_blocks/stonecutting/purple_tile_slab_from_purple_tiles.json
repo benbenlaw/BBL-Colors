@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_purple_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:purple_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/purple_tile_slab_from_purple_tiles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_purple_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/purple_tile_slab_from_purple_tiles"
+    ]
+  }
+}

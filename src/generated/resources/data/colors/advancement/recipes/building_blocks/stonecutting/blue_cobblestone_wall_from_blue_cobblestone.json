@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:blue_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/blue_cobblestone_wall_from_blue_cobblestone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blue_cobblestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/blue_cobblestone_wall_from_blue_cobblestone"
+    ]
+  }
+}

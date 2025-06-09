@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:blue_encased"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:blue_encased_button"
+  }
+}

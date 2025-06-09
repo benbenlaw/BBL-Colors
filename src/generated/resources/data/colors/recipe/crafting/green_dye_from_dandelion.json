@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "colors:green_dandelion"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:green_dye"
+  }
+}

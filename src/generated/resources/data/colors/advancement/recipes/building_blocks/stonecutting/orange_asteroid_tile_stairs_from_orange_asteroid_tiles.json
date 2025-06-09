@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_orange_asteroid_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:orange_asteroid_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/orange_asteroid_tile_stairs_from_orange_asteroid_tiles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_orange_asteroid_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/orange_asteroid_tile_stairs_from_orange_asteroid_tiles"
+    ]
+  }
+}

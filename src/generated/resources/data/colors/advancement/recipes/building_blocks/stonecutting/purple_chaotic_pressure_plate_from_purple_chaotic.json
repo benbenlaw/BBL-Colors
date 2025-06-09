@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_purple_chaotic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:purple_chaotic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/purple_chaotic_pressure_plate_from_purple_chaotic"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_purple_chaotic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/purple_chaotic_pressure_plate_from_purple_chaotic"
+    ]
+  }
+}

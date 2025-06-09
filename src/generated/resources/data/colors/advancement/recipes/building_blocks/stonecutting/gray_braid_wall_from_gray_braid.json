@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gray_braid": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:gray_braid"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/gray_braid_wall_from_gray_braid"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_gray_braid"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/gray_braid_wall_from_gray_braid"
+    ]
+  }
+}

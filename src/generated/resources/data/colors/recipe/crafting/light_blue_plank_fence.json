@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "colors:light_blue_planks"
+    },
+    "T": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "STS",
+    "STS"
+  ],
+  "result": {
+    "count": 3,
+    "id": "colors:light_blue_plank_fence"
+  }
+}

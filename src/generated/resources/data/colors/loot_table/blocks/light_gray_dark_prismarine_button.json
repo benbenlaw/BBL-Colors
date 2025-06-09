@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "colors:light_gray_dark_prismarine_button"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "colors:blocks/light_gray_dark_prismarine_button"
+}

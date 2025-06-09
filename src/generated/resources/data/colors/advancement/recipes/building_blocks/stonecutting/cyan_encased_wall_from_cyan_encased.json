@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_cyan_encased": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:cyan_encased"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/cyan_encased_wall_from_cyan_encased"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_cyan_encased"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/cyan_encased_wall_from_cyan_encased"
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/yellow_braid_button_from_yellow_braid"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_braid": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:yellow_braid"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_braid"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/yellow_braid_button_from_yellow_braid"
+    ]
+  }
+}

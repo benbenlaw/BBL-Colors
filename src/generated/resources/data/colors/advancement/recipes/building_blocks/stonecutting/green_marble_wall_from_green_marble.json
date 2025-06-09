@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_marble": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:green_marble"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/green_marble_wall_from_green_marble"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_green_marble"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/green_marble_wall_from_green_marble"
+    ]
+  }
+}

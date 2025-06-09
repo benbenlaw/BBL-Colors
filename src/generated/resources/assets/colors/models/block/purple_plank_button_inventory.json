@@ -1,0 +1,7 @@
+{
+  "parent": "colors:block/button/tintable_button_inventory",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "texture": "colors:block/planks"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "colors:black_dandelion"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:black_dye"
+  }
+}

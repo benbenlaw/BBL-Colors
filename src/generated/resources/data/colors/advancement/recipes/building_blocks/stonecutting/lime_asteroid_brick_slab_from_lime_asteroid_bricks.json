@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lime_asteroid_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:lime_asteroid_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/lime_asteroid_brick_slab_from_lime_asteroid_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lime_asteroid_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/lime_asteroid_brick_slab_from_lime_asteroid_bricks"
+    ]
+  }
+}

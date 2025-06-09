@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:light_blue_encased"
+  },
+  "result": {
+    "count": 2,
+    "id": "colors:light_blue_encased_slab"
+  }
+}

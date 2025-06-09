@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "colors:block/brown_prismarine_slab"
+    },
+    "type=double": {
+      "model": "colors:block/brown_prismarine"
+    },
+    "type=top": {
+      "model": "colors:block/brown_prismarine_slab_top"
+    }
+  }
+}

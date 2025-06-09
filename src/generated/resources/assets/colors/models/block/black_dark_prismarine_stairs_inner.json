@@ -1,0 +1,9 @@
+{
+  "parent": "colors:block/stairs/tintable_inner_stairs",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "colors:block/dark_prismarine",
+    "side": "colors:block/dark_prismarine",
+    "top": "colors:block/dark_prismarine"
+  }
+}

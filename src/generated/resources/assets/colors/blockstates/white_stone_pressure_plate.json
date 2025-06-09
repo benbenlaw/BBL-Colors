@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "colors:block/white_stone_pressure_plate"
+    },
+    "powered=true": {
+      "model": "colors:block/white_stone_pressure_plate_down"
+    }
+  }
+}

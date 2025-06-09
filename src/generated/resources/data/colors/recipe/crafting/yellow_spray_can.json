@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "tag": "c:dyes/yellow"
+    },
+    "I": {
+      "tag": "c:ingots/iron"
+    }
+  },
+  "pattern": [
+    " I ",
+    "IDI",
+    "IDI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:yellow_spray_can"
+  }
+}

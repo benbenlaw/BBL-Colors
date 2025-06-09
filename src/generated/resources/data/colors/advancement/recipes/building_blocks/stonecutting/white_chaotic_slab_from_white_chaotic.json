@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/white_chaotic_slab_from_white_chaotic"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_chaotic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:white_chaotic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_white_chaotic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/white_chaotic_slab_from_white_chaotic"
+    ]
+  }
+}

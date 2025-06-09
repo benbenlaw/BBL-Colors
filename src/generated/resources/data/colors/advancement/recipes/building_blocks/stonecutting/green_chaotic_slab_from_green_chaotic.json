@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_green_chaotic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:green_chaotic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/green_chaotic_slab_from_green_chaotic"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_green_chaotic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/green_chaotic_slab_from_green_chaotic"
+    ]
+  }
+}

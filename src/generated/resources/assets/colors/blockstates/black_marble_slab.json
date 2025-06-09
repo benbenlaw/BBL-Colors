@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "colors:block/black_marble_slab"
+    },
+    "type=double": {
+      "model": "colors:block/black_marble"
+    },
+    "type=top": {
+      "model": "colors:block/black_marble_slab_top"
+    }
+  }
+}

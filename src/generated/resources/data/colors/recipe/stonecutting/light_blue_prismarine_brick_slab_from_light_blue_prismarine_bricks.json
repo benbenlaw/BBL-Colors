@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:light_blue_prismarine_bricks"
+  },
+  "result": {
+    "count": 2,
+    "id": "colors:light_blue_prismarine_brick_slab"
+  }
+}

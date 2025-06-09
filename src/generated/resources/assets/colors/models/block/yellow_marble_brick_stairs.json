@@ -1,0 +1,9 @@
+{
+  "parent": "colors:block/stairs/tintable_stairs",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "colors:block/marble_bricks",
+    "side": "colors:block/marble_bricks",
+    "top": "colors:block/marble_bricks"
+  }
+}

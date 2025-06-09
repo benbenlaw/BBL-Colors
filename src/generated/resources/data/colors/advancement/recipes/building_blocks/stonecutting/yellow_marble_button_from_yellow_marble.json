@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/yellow_marble_button_from_yellow_marble"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_marble": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:yellow_marble"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_marble"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/yellow_marble_button_from_yellow_marble"
+    ]
+  }
+}

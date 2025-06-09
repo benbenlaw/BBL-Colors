@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "colors:block/orange_prismarine_brick_slab"
+    },
+    "type=double": {
+      "model": "colors:block/orange_prismarine_bricks"
+    },
+    "type=top": {
+      "model": "colors:block/orange_prismarine_brick_slab_top"
+    }
+  }
+}

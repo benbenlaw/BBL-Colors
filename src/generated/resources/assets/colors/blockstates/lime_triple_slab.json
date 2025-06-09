@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "colors:block/lime_triple_slab"
+    },
+    "type=double": {
+      "model": "colors:block/lime_triple"
+    },
+    "type=top": {
+      "model": "colors:block/lime_triple_slab_top"
+    }
+  }
+}

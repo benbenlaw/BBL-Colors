@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_pink_tiles": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:pink_tiles"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/pink_tile_wall_from_pink_tiles"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_pink_tiles"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/pink_tile_wall_from_pink_tiles"
+    ]
+  }
+}

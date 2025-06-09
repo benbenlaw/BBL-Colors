@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_black_encased": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:black_encased"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/black_encased_button_from_black_encased"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_black_encased"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/black_encased_button_from_black_encased"
+    ]
+  }
+}

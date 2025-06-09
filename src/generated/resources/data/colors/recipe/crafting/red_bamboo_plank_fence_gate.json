@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "colors:red_bamboo_planks"
+    },
+    "W": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "WSW",
+    "WSW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:red_bamboo_plank_fence_gate"
+  }
+}

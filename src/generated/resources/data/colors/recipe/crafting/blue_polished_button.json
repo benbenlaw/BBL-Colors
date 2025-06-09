@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:blue_polished"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:blue_polished_button"
+  }
+}

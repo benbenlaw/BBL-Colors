@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "colors:block/light_gray_marble_brick_pressure_plate"
+    },
+    "powered=true": {
+      "model": "colors:block/light_gray_marble_brick_pressure_plate_down"
+    }
+  }
+}

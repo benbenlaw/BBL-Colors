@@ -1,0 +1,9 @@
+{
+  "parent": "colors:block/slab/tintable_slab",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "bottom": "colors:block/stone_bricks",
+    "side": "colors:block/stone_bricks",
+    "top": "colors:block/stone_bricks"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "colors:block/fence_gate/tintable_fence_gate_open",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "texture": "colors:block/planks"
+  }
+}

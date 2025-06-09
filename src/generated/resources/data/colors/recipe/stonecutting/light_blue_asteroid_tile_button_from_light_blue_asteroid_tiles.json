@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:light_blue_asteroid_tiles"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:light_blue_asteroid_tile_button"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "colors:block/pressure_plate/tintable_pressure_plate_up",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "texture": "colors:block/bamboo_mosaic"
+  }
+}

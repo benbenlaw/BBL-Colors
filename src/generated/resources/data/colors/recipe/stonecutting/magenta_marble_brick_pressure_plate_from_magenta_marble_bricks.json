@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:magenta_marble_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:magenta_marble_brick_pressure_plate"
+  }
+}

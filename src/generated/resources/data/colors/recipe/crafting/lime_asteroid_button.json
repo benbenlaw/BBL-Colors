@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:lime_asteroid"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:lime_asteroid_button"
+  }
+}

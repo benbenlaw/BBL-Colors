@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_red_cobblestone": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:red_cobblestone"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/red_cobblestone_slab_from_red_cobblestone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_red_cobblestone"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/red_cobblestone_slab_from_red_cobblestone"
+    ]
+  }
+}

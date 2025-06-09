@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:black_dark_prismarine"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:black_dark_prismarine_button"
+  }
+}

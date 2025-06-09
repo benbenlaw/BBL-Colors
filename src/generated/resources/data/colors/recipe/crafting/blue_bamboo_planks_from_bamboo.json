@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:blue_bamboo"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "colors:blue_bamboo_planks"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "#c:is_forest",
+  "features": "colors:magenta_tree_placed",
+  "step": "vegetal_decoration"
+}

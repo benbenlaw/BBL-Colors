@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "G": {
+      "tag": "c:dusts/glowstone"
+    },
+    "S": {
+      "tag": "c:ingots/iron"
+    }
+  },
+  "pattern": [
+    " G ",
+    "GSG",
+    "GSG"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:glowstone_spray_can"
+  }
+}

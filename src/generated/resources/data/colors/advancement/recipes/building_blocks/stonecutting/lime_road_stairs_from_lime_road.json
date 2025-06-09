@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lime_road": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:lime_road"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/lime_road_stairs_from_lime_road"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lime_road"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/lime_road_stairs_from_lime_road"
+    ]
+  }
+}

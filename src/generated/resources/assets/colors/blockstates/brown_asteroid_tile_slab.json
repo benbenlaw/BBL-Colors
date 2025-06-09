@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "colors:block/brown_asteroid_tile_slab"
+    },
+    "type=double": {
+      "model": "colors:block/brown_asteroid_tiles"
+    },
+    "type=top": {
+      "model": "colors:block/brown_asteroid_tile_slab_top"
+    }
+  }
+}

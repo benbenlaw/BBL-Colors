@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_blue_encased": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:blue_encased"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/blue_encased_slab_from_blue_encased"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_blue_encased"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/blue_encased_slab_from_blue_encased"
+    ]
+  }
+}

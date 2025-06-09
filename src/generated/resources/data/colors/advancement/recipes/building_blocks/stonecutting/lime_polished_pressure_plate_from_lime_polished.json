@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_lime_polished": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:lime_polished"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/lime_polished_pressure_plate_from_lime_polished"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_lime_polished"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/lime_polished_pressure_plate_from_lime_polished"
+    ]
+  }
+}

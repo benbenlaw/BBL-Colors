@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "tag": "colors:light_blue_logs"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "colors:light_blue_planks"
+  }
+}

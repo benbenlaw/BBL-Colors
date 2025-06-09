@@ -1,0 +1,7 @@
+{
+  "parent": "colors:block/wall/tintable_wall_side",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "wall": "colors:block/bricks"
+  }
+}

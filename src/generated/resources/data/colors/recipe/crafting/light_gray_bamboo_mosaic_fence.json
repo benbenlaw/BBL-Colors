@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": {
+      "item": "colors:light_gray_bamboo_mosaic"
+    },
+    "T": {
+      "tag": "c:rods/wooden"
+    }
+  },
+  "pattern": [
+    "STS",
+    "STS"
+  ],
+  "result": {
+    "count": 3,
+    "id": "colors:light_gray_bamboo_mosaic_fence"
+  }
+}

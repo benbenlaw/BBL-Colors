@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_light_gray_dark_prismarine": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:light_gray_dark_prismarine"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/light_gray_dark_prismarine_button_from_light_gray_dark_prismarine"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_light_gray_dark_prismarine"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/light_gray_dark_prismarine_button_from_light_gray_dark_prismarine"
+    ]
+  }
+}

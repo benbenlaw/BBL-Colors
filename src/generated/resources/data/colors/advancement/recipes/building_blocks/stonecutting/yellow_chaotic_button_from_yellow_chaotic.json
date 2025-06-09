@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/yellow_chaotic_button_from_yellow_chaotic"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_chaotic": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:yellow_chaotic"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_chaotic"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/yellow_chaotic_button_from_yellow_chaotic"
+    ]
+  }
+}

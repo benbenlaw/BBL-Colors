@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_red_polished": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:red_polished"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/red_polished_button_from_red_polished"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_red_polished"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/red_polished_button_from_red_polished"
+    ]
+  }
+}

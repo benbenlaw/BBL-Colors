@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:pink_triple"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:pink_triple_button"
+  }
+}

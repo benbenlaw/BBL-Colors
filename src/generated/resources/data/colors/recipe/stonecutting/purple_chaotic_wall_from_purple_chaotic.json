@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:purple_chaotic"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:purple_chaotic_wall"
+  }
+}

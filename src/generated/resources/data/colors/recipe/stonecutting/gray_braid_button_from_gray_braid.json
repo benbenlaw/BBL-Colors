@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:gray_braid"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:gray_braid_button"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": {
+      "tag": "c:dyes/white"
+    },
+    "I": {
+      "tag": "c:ingots/iron"
+    }
+  },
+  "pattern": [
+    " I ",
+    "IDI",
+    "IDI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:white_spray_can"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "colors:green_cracked_stone_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:green_cracked_stone_brick_button"
+  }
+}

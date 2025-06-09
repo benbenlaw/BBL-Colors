@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "colors:orange_braid"
+  },
+  "result": {
+    "count": 1,
+    "id": "colors:orange_braid_pressure_plate"
+  }
+}
