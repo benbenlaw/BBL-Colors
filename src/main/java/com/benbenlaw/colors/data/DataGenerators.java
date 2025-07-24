@@ -42,7 +42,7 @@ public class DataGenerators {
 //
         generator.addProvider(event.includeServer(), new ColorsWorldGenProviders(packOutput, lookupProvider));
 //
-        //generator.addProvider(event.includeServer(), new CaveopolisDataMapProvider(packOutput, lookupProvider));
+        generator.addProvider(event.includeServer(), new ColorsDataMaps(packOutput, lookupProvider));
 
     }
 }

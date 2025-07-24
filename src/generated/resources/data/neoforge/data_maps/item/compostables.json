@@ -1,0 +1,340 @@
+{
+  "values": {
+    "colors:black_apple": {
+      "chance": 0.65
+    },
+    "colors:black_dandelion": {
+      "chance": 0.65
+    },
+    "colors:black_leaves": {
+      "chance": 0.3
+    },
+    "colors:black_poppy": {
+      "chance": 0.65
+    },
+    "colors:black_sapling": {
+      "chance": 0.3
+    },
+    "colors:black_short_grass": {
+      "chance": 0.3
+    },
+    "colors:black_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:blue_apple": {
+      "chance": 0.65
+    },
+    "colors:blue_dandelion": {
+      "chance": 0.65
+    },
+    "colors:blue_leaves": {
+      "chance": 0.3
+    },
+    "colors:blue_poppy": {
+      "chance": 0.65
+    },
+    "colors:blue_sapling": {
+      "chance": 0.3
+    },
+    "colors:blue_short_grass": {
+      "chance": 0.3
+    },
+    "colors:blue_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:brown_apple": {
+      "chance": 0.65
+    },
+    "colors:brown_dandelion": {
+      "chance": 0.65
+    },
+    "colors:brown_leaves": {
+      "chance": 0.3
+    },
+    "colors:brown_poppy": {
+      "chance": 0.65
+    },
+    "colors:brown_sapling": {
+      "chance": 0.3
+    },
+    "colors:brown_short_grass": {
+      "chance": 0.3
+    },
+    "colors:brown_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:cyan_apple": {
+      "chance": 0.65
+    },
+    "colors:cyan_dandelion": {
+      "chance": 0.65
+    },
+    "colors:cyan_leaves": {
+      "chance": 0.3
+    },
+    "colors:cyan_poppy": {
+      "chance": 0.65
+    },
+    "colors:cyan_sapling": {
+      "chance": 0.3
+    },
+    "colors:cyan_short_grass": {
+      "chance": 0.3
+    },
+    "colors:cyan_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:gray_apple": {
+      "chance": 0.65
+    },
+    "colors:gray_dandelion": {
+      "chance": 0.65
+    },
+    "colors:gray_leaves": {
+      "chance": 0.3
+    },
+    "colors:gray_poppy": {
+      "chance": 0.65
+    },
+    "colors:gray_sapling": {
+      "chance": 0.3
+    },
+    "colors:gray_short_grass": {
+      "chance": 0.3
+    },
+    "colors:gray_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:green_apple": {
+      "chance": 0.65
+    },
+    "colors:green_dandelion": {
+      "chance": 0.65
+    },
+    "colors:green_leaves": {
+      "chance": 0.3
+    },
+    "colors:green_poppy": {
+      "chance": 0.65
+    },
+    "colors:green_sapling": {
+      "chance": 0.3
+    },
+    "colors:green_short_grass": {
+      "chance": 0.3
+    },
+    "colors:green_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:light_blue_apple": {
+      "chance": 0.65
+    },
+    "colors:light_blue_dandelion": {
+      "chance": 0.65
+    },
+    "colors:light_blue_leaves": {
+      "chance": 0.3
+    },
+    "colors:light_blue_poppy": {
+      "chance": 0.65
+    },
+    "colors:light_blue_sapling": {
+      "chance": 0.3
+    },
+    "colors:light_blue_short_grass": {
+      "chance": 0.3
+    },
+    "colors:light_blue_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:light_gray_apple": {
+      "chance": 0.65
+    },
+    "colors:light_gray_dandelion": {
+      "chance": 0.65
+    },
+    "colors:light_gray_leaves": {
+      "chance": 0.3
+    },
+    "colors:light_gray_poppy": {
+      "chance": 0.65
+    },
+    "colors:light_gray_sapling": {
+      "chance": 0.3
+    },
+    "colors:light_gray_short_grass": {
+      "chance": 0.3
+    },
+    "colors:light_gray_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:lime_apple": {
+      "chance": 0.65
+    },
+    "colors:lime_dandelion": {
+      "chance": 0.65
+    },
+    "colors:lime_leaves": {
+      "chance": 0.3
+    },
+    "colors:lime_poppy": {
+      "chance": 0.65
+    },
+    "colors:lime_sapling": {
+      "chance": 0.3
+    },
+    "colors:lime_short_grass": {
+      "chance": 0.3
+    },
+    "colors:lime_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:magenta_apple": {
+      "chance": 0.65
+    },
+    "colors:magenta_dandelion": {
+      "chance": 0.65
+    },
+    "colors:magenta_leaves": {
+      "chance": 0.3
+    },
+    "colors:magenta_poppy": {
+      "chance": 0.65
+    },
+    "colors:magenta_sapling": {
+      "chance": 0.3
+    },
+    "colors:magenta_short_grass": {
+      "chance": 0.3
+    },
+    "colors:magenta_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:orange_apple": {
+      "chance": 0.65
+    },
+    "colors:orange_dandelion": {
+      "chance": 0.65
+    },
+    "colors:orange_leaves": {
+      "chance": 0.3
+    },
+    "colors:orange_poppy": {
+      "chance": 0.65
+    },
+    "colors:orange_sapling": {
+      "chance": 0.3
+    },
+    "colors:orange_short_grass": {
+      "chance": 0.3
+    },
+    "colors:orange_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:pink_apple": {
+      "chance": 0.65
+    },
+    "colors:pink_dandelion": {
+      "chance": 0.65
+    },
+    "colors:pink_leaves": {
+      "chance": 0.3
+    },
+    "colors:pink_poppy": {
+      "chance": 0.65
+    },
+    "colors:pink_sapling": {
+      "chance": 0.3
+    },
+    "colors:pink_short_grass": {
+      "chance": 0.3
+    },
+    "colors:pink_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:purple_apple": {
+      "chance": 0.65
+    },
+    "colors:purple_dandelion": {
+      "chance": 0.65
+    },
+    "colors:purple_leaves": {
+      "chance": 0.3
+    },
+    "colors:purple_poppy": {
+      "chance": 0.65
+    },
+    "colors:purple_sapling": {
+      "chance": 0.3
+    },
+    "colors:purple_short_grass": {
+      "chance": 0.3
+    },
+    "colors:purple_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:red_apple": {
+      "chance": 0.65
+    },
+    "colors:red_dandelion": {
+      "chance": 0.65
+    },
+    "colors:red_leaves": {
+      "chance": 0.3
+    },
+    "colors:red_poppy": {
+      "chance": 0.65
+    },
+    "colors:red_sapling": {
+      "chance": 0.3
+    },
+    "colors:red_short_grass": {
+      "chance": 0.3
+    },
+    "colors:red_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:white_apple": {
+      "chance": 0.65
+    },
+    "colors:white_dandelion": {
+      "chance": 0.65
+    },
+    "colors:white_leaves": {
+      "chance": 0.3
+    },
+    "colors:white_poppy": {
+      "chance": 0.65
+    },
+    "colors:white_sapling": {
+      "chance": 0.3
+    },
+    "colors:white_short_grass": {
+      "chance": 0.3
+    },
+    "colors:white_tall_grass": {
+      "chance": 0.5
+    },
+    "colors:yellow_apple": {
+      "chance": 0.65
+    },
+    "colors:yellow_dandelion": {
+      "chance": 0.65
+    },
+    "colors:yellow_leaves": {
+      "chance": 0.3
+    },
+    "colors:yellow_poppy": {
+      "chance": 0.65
+    },
+    "colors:yellow_sapling": {
+      "chance": 0.3
+    },
+    "colors:yellow_short_grass": {
+      "chance": 0.3
+    },
+    "colors:yellow_tall_grass": {
+      "chance": 0.5
+    }
+  }
+}
