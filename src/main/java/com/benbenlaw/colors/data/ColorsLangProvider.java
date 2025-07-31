@@ -66,7 +66,7 @@ public class ColorsLangProvider extends LanguageProvider {
             addBlockTranslation(color + "_log", formatName(color) + " Log");
             addBlockTranslation(color + "_stripped_log", formatName(color) + " Stripped Log");
             addBlockTranslation(color + "_wood", formatName(color) + " Wood");
-            addBlockTranslation(color + "_stripped_wood", formatName(color) + " Stripped Wod");
+            addBlockTranslation(color + "_stripped_wood", formatName(color) + " Stripped Wood");
             addBlockTranslation(color + "_bamboo", formatName(color) + " Bamboo");
             addBlockTranslation(color + "_stripped_bamboo", formatName(color) + " Stripped Bamboo");
             addBlockTranslation(color + "_sapling", formatName(color) + " Sapling");
