@@ -8,6 +8,7 @@ import com.benbenlaw.core.block.brightable.BrightDoublePlantBlock;
 import com.benbenlaw.core.block.brightable.BrightTallGrassBlock;
 import com.benbenlaw.core.block.colored.*;
 import com.benbenlaw.core.util.ColorList;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
@@ -88,12 +89,12 @@ public class ColorsBlockStatesProvider extends BlockStateProvider {
             itemModels().withExistingParent(color + "_tall_grass", modLoc("block/" + color + "_tall_grass_bottom"));
 
             //Poppy
-            simpleBlock(POPPY.get(color + "_poppy").get(), models().cross(color + "_poppy", modLoc("block/" + color + "_poppy")));
+            simpleBlock(POPPY.get(color + "_poppy").get(), models().cross(color + "_poppy", modLoc("block/" + color + "_poppy")).renderType(RenderType.CUTOUT.toString()));
             simpleBlock(POTTED_POPPY.get(color + "_potted_poppy").get(), models().singleTexture("potted_poppy",
                     ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, "tintable_flower_pot_cross"), "plant",
                     ResourceLocation.parse("colors:block/poppy")).renderType("cutout"));
             //Dandelion
-            simpleBlock(DANDELION.get(color + "_dandelion").get(), models().cross(color + "_dandelion", modLoc("block/" + color + "_dandelion")));
+            simpleBlock(DANDELION.get(color + "_dandelion").get(), models().cross(color + "_dandelion", modLoc("block/" + color + "_dandelion")).renderType(RenderType.CUTOUT.toString()));
             simpleBlock(POTTED_DANDELION.get(color + "_potted_dandelion").get(), models().singleTexture( "potted_dandelion",
                     ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, "tintable_flower_pot_cross"), "plant",
                     ResourceLocation.parse("colors:block/dandelion")).renderType("cutout"));
@@ -177,7 +178,7 @@ public class ColorsBlockStatesProvider extends BlockStateProvider {
                 fenceBlock((FenceBlock) PLANKS.get(keyPrefix + "_fence").get(), blockTexture(PLANKS.get(color + "_" + type).get()));
                 fenceGateBlock((FenceGateBlock) PLANKS.get(keyPrefix + "_fence_gate").get(), blockTexture(PLANKS.get(color + "_" + type).get()));
                 doorBlock((DoorBlock) PLANKS.get(keyPrefix + "_door").get(), ResourceLocation.parse("colors:block/" + color + "_" + singularType + "_door_top"), ResourceLocation.parse("colors:block/" + color + "_" + singularType + "_door_bottom"));
-                trapdoorBlock((TrapDoorBlock) PLANKS.get(keyPrefix + "_trapdoor").get(), blockTexture(PLANKS.get(color + "_plank_trapdoor").get()), true);
+                trapdoorBlockWithRenderType((TrapDoorBlock) PLANKS.get(keyPrefix + "_trapdoor").get(), blockTexture(PLANKS.get(color + "_plank_trapdoor").get()), true, "cutout");
 
                 itemModels().withExistingParent(keyPrefix + "_slab", modLoc("block/" + keyPrefix + "_slab"));
                 itemModels().withExistingParent(keyPrefix + "_stairs", modLoc("block/" + keyPrefix + "_stairs"));
