@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "colors:block/yellow_bamboo_top",
+    "side": "colors:block/yellow_bamboo"
+  }
+}
