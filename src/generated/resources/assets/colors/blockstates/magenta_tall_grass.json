@@ -1,9 +1,15 @@
 {
   "variants": {
-    "half=lower": {
+    "half=lower,lit=false": {
       "model": "colors:block/magenta_tall_grass_bottom"
     },
-    "half=upper": {
+    "half=lower,lit=true": {
+      "model": "colors:block/magenta_tall_grass_bottom"
+    },
+    "half=upper,lit=false": {
+      "model": "colors:block/magenta_tall_grass_top"
+    },
+    "half=upper,lit=true": {
       "model": "colors:block/magenta_tall_grass_top"
     }
   }

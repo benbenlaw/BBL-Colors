@@ -1,3 +1,7 @@
 {
-  "parent": "colors:block/purple_short_grass"
+  "parent": "minecraft:item/generated",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "layer0": "colors:block/purple_short_grass"
+  }
 }

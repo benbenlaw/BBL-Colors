@@ -1,7 +1,8 @@
 {
   "parent": "minecraft:block/door_top_left",
+  "render_type": "minecraft:cutout",
   "textures": {
-    "bottom": "colors:block/yellow_bamboo_plank_door_top",
-    "top": "colors:block/yellow_bamboo_plank_door_bottom"
+    "bottom": "colors:block/yellow_bamboo_plank_door_bottom",
+    "top": "colors:block/yellow_bamboo_plank_door_top"
   }
 }
