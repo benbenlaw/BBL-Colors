@@ -1,10 +1,5 @@
 Changelog BBL Colors
 
-//TRAPDOOR TEXTURES, ADD CUTOUT
-//DOOR TEXTURES WRONG WAY AROUND, ADD CUTOUT
-//GRASS CUTOUT, HELD TEXTURE WRONG SEE SAPLINGS
-//POPPY AND DANDELION CUTOUT, HELD TEXTURE WRONG SEE SAPLINGS
-
 1.3.0
 Completely reworked rendering, instead of relying on BBL Core tinting we are now data generating colored textures
 This will fix issues with mods like Storage Drawers when there custom drawers would always be white when using BBL Colors blocks
