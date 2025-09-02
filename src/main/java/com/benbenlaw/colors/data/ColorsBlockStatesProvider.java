@@ -19,8 +19,10 @@ import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
 import net.neoforged.neoforge.client.model.generators.MultiPartBlockStateBuilder;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import net.neoforged.neoforge.registries.DeferredBlock;
 
 import java.util.Map;
+import java.util.function.Supplier;
 
 import static com.benbenlaw.colors.block.ColorsBlocks.*;
 
@@ -37,43 +39,107 @@ public class ColorsBlockStatesProvider extends BlockStateProvider {
         for (String color : ColorList.COLORS) {
 
             //Sapling
-            saplingWithElements((SaplingBlock) SAPLINGS.get(color + "_sapling").get(), "colors:block/sapling");
-
+            simpleBlock(SAPLINGS.get(color + "_sapling").get(), models().cross("sapling", modLoc("block/" + color + "_sapling"))
+                    .texture("cross", modLoc("block/" + color + "_sapling")).renderType("cutout"));
 
             //Wood
-            logBlockWithElement(LOGS.get(color + "_log").get(), "colors:block/log");
-            strippedLogBlockWithElement((RotatedPillarBlock) LOGS.get(color + "_stripped_log").get(), "colors:block/stripped_log");
-            woodBlockWithElement((RotatedPillarBlock) WOOD.get(color + "_wood").get(), "colors:block/log");
-            strippedWoodBlockWithElement((RotatedPillarBlock) WOOD.get(color + "_stripped_wood").get(), "colors:block/stripped_log");
+            logBlock((RotatedPillarBlock) LOGS.get(color + "_log").get());
+            logBlock((RotatedPillarBlock) LOGS.get(color + "_stripped_log").get());
+            axisBlock((RotatedPillarBlock) WOOD.get(color + "_wood").get(), blockTexture(LOGS.get(color + "_log").get()), blockTexture(LOGS.get(color + "_log").get()));
+            axisBlock((RotatedPillarBlock) WOOD.get(color + "_stripped_wood").get(), blockTexture(LOGS.get(color + "_stripped_log").get()), blockTexture(LOGS.get(color + "_stripped_log").get()));
+
+            itemModels().withExistingParent(color + "_log", modLoc("block/" + color + "_log"));
+            itemModels().withExistingParent(color + "_stripped_log", modLoc("block/" + color + "_stripped_log"));
+            itemModels().withExistingParent(color + "_wood", modLoc("block/" + color + "_wood"));
+            itemModels().withExistingParent(color + "_stripped_wood", modLoc("block/" + color + "_stripped_wood"));
 
             //Bamboo
-            logBlockWithElement(BAMBOO.get(color + "_bamboo").get(), "colors:block/bamboo_block");
-            strippedLogBlockWithElement((RotatedPillarBlock) BAMBOO.get(color + "_stripped_bamboo").get(), "colors:block/stripped_bamboo_block");
+            logBlock((RotatedPillarBlock) BAMBOO.get(color + "_bamboo").get());
+            logBlock((RotatedPillarBlock) BAMBOO.get(color + "_stripped_bamboo").get());
+
+            itemModels().withExistingParent(color + "_bamboo", modLoc("block/" + color + "_bamboo"));
+            itemModels().withExistingParent(color + "_stripped_bamboo", modLoc("block/" + color + "_stripped_bamboo"));
 
             //Leaves
-            simpleBlockWithElements(LEAVES.get(color + "_leaves").get(), "colors:block/leaves");
+            blockWithItem(LEAVES.get(color + "_leaves"));
 
             //Short Grass
-            tallGrassWithElements((BrightTallGrassBlock) SHORT_GRASS.get(color + "_short_grass").get(), "colors:block/short_grass");
+            simpleBlock(SHORT_GRASS.get(color + "_short_grass").get(),
+                    models().cross(color + "_short_grass", modLoc("block/" + color + "_short_grass")).renderType("cutout")
+            );
+            itemModels().withExistingParent(color + "_short_grass", modLoc("block/" + color + "_short_grass"));
+
             //Tall Plant
-            doublePlantWithElements((BrightDoublePlantBlock) TALL_GRASS.get(color + "_tall_grass").get(), "colors:block/tall_grass");
+            getVariantBuilder(TALL_GRASS.get(color + "_tall_grass").get())
+                    .forAllStates(state -> {
+                        DoubleBlockHalf half = state.getValue(BlockStateProperties.DOUBLE_BLOCK_HALF);
+
+                        ModelFile model = models().cross(
+                                color + "_tall_grass_" + (half == DoubleBlockHalf.LOWER ? "bottom" : "top"),
+                                modLoc("block/" + color + "_tall_grass_" + (half == DoubleBlockHalf.LOWER ? "bottom" : "top"))
+                        ).renderType("cutout");
+
+                        return ConfiguredModel.builder()
+                                .modelFile(model)
+                                .build();
+                    });
+
+
+            itemModels().withExistingParent(color + "_tall_grass", modLoc("block/" + color + "_tall_grass_bottom"));
+
             //Poppy
-            flowerWithElements((FlowerBlock) POPPY.get(color + "_poppy").get(), "colors:block/poppy");
+            simpleBlock(POPPY.get(color + "_poppy").get(), models().cross(color + "_poppy", modLoc("block/" + color + "_poppy")));
             simpleBlock(POTTED_POPPY.get(color + "_potted_poppy").get(), models().singleTexture("potted_poppy",
                     ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, "tintable_flower_pot_cross"), "plant",
                     ResourceLocation.parse("colors:block/poppy")).renderType("cutout"));
             //Dandelion
-            flowerWithElements((FlowerBlock) DANDELION.get(color + "_dandelion").get(), "colors:block/dandelion");
+            simpleBlock(DANDELION.get(color + "_dandelion").get(), models().cross(color + "_dandelion", modLoc("block/" + color + "_dandelion")));
             simpleBlock(POTTED_DANDELION.get(color + "_potted_dandelion").get(), models().singleTexture( "potted_dandelion",
                     ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, "tintable_flower_pot_cross"), "plant",
                     ResourceLocation.parse("colors:block/dandelion")).renderType("cutout"));
             //Dirt
-            simpleBlockWithElements(DIRT.get(color + "_dirt").get(), "colors:block/dirt");
+            blockWithItem(DIRT.get(color + "_dirt"));
             //Grass
-            grassBlockWithElements((GrassBlock) GRASS_BLOCK.get(color + "_grass_block").get(), "colors:block/dirt", "colors:block/grass_block");
-            //Crafting Table
-            craftingTableBlock((BrightCraftingTable) CRAFTING_TABLE.get(color + "_crafting_table").get(), "colors:block/planks", "colors:block/crafting_table");
+            getVariantBuilder(GRASS_BLOCK.get(color + "_grass_block").get()).forAllStates(state -> {
+                boolean snowy = state.getValue(SnowyDirtBlock.SNOWY);
 
+                String blockName = color + "_grass_block";
+
+                // choose side depending on snowy property
+                ResourceLocation side = modLoc("block/" + blockName + "_side" + (snowy ? "_snow" : ""));
+                ResourceLocation bottom = modLoc("block/" + color + "_dirt"); // or minecraft:block/dirt
+                ResourceLocation top = modLoc("block/" + blockName + "_top");
+
+                ModelFile model = models().cubeBottomTop(
+                        blockName + (snowy ? "_snow" : ""),
+                        side,
+                        bottom,
+                        top
+                );
+
+                return ConfiguredModel.builder()
+                        .modelFile(model)
+                        .build();
+            });
+            itemModels().withExistingParent(color + "_grass_block", modLoc("block/" + color + "_grass_block"));
+
+
+
+            //Crafting Table
+            simpleBlock(
+                    (BrightCraftingTable) CRAFTING_TABLE.get(color + "_crafting_table").get(),
+                    models().cube(
+                            color + "_crafting_table",
+                            modLoc("block/" + color + "_planks"),
+                            modLoc("block/" + color + "_crafting_table_top"),
+                            modLoc("block/" + color + "_crafting_table"),
+                            modLoc("block/" + color + "_crafting_table_side"),
+                            modLoc("block/" + color + "_crafting_table_side"),
+                            modLoc("block/" + color + "_crafting_table")
+                    )
+            );
+
+            itemModels().withExistingParent(color + "_crafting_table", modLoc("block/" + color + "_crafting_table"));
 
             //Stone Blocks
             for (String type : StoneLikeBlocksList.STONE_BLOCKS) {
@@ -81,12 +147,20 @@ public class ColorsBlockStatesProvider extends BlockStateProvider {
                 String singularType = type.endsWith("s") ? type.substring(0, type.length() - 1) : type;
                 String keyPrefix = color + "_" + singularType;
 
-                simpleBlockWithElements(STONE_BLOCKS.get(color + "_" + type).get(), "colors:block/" + type);
-                slabWithElements((SlabBlock) STONE_BLOCKS.get(keyPrefix + "_slab").get(), "colors:block/" + type);
-                stairsWithElements((StairBlock) STONE_BLOCKS.get(keyPrefix + "_stairs").get(), "colors:block/" + type);
-                wallWithElements((WallBlock) STONE_BLOCKS.get(keyPrefix + "_wall").get(), "colors:block/" + type);
-                pressurePlateWithElements((PressurePlateBlock) STONE_BLOCKS.get(keyPrefix + "_pressure_plate").get(), "colors:block/" + type);
-                buttonWithElements((ButtonBlock) STONE_BLOCKS.get(keyPrefix + "_button").get(), "colors:block/" + type);
+                blockWithItem(STONE_BLOCKS.get(color + "_" + type));
+                slabBlock((SlabBlock) STONE_BLOCKS.get(keyPrefix + "_slab").get(), blockTexture(STONE_BLOCKS.get(color + "_" + type).get()), blockTexture(STONE_BLOCKS.get(color + "_" + type).get()));
+                stairsBlock((StairBlock) STONE_BLOCKS.get(keyPrefix + "_stairs").get(), blockTexture(STONE_BLOCKS.get(color + "_" + type).get()));
+                wallBlock((WallBlock) STONE_BLOCKS.get(keyPrefix + "_wall").get(), blockTexture(STONE_BLOCKS.get(color + "_" + type).get()));
+                pressurePlateBlock((PressurePlateBlock) STONE_BLOCKS.get(keyPrefix + "_pressure_plate").get(), blockTexture(STONE_BLOCKS.get(color + "_" + type).get()));
+                buttonBlock((ButtonBlock) STONE_BLOCKS.get(keyPrefix + "_button").get(), blockTexture(STONE_BLOCKS.get(color + "_" + type).get()));
+
+                itemModels().withExistingParent(keyPrefix + "_slab", modLoc("block/" + keyPrefix + "_slab"));
+                itemModels().withExistingParent(keyPrefix + "_stairs", modLoc("block/" + keyPrefix + "_stairs"));
+                itemModels().withExistingParent(keyPrefix + "_wall", mcLoc("block/wall_inventory"))
+                        .texture("wall", blockTexture(STONE_BLOCKS.get(color + "_" + type).get()));
+                itemModels().withExistingParent(keyPrefix + "_pressure_plate", modLoc("block/" + keyPrefix + "_pressure_plate"));
+                itemModels().withExistingParent(keyPrefix + "_button", mcLoc("block/button_inventory"))
+                        .texture("texture", blockTexture(STONE_BLOCKS.get(color + "_" + type).get()));
 
             }
 
@@ -95,20 +169,34 @@ public class ColorsBlockStatesProvider extends BlockStateProvider {
                 String singularType = type.endsWith("s") ? type.substring(0, type.length() - 1) : type;
                 String keyPrefix = color + "_" + singularType;
 
-                simpleBlockWithElements(PLANKS.get(color + "_" + type).get(), "colors:block/" + type);
-                slabWithElements((SlabBlock) PLANKS.get(keyPrefix + "_slab").get(), "colors:block/" + type);
-                stairsWithElements((StairBlock) PLANKS.get(keyPrefix + "_stairs").get(), "colors:block/" + type);
-                pressurePlateWithElements((PressurePlateBlock) PLANKS.get(keyPrefix + "_pressure_plate").get(), "colors:block/" + type);
-                buttonWithElements((ButtonBlock) PLANKS.get(keyPrefix + "_button").get(), "colors:block/" + type);
-                fenceWithElements((FenceBlock) PLANKS.get(keyPrefix + "_fence").get(), "colors:block/" + type);
-                fenceGateWithElements((FenceGateBlock) PLANKS.get(keyPrefix + "_fence_gate").get(), "colors:block/" + type);
-                doorWithElements((DoorBlock) PLANKS.get(keyPrefix + "_door").get(), "colors:block/" + singularType);
-                trapDoorWithElements((TrapDoorBlock) PLANKS.get(keyPrefix + "_trapdoor").get(), "colors:block/" + singularType + "_trapdoor", true);
+                blockWithItem(PLANKS.get(color + "_" + type));
+                slabBlock((SlabBlock) PLANKS.get(keyPrefix + "_slab").get(), blockTexture(PLANKS.get(color + "_" + type).get()), blockTexture(PLANKS.get(color + "_" + type).get()));
+                stairsBlock((StairBlock) PLANKS.get(keyPrefix + "_stairs").get(), blockTexture(PLANKS.get(color + "_" + type).get()));
+                pressurePlateBlock((PressurePlateBlock) PLANKS.get(keyPrefix + "_pressure_plate").get(), blockTexture(PLANKS.get(color + "_" + type).get()));
+                buttonBlock((ButtonBlock) PLANKS.get(keyPrefix + "_button").get(), blockTexture(PLANKS.get(color + "_" + type).get()));
+                fenceBlock((FenceBlock) PLANKS.get(keyPrefix + "_fence").get(), blockTexture(PLANKS.get(color + "_" + type).get()));
+                fenceGateBlock((FenceGateBlock) PLANKS.get(keyPrefix + "_fence_gate").get(), blockTexture(PLANKS.get(color + "_" + type).get()));
+                doorBlock((DoorBlock) PLANKS.get(keyPrefix + "_door").get(), ResourceLocation.parse("colors:block/" + color + "_" + singularType + "_door_top"), ResourceLocation.parse("colors:block/" + color + "_" + singularType + "_door_bottom"));
+                trapdoorBlock((TrapDoorBlock) PLANKS.get(keyPrefix + "_trapdoor").get(), blockTexture(PLANKS.get(color + "_plank_trapdoor").get()), true);
+
+                itemModels().withExistingParent(keyPrefix + "_slab", modLoc("block/" + keyPrefix + "_slab"));
+                itemModels().withExistingParent(keyPrefix + "_stairs", modLoc("block/" + keyPrefix + "_stairs"));
+                itemModels().withExistingParent(keyPrefix + "_pressure_plate", modLoc("block/" + keyPrefix + "_pressure_plate"));
+                itemModels().withExistingParent(keyPrefix + "_button", mcLoc("block/button_inventory"))
+                        .texture("texture", blockTexture(PLANKS.get(color + "_" + type).get()));
+                itemModels().withExistingParent(keyPrefix + "_fence", mcLoc("block/fence_inventory"))
+                        .texture("texture", blockTexture(PLANKS.get(color + "_" + type).get()));
+                itemModels().withExistingParent(keyPrefix + "_fence_gate", modLoc("block/" + keyPrefix + "_fence_gate"));
+                itemModels().basicItem(PLANKS.get(keyPrefix + "_door").get().asItem());
+                itemModels().withExistingParent(keyPrefix + "_trapdoor", modLoc("block/" + keyPrefix + "_trapdoor_bottom"));
+
+
             }
-
-
-
         }
+    }
+
+    private void blockWithItem(DeferredBlock<Block> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(), cubeAll(deferredBlock.get()));
     }
 
     private void strippedWoodBlockWithElement(RotatedPillarBlock strippedWoodBlock, String defaultTexture) {

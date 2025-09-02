@@ -1,7 +1,0 @@
-{
-  "parent": "colors:block/tintable_cross",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "cross": "colors:block/sapling"
-  }
-}

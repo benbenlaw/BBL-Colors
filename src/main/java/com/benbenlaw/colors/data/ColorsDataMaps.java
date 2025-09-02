@@ -21,7 +21,7 @@ public class ColorsDataMaps extends DataMapProvider {
     }
 
     @Override
-    protected void gather() {
+    protected void gather(HolderLookup.Provider provider) {
         var compostables = this.builder(NeoForgeDataMaps.COMPOSTABLES);
 
         for (String type : LEAVES.keySet()) {

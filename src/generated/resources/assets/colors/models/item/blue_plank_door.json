@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "colors:item/plank_door"
+    "layer0": "colors:item/blue_plank_door"
   }
 }

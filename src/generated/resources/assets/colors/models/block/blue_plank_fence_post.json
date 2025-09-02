@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/fence/tintable_fence_post",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/fence_post",
   "textures": {
-    "texture": "colors:block/planks"
+    "texture": "colors:block/blue_planks"
   }
 }

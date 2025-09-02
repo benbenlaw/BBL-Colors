@@ -1,9 +1,8 @@
 {
-  "parent": "colors:block/slab/tintable_slab",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "colors:block/road",
-    "side": "colors:block/road",
-    "top": "colors:block/road"
+    "bottom": "colors:block/pink_road",
+    "side": "colors:block/pink_road",
+    "top": "colors:block/pink_road"
   }
 }

@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/wall/tintable_wall_post",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/template_wall_post",
   "textures": {
-    "wall": "colors:block/polished"
+    "wall": "colors:block/purple_polished"
   }
 }

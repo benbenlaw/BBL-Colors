@@ -1,3 +1,6 @@
 {
-  "parent": "colors:block/cyan_tile_button_inventory"
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "colors:block/cyan_tiles"
+  }
 }

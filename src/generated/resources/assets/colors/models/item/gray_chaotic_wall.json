@@ -1,3 +1,6 @@
 {
-  "parent": "colors:block/gray_chaotic_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "colors:block/gray_chaotic"
+  }
 }

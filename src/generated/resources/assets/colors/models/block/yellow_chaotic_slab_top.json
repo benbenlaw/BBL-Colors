@@ -1,9 +1,8 @@
 {
-  "parent": "colors:block/slab/tintable_slab_top",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/slab_top",
   "textures": {
-    "bottom": "colors:block/chaotic",
-    "side": "colors:block/chaotic",
-    "top": "colors:block/chaotic"
+    "bottom": "colors:block/yellow_chaotic",
+    "side": "colors:block/yellow_chaotic",
+    "top": "colors:block/yellow_chaotic"
   }
 }

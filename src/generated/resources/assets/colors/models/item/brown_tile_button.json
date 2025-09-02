@@ -1,3 +1,6 @@
 {
-  "parent": "colors:block/brown_tile_button_inventory"
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "colors:block/brown_tiles"
+  }
 }

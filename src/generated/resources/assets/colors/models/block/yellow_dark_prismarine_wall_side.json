@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/wall/tintable_wall_side",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/template_wall_side",
   "textures": {
-    "wall": "colors:block/dark_prismarine"
+    "wall": "colors:block/yellow_dark_prismarine"
   }
 }

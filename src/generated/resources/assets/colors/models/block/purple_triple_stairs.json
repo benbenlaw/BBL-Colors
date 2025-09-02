@@ -1,9 +1,8 @@
 {
-  "parent": "colors:block/stairs/tintable_stairs",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/stairs",
   "textures": {
-    "bottom": "colors:block/triple",
-    "side": "colors:block/triple",
-    "top": "colors:block/triple"
+    "bottom": "colors:block/purple_triple",
+    "side": "colors:block/purple_triple",
+    "top": "colors:block/purple_triple"
   }
 }

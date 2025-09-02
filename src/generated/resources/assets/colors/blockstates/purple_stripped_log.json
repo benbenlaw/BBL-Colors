@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x": {
-      "model": "colors:block/purple_stripped_log",
+      "model": "colors:block/purple_stripped_log_horizontal",
       "x": 90,
       "y": 90
     },
@@ -9,7 +9,7 @@
       "model": "colors:block/purple_stripped_log"
     },
     "axis=z": {
-      "model": "colors:block/purple_stripped_log",
+      "model": "colors:block/purple_stripped_log_horizontal",
       "x": 90
     }
   }

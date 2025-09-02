@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/tintable_cross",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/cross",
   "textures": {
-    "cross": "colors:block/short_grass"
+    "cross": "colors:block/cyan_short_grass"
   }
 }

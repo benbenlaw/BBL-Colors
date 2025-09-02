@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/pressure_plate/tintable_pressure_plate_up",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/pressure_plate_up",
   "textures": {
-    "texture": "colors:block/prismarine_bricks"
+    "texture": "colors:block/light_blue_prismarine_bricks"
   }
 }

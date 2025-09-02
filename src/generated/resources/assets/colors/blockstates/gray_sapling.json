@@ -1,10 +1,7 @@
 {
   "variants": {
-    "stage=0": {
-      "model": "colors:block/gray_sapling"
-    },
-    "stage=1": {
-      "model": "colors:block/gray_sapling"
+    "": {
+      "model": "colors:block/sapling"
     }
   }
 }

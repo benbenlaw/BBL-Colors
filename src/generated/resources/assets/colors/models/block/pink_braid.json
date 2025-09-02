@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/tintable_cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "colors:block/braid",
-    "particle": "colors:block/braid"
+    "all": "colors:block/pink_braid"
   }
 }

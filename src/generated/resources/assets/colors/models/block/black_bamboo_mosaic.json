@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/tintable_cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "colors:block/bamboo_mosaic",
-    "particle": "colors:block/bamboo_mosaic"
+    "all": "colors:block/black_bamboo_mosaic"
   }
 }

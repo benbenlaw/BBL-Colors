@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "colors:block/short_grass"
-  }
+  "parent": "colors:block/white_short_grass"
 }

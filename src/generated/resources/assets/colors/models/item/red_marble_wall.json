@@ -1,3 +1,6 @@
 {
-  "parent": "colors:block/red_marble_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "colors:block/red_marble"
+  }
 }

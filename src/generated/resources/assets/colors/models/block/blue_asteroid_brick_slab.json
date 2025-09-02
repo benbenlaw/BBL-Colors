@@ -1,9 +1,8 @@
 {
-  "parent": "colors:block/slab/tintable_slab",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/slab",
   "textures": {
-    "bottom": "colors:block/asteroid_bricks",
-    "side": "colors:block/asteroid_bricks",
-    "top": "colors:block/asteroid_bricks"
+    "bottom": "colors:block/blue_asteroid_bricks",
+    "side": "colors:block/blue_asteroid_bricks",
+    "top": "colors:block/blue_asteroid_bricks"
   }
 }

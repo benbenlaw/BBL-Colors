@@ -67,8 +67,8 @@ dependencies {
     implementation "net.neoforged:neoforge:${neo_version}"
 
     //BBL Core
-    compileOnly "curse.maven:bbl-core-1135181:6509711"
-    runtimeOnly "curse.maven:bbl-core-1135181:6509711"
+    compileOnly "curse.maven:bbl-core-1135181:6947750"
+    runtimeOnly "curse.maven:bbl-core-1135181:6947750"
 
     //Fusion
     compileOnly "curse.maven:fusion-connected-textures-854949:6453834"

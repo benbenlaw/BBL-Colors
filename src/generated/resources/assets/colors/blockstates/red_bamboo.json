@@ -1,7 +1,7 @@
 {
   "variants": {
     "axis=x": {
-      "model": "colors:block/red_bamboo",
+      "model": "colors:block/red_bamboo_horizontal",
       "x": 90,
       "y": 90
     },
@@ -9,7 +9,7 @@
       "model": "colors:block/red_bamboo"
     },
     "axis=z": {
-      "model": "colors:block/red_bamboo",
+      "model": "colors:block/red_bamboo_horizontal",
       "x": 90
     }
   }

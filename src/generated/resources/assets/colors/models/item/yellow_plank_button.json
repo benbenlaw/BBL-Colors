@@ -1,3 +1,6 @@
 {
-  "parent": "colors:block/yellow_plank_button_inventory"
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "colors:block/yellow_planks"
+  }
 }

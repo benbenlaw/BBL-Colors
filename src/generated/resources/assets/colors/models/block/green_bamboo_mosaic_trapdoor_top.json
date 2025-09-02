@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/trapdoor/tintable_orientable_trapdoor_top",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/template_orientable_trapdoor_top",
   "textures": {
-    "texture": "colors:block/bamboo_mosaic_trapdoor"
+    "texture": "colors:block/green_bamboo_mosaic"
   }
 }

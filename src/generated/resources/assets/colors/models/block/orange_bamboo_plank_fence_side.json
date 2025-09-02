@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/fence/tintable_fence_side",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/fence_side",
   "textures": {
-    "texture": "colors:block/bamboo_planks"
+    "texture": "colors:block/orange_bamboo_planks"
   }
 }

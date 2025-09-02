@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/tintable_cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "colors:block/cobblestone_bricks",
-    "particle": "colors:block/cobblestone_bricks"
+    "all": "colors:block/yellow_cobblestone_bricks"
   }
 }

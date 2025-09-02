@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/pressure_plate/tintable_pressure_plate_down",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/pressure_plate_down",
   "textures": {
-    "texture": "colors:block/marble"
+    "texture": "colors:block/yellow_marble"
   }
 }

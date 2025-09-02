@@ -1,3 +1,6 @@
 {
-  "parent": "colors:block/blue_mosaic_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "colors:block/blue_mosaic"
+  }
 }

@@ -1,13 +1,11 @@
 {
-  "parent": "colors:block/tintable_cube",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/cube",
   "textures": {
-    "down": "colors:block/planks",
-    "east": "colors:block/crafting_table_side",
-    "north": "colors:block/crafting_table",
-    "particle": "colors:block/crafting_table",
-    "south": "colors:block/crafting_table_side",
-    "up": "colors:block/crafting_table_top",
-    "west": "colors:block/crafting_table"
+    "down": "colors:block/magenta_planks",
+    "east": "colors:block/magenta_crafting_table_side",
+    "north": "colors:block/magenta_crafting_table",
+    "south": "colors:block/magenta_crafting_table_side",
+    "up": "colors:block/magenta_crafting_table_top",
+    "west": "colors:block/magenta_crafting_table"
   }
 }

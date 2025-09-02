@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/tintable_cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "colors:block/dark_prismarine",
-    "particle": "colors:block/dark_prismarine"
+    "all": "colors:block/cyan_dark_prismarine"
   }
 }

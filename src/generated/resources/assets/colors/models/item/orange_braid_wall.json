@@ -1,3 +1,6 @@
 {
-  "parent": "colors:block/orange_braid_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "colors:block/orange_braid"
+  }
 }

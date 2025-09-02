@@ -1,9 +1,8 @@
 {
-  "parent": "colors:block/slab/tintable_slab_top",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/slab_top",
   "textures": {
-    "bottom": "colors:block/polished",
-    "side": "colors:block/polished",
-    "top": "colors:block/polished"
+    "bottom": "colors:block/light_gray_polished",
+    "side": "colors:block/light_gray_polished",
+    "top": "colors:block/light_gray_polished"
   }
 }

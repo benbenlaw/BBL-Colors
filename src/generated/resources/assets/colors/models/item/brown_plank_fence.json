@@ -1,3 +1,6 @@
 {
-  "parent": "colors:block/brown_plank_fence_inventory"
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "colors:block/brown_planks"
+  }
 }

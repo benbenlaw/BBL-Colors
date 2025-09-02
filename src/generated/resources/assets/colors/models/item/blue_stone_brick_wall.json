@@ -1,3 +1,6 @@
 {
-  "parent": "colors:block/blue_stone_brick_wall_inventory"
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "colors:block/blue_stone_bricks"
+  }
 }

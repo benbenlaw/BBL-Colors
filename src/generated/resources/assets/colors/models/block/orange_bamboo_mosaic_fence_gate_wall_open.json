@@ -1,7 +1,6 @@
 {
-  "parent": "colors:block/fence_gate/tintable_fence_gate_wall_open",
-  "render_type": "minecraft:cutout",
+  "parent": "minecraft:block/template_fence_gate_wall_open",
   "textures": {
-    "texture": "colors:block/bamboo_mosaic"
+    "texture": "colors:block/orange_bamboo_mosaic"
   }
 }

@@ -1,12 +1,6 @@
 {
-  "loader": "fusion:model",
-  "type": "connecting",
-  "parent": "colors:block/tintable_cube_all",
+  "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "colors:block/encased_connected",
-    "particle": "colors:block/encased"
-  },
-  "connections": {
-    "type": "is_same_block"
+    "all": "colors:block/black_encased"
   }
 }
