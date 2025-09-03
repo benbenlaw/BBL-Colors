@@ -6,10 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "colors:cyan_stone",
-          "Properties": {
-            "lit": "false"
-          }
+          "Name": "colors:cyan_stone"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

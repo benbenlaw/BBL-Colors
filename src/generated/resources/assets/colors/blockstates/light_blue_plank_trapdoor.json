@@ -1,129 +1,65 @@
 {
   "variants": {
-    "facing=east,half=bottom,lit=false,open=false": {
+    "facing=east,half=bottom,open=false": {
       "model": "colors:block/light_blue_plank_trapdoor_bottom",
       "y": 90
     },
-    "facing=east,half=bottom,lit=false,open=true": {
+    "facing=east,half=bottom,open=true": {
       "model": "colors:block/light_blue_plank_trapdoor_open",
       "y": 90
     },
-    "facing=east,half=bottom,lit=true,open=false": {
-      "model": "colors:block/light_blue_plank_trapdoor_bottom",
-      "y": 90
-    },
-    "facing=east,half=bottom,lit=true,open=true": {
-      "model": "colors:block/light_blue_plank_trapdoor_open",
-      "y": 90
-    },
-    "facing=east,half=top,lit=false,open=false": {
+    "facing=east,half=top,open=false": {
       "model": "colors:block/light_blue_plank_trapdoor_top",
       "y": 90
     },
-    "facing=east,half=top,lit=false,open=true": {
+    "facing=east,half=top,open=true": {
       "model": "colors:block/light_blue_plank_trapdoor_open",
       "x": 180,
       "y": 270
     },
-    "facing=east,half=top,lit=true,open=false": {
-      "model": "colors:block/light_blue_plank_trapdoor_top",
-      "y": 90
-    },
-    "facing=east,half=top,lit=true,open=true": {
-      "model": "colors:block/light_blue_plank_trapdoor_open",
-      "x": 180,
-      "y": 270
-    },
-    "facing=north,half=bottom,lit=false,open=false": {
+    "facing=north,half=bottom,open=false": {
       "model": "colors:block/light_blue_plank_trapdoor_bottom"
     },
-    "facing=north,half=bottom,lit=false,open=true": {
+    "facing=north,half=bottom,open=true": {
       "model": "colors:block/light_blue_plank_trapdoor_open"
     },
-    "facing=north,half=bottom,lit=true,open=false": {
-      "model": "colors:block/light_blue_plank_trapdoor_bottom"
-    },
-    "facing=north,half=bottom,lit=true,open=true": {
-      "model": "colors:block/light_blue_plank_trapdoor_open"
-    },
-    "facing=north,half=top,lit=false,open=false": {
+    "facing=north,half=top,open=false": {
       "model": "colors:block/light_blue_plank_trapdoor_top"
     },
-    "facing=north,half=top,lit=false,open=true": {
+    "facing=north,half=top,open=true": {
       "model": "colors:block/light_blue_plank_trapdoor_open",
       "x": 180,
       "y": 180
     },
-    "facing=north,half=top,lit=true,open=false": {
-      "model": "colors:block/light_blue_plank_trapdoor_top"
-    },
-    "facing=north,half=top,lit=true,open=true": {
-      "model": "colors:block/light_blue_plank_trapdoor_open",
-      "x": 180,
-      "y": 180
-    },
-    "facing=south,half=bottom,lit=false,open=false": {
+    "facing=south,half=bottom,open=false": {
       "model": "colors:block/light_blue_plank_trapdoor_bottom",
       "y": 180
     },
-    "facing=south,half=bottom,lit=false,open=true": {
+    "facing=south,half=bottom,open=true": {
       "model": "colors:block/light_blue_plank_trapdoor_open",
       "y": 180
     },
-    "facing=south,half=bottom,lit=true,open=false": {
-      "model": "colors:block/light_blue_plank_trapdoor_bottom",
-      "y": 180
-    },
-    "facing=south,half=bottom,lit=true,open=true": {
-      "model": "colors:block/light_blue_plank_trapdoor_open",
-      "y": 180
-    },
-    "facing=south,half=top,lit=false,open=false": {
+    "facing=south,half=top,open=false": {
       "model": "colors:block/light_blue_plank_trapdoor_top",
       "y": 180
     },
-    "facing=south,half=top,lit=false,open=true": {
+    "facing=south,half=top,open=true": {
       "model": "colors:block/light_blue_plank_trapdoor_open",
       "x": 180
     },
-    "facing=south,half=top,lit=true,open=false": {
-      "model": "colors:block/light_blue_plank_trapdoor_top",
-      "y": 180
-    },
-    "facing=south,half=top,lit=true,open=true": {
-      "model": "colors:block/light_blue_plank_trapdoor_open",
-      "x": 180
-    },
-    "facing=west,half=bottom,lit=false,open=false": {
+    "facing=west,half=bottom,open=false": {
       "model": "colors:block/light_blue_plank_trapdoor_bottom",
       "y": 270
     },
-    "facing=west,half=bottom,lit=false,open=true": {
+    "facing=west,half=bottom,open=true": {
       "model": "colors:block/light_blue_plank_trapdoor_open",
       "y": 270
     },
-    "facing=west,half=bottom,lit=true,open=false": {
-      "model": "colors:block/light_blue_plank_trapdoor_bottom",
-      "y": 270
-    },
-    "facing=west,half=bottom,lit=true,open=true": {
-      "model": "colors:block/light_blue_plank_trapdoor_open",
-      "y": 270
-    },
-    "facing=west,half=top,lit=false,open=false": {
+    "facing=west,half=top,open=false": {
       "model": "colors:block/light_blue_plank_trapdoor_top",
       "y": 270
     },
-    "facing=west,half=top,lit=false,open=true": {
-      "model": "colors:block/light_blue_plank_trapdoor_open",
-      "x": 180,
-      "y": 90
-    },
-    "facing=west,half=top,lit=true,open=false": {
-      "model": "colors:block/light_blue_plank_trapdoor_top",
-      "y": 270
-    },
-    "facing=west,half=top,lit=true,open=true": {
+    "facing=west,half=top,open=true": {
       "model": "colors:block/light_blue_plank_trapdoor_open",
       "x": 180,
       "y": 90

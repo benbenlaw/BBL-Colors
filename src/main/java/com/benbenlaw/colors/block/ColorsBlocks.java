@@ -11,10 +11,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -128,26 +125,26 @@ public class ColorsBlocks {
                 String keyPrefix = color + "_" + singularType;
 
                 PLANKS.put(color + "_" + type, registerBlock(color + "_" + type, () ->
-                        new BrightBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).lightLevel(litBlockEmission()))));
+                        new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS))));
                 PLANKS.put(keyPrefix + "_stairs", registerBlock(keyPrefix + "_stairs", () -> {
                     BlockState baseState = PLANKS.get(color + "_" + type).get().defaultBlockState();
-                    return new BrightFlammableStairs(baseState, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS).lightLevel(litBlockEmission()));
+                    return new StairBlock(baseState, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS));
                 }));
                 PLANKS.put(keyPrefix + "_slab", registerBlock(keyPrefix + "_slab", () ->
-                        new BrightFlammableSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).lightLevel(litBlockEmission()))));
+                        new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB))));
                 PLANKS.put(keyPrefix + "_fence", registerBlock(keyPrefix + "_fence", () ->
-                        new BrightFlammableFence(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE).lightLevel(litBlockEmission()))));
+                        new FenceBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE))));
                 PLANKS.put(keyPrefix + "_fence_gate", registerBlock(keyPrefix + "_fence_gate", () ->
-                        new BrightFlammableFenceGate(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE).lightLevel(litBlockEmission()),
+                        new FenceGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_FENCE_GATE),
                                 SoundEvents.FENCE_GATE_OPEN, SoundEvents.FENCE_GATE_CLOSE)));
                 PLANKS.put(keyPrefix + "_pressure_plate", registerBlock(keyPrefix + "_pressure_plate", () ->
-                        new BrightPressurePlate(BlockSetType.PressurePlateSensitivity.EVERYTHING, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE).lightLevel(litBlockEmission()), BlockSetType.OAK)));
+                        new PressurePlateBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PRESSURE_PLATE))));
                 PLANKS.put(keyPrefix + "_button", registerBlock(keyPrefix + "_button", () ->
-                        new BrightButton(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON).lightLevel(litBlockEmission()), BlockSetType.OAK, 30, true)));
+                        new ButtonBlock(BlockSetType.OAK, 30, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_BUTTON))));
                 PLANKS.put(keyPrefix + "_trapdoor", registerBlock(keyPrefix + "_trapdoor", () ->
-                        new BrightTrapDoor(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR).lightLevel(litBlockEmission()), BlockSetType.OAK)));
+                        new TrapDoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_TRAPDOOR))));
                 PLANKS.put(keyPrefix + "_door", registerBlock(keyPrefix + "_door", () ->
-                        new BrightDoor(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR).lightLevel(litBlockEmission()), BlockSetType.OAK)));
+                        new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR))));
 
             }
 
@@ -158,19 +155,19 @@ public class ColorsBlocks {
                 String keyPrefix = color + "_" + singularType;
 
                 STONE_BLOCKS.put(color + "_" + type, registerBlock(color + "_" + type, () ->
-                        new BrightBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).lightLevel(litBlockEmission()))));
+                        new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE))));
                 STONE_BLOCKS.put(keyPrefix + "_stairs", registerBlock(keyPrefix + "_stairs", () -> {
                     BlockState baseState = STONE_BLOCKS.get(color + "_" + type).get().defaultBlockState();
-                    return new BrightStairs(baseState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS).lightLevel(litBlockEmission()));
+                    return new StairBlock(baseState, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_STAIRS));
                 }));
                 STONE_BLOCKS.put(keyPrefix + "_slab", registerBlock(keyPrefix + "_slab", () ->
-                        new BrightSlab(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB).lightLevel(litBlockEmission()))));
+                        new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_SLAB))));
                 STONE_BLOCKS.put(keyPrefix + "_wall", registerBlock(keyPrefix + "_wall", () ->
-                        new BrightWall(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL).lightLevel(litBlockEmission()))));
+                        new WallBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.COBBLESTONE_WALL))));
                 STONE_BLOCKS.put(keyPrefix + "_pressure_plate", registerBlock(keyPrefix + "_pressure_plate", () ->
-                        new BrightPressurePlate(BlockSetType.PressurePlateSensitivity.MOBS, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE).lightLevel(litBlockEmission()), BlockSetType.STONE)));
+                        new PressurePlateBlock(BlockSetType.STONE, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_PRESSURE_PLATE))));
                 STONE_BLOCKS.put(keyPrefix + "_button", registerBlock(keyPrefix + "_button", () ->
-                        new BrightButton(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON).lightLevel(litBlockEmission()), BlockSetType.STONE, 20, false)));
+                        new ButtonBlock(BlockSetType.STONE, 20, BlockBehaviour.Properties.ofFullCopy(Blocks.STONE_BUTTON))));
             }
         }
     }

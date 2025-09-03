@@ -1,5 +1,10 @@
 Changelog BBL Colors
 
+1.3.1
+Disabled Color Handler for BBL Colors, this fixes particle being tinted as well as some textures not looking correct
+Started Migration from BBL Core classes to vanilla classes
+Deprecated Glowstone spray can
+
 1.3.0
 Completely reworked rendering, instead of relying on BBL Core tinting we are now data generating colored textures
 This will fix issues with mods like Storage Drawers when there custom drawers would always be white when using BBL Colors blocks

@@ -12,6 +12,8 @@ import java.util.Map;
 import static com.benbenlaw.colors.block.ColorsBlocks.*;
 import static com.benbenlaw.colors.item.ColorsItems.APPLES;
 
+
+@Deprecated(since = "1.3.1", forRemoval = true)
 public class ColorHandler {
 
     List<Map<String, DeferredBlock<Block>>> blockGroups = List.of(
@@ -22,18 +24,18 @@ public class ColorHandler {
 
     @SubscribeEvent
     public void registerBlockColors(final RegisterColorHandlersEvent.Block event) {
-        for (Map<String, DeferredBlock<Block>> blocks : blockGroups) {
-            blocks.values().forEach(block -> event.register(new IColored.BlockColors(), block.get()));
-        }
+        //for (Map<String, DeferredBlock<Block>> blocks : blockGroups) {
+        //    blocks.values().forEach(block -> event.register(new IColored.BlockColors(), block.get()));
+        //}
     }
 
     @SubscribeEvent
     public void onItemColors(RegisterColorHandlersEvent.Item event) {
-        for (Map<String, DeferredBlock<Block>> blocks : blockGroups) {
-            blocks.values().forEach(block -> event.register(new IColored.ItemColors(), block.get()));
-        }
-
-        //Apples
-        APPLES.values().forEach(item -> event.register(new IColored.ItemColors(), item.get()));
+        //for (Map<String, DeferredBlock<Block>> blocks : blockGroups) {
+        //    blocks.values().forEach(block -> event.register(new IColored.ItemColors(), block.get()));
+        //}
+//
+        ////Apples
+        //APPLES.values().forEach(item -> event.register(new IColored.ItemColors(), item.get()));
     }
 }
