@@ -1,5 +1,8 @@
 Changelog BBL Colors
 
+1.3.2
+Fixed some items using default item textures instead of the generated ones
+
 1.3.1
 Disabled Color Handler for BBL Colors, this fixes particle being tinted as well as some textures not looking correct
 Started Migration from BBL Core classes to vanilla classes

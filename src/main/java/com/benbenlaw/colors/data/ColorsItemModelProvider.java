@@ -60,16 +60,16 @@ public class ColorsItemModelProvider extends ItemModelProvider {
             tallGrass(entry.getValue(), "tall_grass");
         }
         for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.POPPY.entrySet()) {
-            saplingItem(entry.getValue(), "poppy");
+            saplingItem(entry.getValue(), entry.getKey());
         }
         for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.DANDELION.entrySet()) {
-            saplingItem(entry.getValue(), "dandelion");
+            saplingItem(entry.getValue(), entry.getKey());
         }
         for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.SAPLINGS.entrySet()) {
-            saplingItem(entry.getValue(), "sapling");
+            saplingItem(entry.getValue(), entry.getKey());
         }
         for (Map.Entry<String, DeferredItem<Item>> entry : ColorsItems.APPLES.entrySet()) {
-            simpleItem(entry.getValue(), "apple");
+            simpleItem(entry.getValue(), entry.getKey());
         }
     }
 

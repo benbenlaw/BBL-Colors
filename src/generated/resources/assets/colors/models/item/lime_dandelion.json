@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "colors:block/dandelion"
+    "layer0": "colors:block/lime_dandelion"
   }
 }
