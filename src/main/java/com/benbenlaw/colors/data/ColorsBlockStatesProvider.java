@@ -40,8 +40,10 @@ public class ColorsBlockStatesProvider extends BlockStateProvider {
         for (String color : ColorList.COLORS) {
 
             //Sapling
-            simpleBlock(SAPLINGS.get(color + "_sapling").get(), models().cross("sapling", modLoc("block/" + color + "_sapling"))
+            simpleBlock(SAPLINGS.get(color + "_sapling").get(), models().cross( color + "_sapling", modLoc("block/" + color + "_sapling"))
                     .texture("cross", modLoc("block/" + color + "_sapling")).renderType("cutout"));
+
+
 
             //Wood
             logBlock((RotatedPillarBlock) LOGS.get(color + "_log").get());

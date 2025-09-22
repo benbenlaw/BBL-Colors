@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "colors:block/sapling"
+      "model": "colors:block/green_sapling"
     }
   }
 }
