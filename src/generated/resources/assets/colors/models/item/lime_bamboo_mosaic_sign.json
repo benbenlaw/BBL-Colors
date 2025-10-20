@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "colors:item/lime_bamboo_mosaic_sign"
+  }
+}

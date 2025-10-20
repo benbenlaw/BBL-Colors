@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "item": "minecraft:chain"
+    },
+    "S": {
+      "item": "colors:black_planks"
+    }
+  },
+  "pattern": [
+    "I I",
+    "SSS",
+    "SSS"
+  ],
+  "result": {
+    "count": 3,
+    "id": "colors:black_plank_hanging_sign"
+  }
+}

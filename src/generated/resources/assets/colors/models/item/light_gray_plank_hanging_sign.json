@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "colors:item/light_gray_plank_hanging_sign"
+  }
+}

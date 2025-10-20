@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "I": {
+      "tag": "c:rods/wooden"
+    },
+    "S": {
+      "item": "colors:green_bamboo_planks"
+    }
+  },
+  "pattern": [
+    "SSS",
+    "SSS",
+    " I "
+  ],
+  "result": {
+    "count": 3,
+    "id": "colors:green_bamboo_plank_sign"
+  }
+}
