@@ -12,6 +12,7 @@ import java.util.Comparator;
 import java.util.function.Supplier;
 
 import static com.benbenlaw.colors.block.ColorsBlocks.*;
+import static com.benbenlaw.colors.block.ColorsBlocks.PLANKS;
 import static com.benbenlaw.colors.item.ColorsItems.*;
 
 public class ColorsCreativeTab {

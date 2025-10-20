@@ -184,6 +184,10 @@ public class ColorsBlockStatesProvider extends BlockStateProvider {
                 doorBlockWithRenderType((DoorBlock) PLANKS.get(keyPrefix + "_door").get(), ResourceLocation.parse("colors:block/" + color + "_" + singularType + "_door_bottom"), ResourceLocation.parse("colors:block/" + color + "_" + singularType + "_door_top"), "cutout");
                 trapdoorBlockWithRenderType((TrapDoorBlock) PLANKS.get(keyPrefix + "_trapdoor").get(), blockTexture(PLANKS.get(keyPrefix + "_trapdoor").get()), true, "cutout");
 
+                signBlock((StandingSignBlock) PLANKS.get(keyPrefix + "_sign").get(),
+                        (WallSignBlock) PLANKS.get(keyPrefix + "_wall_sign").get(), blockTexture(PLANKS.get(color + "_" + type).get()));
+                hangingSignBlock((CeilingHangingSignBlock) PLANKS.get(keyPrefix + "_hanging_sign").get(), (WallHangingSignBlock) PLANKS.get(keyPrefix + "_wall_hanging_sign").get(), blockTexture(PLANKS.get(color + "_" + type).get()));
+
                 itemModels().withExistingParent(keyPrefix + "_slab", modLoc("block/" + keyPrefix + "_slab"));
                 itemModels().withExistingParent(keyPrefix + "_stairs", modLoc("block/" + keyPrefix + "_stairs"));
                 itemModels().withExistingParent(keyPrefix + "_pressure_plate", modLoc("block/" + keyPrefix + "_pressure_plate"));
@@ -194,6 +198,9 @@ public class ColorsBlockStatesProvider extends BlockStateProvider {
                 itemModels().withExistingParent(keyPrefix + "_fence_gate", modLoc("block/" + keyPrefix + "_fence_gate"));
                 itemModels().basicItem(PLANKS.get(keyPrefix + "_door").get().asItem());
                 itemModels().withExistingParent(keyPrefix + "_trapdoor", modLoc("block/" + keyPrefix + "_trapdoor_bottom"));
+
+                itemModels().basicItem(PLANKS.get(keyPrefix + "_sign").get().asItem());
+                itemModels().basicItem(PLANKS.get(keyPrefix + "_hanging_sign").get().asItem());
             }
         }
     }

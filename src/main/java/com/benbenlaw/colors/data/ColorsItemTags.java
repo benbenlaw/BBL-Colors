@@ -3,6 +3,7 @@ package com.benbenlaw.colors.data;
 import com.benbenlaw.colors.Colors;
 import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
+import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.util.ColorsTags;
 import com.benbenlaw.core.util.ColorList;
 import com.benbenlaw.core.util.CoreTags;
@@ -69,6 +70,15 @@ public class ColorsItemTags extends ItemTagsProvider {
                         STONE_BLOCKS.get(keyPrefix + "_pressure_plate").get().asItem(),
                         STONE_BLOCKS.get(keyPrefix + "_button").get().asItem()
                 );
+            }
+
+            for (String type : ColorsItems.PLANKS.keySet()) {
+                if (type.endsWith(color + "_hanging_sign")) {
+                    tag(ItemTags.HANGING_SIGNS).add(ColorsItems.PLANKS.get(type).get().asItem());
+                }
+                else if (type.endsWith(color + "_sign")) {
+                    tag(ItemTags.SIGNS).add(ColorsItems.PLANKS.get(type).get().asItem());
+                }
             }
 
             for (String type : DIRT.keySet()) {

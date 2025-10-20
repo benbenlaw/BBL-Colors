@@ -51,6 +51,11 @@ public class ColorsLangProvider extends LanguageProvider {
                 addBlockTranslation(keyPrefix + "_button", formatName(color) + " " + formatName(singularType) + " Button");
                 addBlockTranslation(keyPrefix + "_trapdoor", formatName(color) + " " + formatName(singularType) + " Trapdoor");
                 addBlockTranslation(keyPrefix + "_door", formatName(color) + " " + formatName(singularType) + " Door");
+                addBlockTranslation(keyPrefix + "_sign", formatName(color) + " " + formatName(singularType) + " Sign");
+                addBlockTranslation(keyPrefix + "_wall_sign", formatName(color) + " " + formatName(singularType) + " Sign");
+                addBlockTranslation(keyPrefix + "_hanging_sign", formatName(color) + " " + formatName(singularType) + " Hanging Sign");
+                addBlockTranslation(keyPrefix + "_wall_hanging_sign", formatName(color) + " " + formatName(singularType) + " Hanging Sign");
+
 
             }
 

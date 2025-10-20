@@ -1,6 +1,7 @@
 package com.benbenlaw.colors;
 
 import com.benbenlaw.colors.block.ColorsBlocks;
+import com.benbenlaw.colors.block.sets.ColorsWoodTypes;
 import com.benbenlaw.colors.config.StartupConfig;
 import com.benbenlaw.colors.config.WorldGenConfig;
 import com.benbenlaw.colors.item.ColorsCreativeTab;
@@ -8,10 +9,11 @@ import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.maps.StrippedLogMap;
 import com.benbenlaw.colors.util.ColorHandler;
 import com.benbenlaw.colors.worldgen.ColorsWorldGen;
-import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.client.renderer.Sheets;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
+import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -19,15 +21,14 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
+import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
 import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.apache.logging.log4j.LogManager;
 
-import java.awt.*;
 import java.util.Map;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
@@ -51,8 +52,11 @@ public class Colors{
 
         modEventBus.addListener(this::registerCapabilities);
         modEventBus.addListener(this::commonSetup);
+        modEventBus.addListener(ColorsBlocks::addPlanksToSigns);
+
 
         if (FMLEnvironment.dist == Dist.CLIENT) {
+            modEventBus.addListener(ColorsWoodTypes::clientSetup);
             modEventBus.register(new ColorHandler());
         }
 
@@ -69,6 +73,7 @@ public class Colors{
             //event.register(ClocheMenus.CLOCHE_MENU.get(), ClocheScreen::new);
         }
     }
+
 
     public void commonSetup(final FMLCommonSetupEvent event) {
 

@@ -50,7 +50,8 @@ public class DataGenerators {
                 "poppy", "prismarine", "prismarine_bricks", "road", "short_grass", "stone",
                 "stone_bricks", "stripped_bamboo", "stripped_bamboo_top",
                 "stripped_log", "stripped_log_top", "tall_grass_bottom", "tall_grass_top",
-                "tiles", "triple"
+                "tiles", "triple", "plank_sign", "bamboo_plank_sign", "bamboo_mosaic_sign", "plank_hanging_sign",
+                "bamboo_plank_hanging_sign", "bamboo_mosaic_hanging_sign"
         };
 
         // Tell the existing file helper about all the textures we are going to generate, so it doesn't think they are missing when validating models.

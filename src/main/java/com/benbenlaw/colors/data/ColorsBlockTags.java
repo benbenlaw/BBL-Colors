@@ -63,7 +63,12 @@ public class ColorsBlockTags extends BlockTagsProvider {
                         PLANKS.get(keyPrefix + "_pressure_plate").get(),
                         PLANKS.get(keyPrefix + "_button").get(),
                         PLANKS.get(keyPrefix + "_trapdoor").get(),
-                        PLANKS.get(keyPrefix + "_door").get()
+                        PLANKS.get(keyPrefix + "_door").get(),
+                        PLANKS.get(keyPrefix + "_sign").get(),
+                        PLANKS.get(keyPrefix + "_wall_sign").get(),
+                        PLANKS.get(keyPrefix + "_hanging_sign").get(),
+                        PLANKS.get(keyPrefix + "_wall_hanging_sign").get()
+
                 );
             }
 
@@ -188,12 +193,6 @@ public class ColorsBlockTags extends BlockTagsProvider {
                     tag(BlockTags.SAPLINGS).add(SAPLINGS.get(type).get());
                 }
             }
-
-
-
-
-
-
         }
 
         //Mineable With Pickaxe

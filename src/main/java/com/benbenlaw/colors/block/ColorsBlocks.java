@@ -1,6 +1,7 @@
 package com.benbenlaw.colors.block;
 
 import com.benbenlaw.colors.Colors;
+import com.benbenlaw.colors.block.sets.ColorsWoodTypes;
 import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
 import com.benbenlaw.colors.item.ColorsItems;
@@ -12,11 +13,13 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.bus.api.IEventBus;
+import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -25,6 +28,8 @@ import java.util.Map;
 import java.util.function.Supplier;
 import java.util.function.ToIntFunction;
 
+import static com.benbenlaw.colors.block.sets.ColorsWoodTypes.WOOD_TYPES;
+import static com.benbenlaw.colors.block.sets.ColorsWoodTypes.getWoodType;
 import static com.benbenlaw.colors.worldgen.ColorsConfiguredFeatures.GRASS_BONEMEAL_KEY;
 import static com.benbenlaw.colors.worldgen.tree.ColorsTreeGrowers.TREE_GROWERS;
 
@@ -49,6 +54,7 @@ public class ColorsBlocks {
     public static final Map<String, DeferredBlock<Block>> SAPLINGS = new HashMap<>();
 
     static {
+
         for (String color : ColorList.COLORS) {
 
             //Sapling
@@ -146,6 +152,18 @@ public class ColorsBlocks {
                 PLANKS.put(keyPrefix + "_door", registerBlock(keyPrefix + "_door", () ->
                         new DoorBlock(BlockSetType.OAK, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_DOOR))));
 
+                System.out.println("woodtyp2 " + getWoodType(color, singularType));
+
+                PLANKS.put(keyPrefix + "_sign", registerBlockWithoutBlockItem(keyPrefix + "_sign", () ->
+                        new StandingSignBlock(getWoodType(color, singularType), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN))));
+                PLANKS.put(keyPrefix + "_wall_sign", registerBlockWithoutBlockItem(keyPrefix + "_wall_sign", () ->
+                        new WallSignBlock(getWoodType(color, singularType), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN))));
+
+                PLANKS.put(keyPrefix + "_hanging_sign", registerBlockWithoutBlockItem(keyPrefix + "_hanging_sign", () ->
+                        new CeilingHangingSignBlock(getWoodType(color, singularType), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN))));
+                PLANKS.put(keyPrefix + "_wall_hanging_sign", registerBlockWithoutBlockItem(keyPrefix + "_wall_hanging_sign", () ->
+                        new WallHangingSignBlock(getWoodType(color, singularType), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN))));
+
             }
 
             //Stone Blocks
@@ -171,6 +189,22 @@ public class ColorsBlocks {
             }
         }
     }
+
+    public static void addPlanksToSigns(BlockEntityTypeAddBlocksEvent event) {
+
+        for (String color : ColorList.COLORS) {
+            event.modify(BlockEntityType.SIGN, PLANKS.get(color + "_plank_sign").get(), PLANKS.get(color +"_plank_wall_sign").get());
+            event.modify(BlockEntityType.HANGING_SIGN, PLANKS.get(color + "_plank_hanging_sign").get(), PLANKS.get(color + "_plank_wall_hanging_sign").get());
+
+            event.modify(BlockEntityType.SIGN, PLANKS.get(color + "_bamboo_plank_sign").get(), PLANKS.get(color +"_bamboo_plank_wall_sign").get());
+            event.modify(BlockEntityType.HANGING_SIGN, PLANKS.get(color + "_bamboo_plank_hanging_sign").get(), PLANKS.get(color + "_bamboo_plank_wall_hanging_sign").get());
+
+            event.modify(BlockEntityType.SIGN, PLANKS.get(color + "_bamboo_mosaic_sign").get(), PLANKS.get(color +"_bamboo_mosaic_wall_sign").get());
+            event.modify(BlockEntityType.HANGING_SIGN, PLANKS.get(color + "_bamboo_mosaic_hanging_sign").get(), PLANKS.get(color + "_bamboo_mosaic_wall_hanging_sign").get());
+
+        }
+    }
+
 
     private static <T extends Block> DeferredBlock<T> registerBlockWithoutBlockItem(String name, Supplier<T> block) {
         return BLOCKS.register(name, block);

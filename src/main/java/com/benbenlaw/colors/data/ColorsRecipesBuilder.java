@@ -6,6 +6,7 @@ import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
 import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.util.ColorsTags;
+import com.benbenlaw.core.item.colored.ColoredItem;
 import com.benbenlaw.core.util.ColorList;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -58,7 +59,6 @@ public class ColorsRecipesBuilder extends RecipeProvider {
                 }
 
 
-
                 switch (type) {
                     case "prismarine" ->
                             stonecutterResultFromBase(consumer, ColorsBlocks.STONE_BLOCKS.get(color + "_prismarine"), Blocks.PRISMARINE, 1);
@@ -89,11 +89,9 @@ public class ColorsRecipesBuilder extends RecipeProvider {
                 //Vanilla to Colored
                 if (type.equals("bamboo_planks")) {
                     stonecutterResultFromBase(consumer, ColorsBlocks.PLANKS.get(color + "_" + type), Blocks.BAMBOO_PLANKS, 1);
-                }
-                else if (type.equals("bamboo_mosaic")) {
+                } else if (type.equals("bamboo_mosaic")) {
                     stonecutterResultFromBase(consumer, ColorsBlocks.PLANKS.get(color + "_" + type), Blocks.BAMBOO_MOSAIC, 1);
-                }
-                else {
+                } else {
                     stonecutterResultFromBase(consumer, ColorsBlocks.PLANKS.get(color + "_" + type), Blocks.OAK_PLANKS, 1);
                 }
 
@@ -107,7 +105,9 @@ public class ColorsRecipesBuilder extends RecipeProvider {
                 ItemLike button = ColorsBlocks.PLANKS.get(keyPrefix + "_button");
                 ItemLike trapdoor = ColorsBlocks.PLANKS.get(keyPrefix + "_trapdoor");
                 ItemLike door = ColorsBlocks.PLANKS.get(keyPrefix + "_door");
-                createPlankLikeCraftingRecipes(consumer, plank, stairs, slab, fence, fence_gate, pressure_plate, button, trapdoor, door);
+                ItemLike sign = ColorsItems.PLANKS.get(keyPrefix + "_sign");
+                ItemLike hangingSign = ColorsItems.PLANKS.get(keyPrefix + "_hanging_sign");
+                createPlankLikeCraftingRecipes(consumer, plank, stairs, slab, fence, fence_gate, pressure_plate, button, trapdoor, door, sign, hangingSign);
             }
 
             //Sapling
@@ -200,10 +200,9 @@ public class ColorsRecipesBuilder extends RecipeProvider {
                 .save(consumer, ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, "crafting/glowstone_spray_can"));
 
 
-
     }
 
-    public void createPlankLikeCraftingRecipes(RecipeOutput consumer, ItemLike plank, ItemLike stairs, ItemLike slab, ItemLike fence, ItemLike fence_gate, ItemLike pressure_plate, ItemLike button, ItemLike trapdoor, ItemLike door) {
+    public void createPlankLikeCraftingRecipes(RecipeOutput consumer, ItemLike plank, ItemLike stairs, ItemLike slab, ItemLike fence, ItemLike fence_gate, ItemLike pressure_plate, ItemLike button, ItemLike trapdoor, ItemLike door, ItemLike sign, ItemLike hangingSign) {
         createStairsRecipe(consumer, plank, stairs);
         createSlabRecipe(consumer, plank, slab);
         createFenceRecipe(consumer, plank, fence);
@@ -212,6 +211,9 @@ public class ColorsRecipesBuilder extends RecipeProvider {
         createButtonRecipe(consumer, plank, button);
         createTrapdoorRecipe(consumer, plank, trapdoor);
         createDoorRecipe(consumer, plank, door);
+        createSignRecipe(consumer, plank, sign);
+        createHangingSignRecipe(consumer, plank, hangingSign);
+        
     }
 
     public void createStoneLikeCraftingRecipes(RecipeOutput consumer, ItemLike stone, ItemLike stairs, ItemLike slab, ItemLike wall, ItemLike pressure_plate, ItemLike button) {
@@ -221,6 +223,30 @@ public class ColorsRecipesBuilder extends RecipeProvider {
         createPressurePlateRecipe(consumer, stone, pressure_plate);
         createButtonRecipe(consumer, stone, button);
         createStonecutterRecipes(consumer, stone, stairs, slab, wall, pressure_plate, button);
+    }
+
+    public void createHangingSignRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 3)
+                .pattern("I I")
+                .pattern("SSS")
+                .pattern("SSS")
+                .define('S', input)
+                .define('I', Items.CHAIN)
+                .unlockedBy("has_item", has(input))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, "crafting/" + outputPath));
+    }
+
+    public void createSignRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
+        String outputPath = BuiltInRegistries.ITEM.getKey(output.asItem()).getPath();
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, output, 3)
+                .pattern("SSS")
+                .pattern("SSS")
+                .pattern(" I ")
+                .define('S', input)
+                .define('I', Tags.Items.RODS_WOODEN)
+                .unlockedBy("has_item", has(input))
+                .save(consumer, ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, "crafting/" + outputPath));
     }
 
     public void createFenceRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {
