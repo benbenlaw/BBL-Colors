@@ -2,8 +2,6 @@ package com.benbenlaw.colors.data;
 
 import com.benbenlaw.colors.block.ColorsBlocks;
 import com.benbenlaw.colors.item.ColorsItems;
-import com.benbenlaw.core.item.colored.ColoredItem;
-import com.benbenlaw.core.util.ColorList;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.neoforged.neoforge.common.data.DataMapProvider;

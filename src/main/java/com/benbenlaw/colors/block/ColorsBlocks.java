@@ -5,9 +5,7 @@ import com.benbenlaw.colors.block.sets.ColorsWoodTypes;
 import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
 import com.benbenlaw.colors.item.ColorsItems;
-import com.benbenlaw.core.block.brightable.*;
-import com.benbenlaw.core.block.brightable.flammable.*;
-import com.benbenlaw.core.util.ColorList;
+import com.benbenlaw.colors.util.ColorList;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -59,70 +57,62 @@ public class ColorsBlocks {
 
             //Sapling
             SAPLINGS.put(color + "_sapling", registerBlock(color + "_sapling", () ->
-                    new BrightSapling(TREE_GROWERS.get(color), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).lightLevel(litBlockEmission()))));
+                    new SaplingBlock(TREE_GROWERS.get(color), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).lightLevel(litBlockEmission()))));
 
             //Bamboo
             BAMBOO.put(color + "_bamboo", registerBlock(color + "_bamboo", () ->
-                    new BrightFlammableLog(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_BLOCK).lightLevel(litBlockEmission()))));
+                    new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_BLOCK))));
             BAMBOO.put(color + "_stripped_bamboo", registerBlock(color + "_stripped_bamboo", () ->
-                    new BrightFlammableLog(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_BLOCK).lightLevel(litBlockEmission()))));
+                    new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BAMBOO_BLOCK))));
 
             //Logs
             LOGS.put(color + "_log", registerBlock(color + "_log", () ->
-                    new BrightFlammableLog(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).lightLevel(litBlockEmission()))));
+                    new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG))));
             LOGS.put(color + "_stripped_log", registerBlock(color + "_stripped_log", () ->
-                    new BrightFlammableLog(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG).lightLevel(litBlockEmission()))));
+                    new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG))));
 
             //Wood
             WOOD.put(color + "_wood", registerBlock(color + "_wood", () ->
-                    new BrightFlammableLog(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD).lightLevel(litBlockEmission()))));
+                    new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD))));
             WOOD.put(color + "_stripped_wood", registerBlock(color + "_stripped_wood", () ->
-                    new BrightFlammableLog(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD).lightLevel(litBlockEmission()))));
+                    new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD))));
 
             //Leaves
             LEAVES.put(color + "_leaves", registerBlock(color + "_leaves", () ->
-                    new BrightFlammableLeaves(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).lightLevel(litBlockEmission()))));
+                    new TintedParticleLeavesBlock(0.02F, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
+                    }));
 
             //Tall Grass
             TALL_GRASS.put(color + "_tall_grass", registerBlock(color + "_tall_grass", () ->
-                    new BrightDoublePlantBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS).lightLevel(litBlockEmission()))));
+                    new DoublePlantBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.TALL_GRASS))));
 
             //Short Grass
             SHORT_GRASS.put(color + "_short_grass", registerBlock(color + "_short_grass", () ->
-                    new BrightTallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).lightLevel(litBlockEmission()),
-                            (BrightDoublePlantBlock) TALL_GRASS.get(color + "_tall_grass").get())));
+                    new TallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS))));
 
             //Dandelion
             DANDELION.put(color + "_dandelion", registerBlock(color + "_dandelion", () ->
-                    new BrightFlower(MobEffects.ABSORPTION, 0.0f, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).sound(SoundType.GRASS)
-                    .lightLevel(litBlockEmission()).noOcclusion())));
+                    new FlowerBlock(MobEffects.ABSORPTION, 0.0f, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).sound(SoundType.GRASS).noOcclusion())));
             POTTED_DANDELION.put(color + "_potted_dandelion", registerBlockWithoutBlockItem(color + "_potted_dandelion", () ->
-                    new BrightFlowerPot(() -> (FlowerPotBlock) Blocks.FLOWER_POT, DANDELION.get(color + "_dandelion"), BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION)
-                    .lightLevel(litBlockEmission()))));
+                    new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, DANDELION.get(color + "_dandelion"), BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION))));
 
             //Poppy
             POPPY.put(color + "_poppy", registerBlock(color + "_poppy", () ->
-                    new BrightFlower(MobEffects.ABSORPTION, 0.0f, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).sound(SoundType.GRASS)
-                    .lightLevel(litBlockEmission()).noOcclusion())));
+                    new FlowerBlock(MobEffects.ABSORPTION, 0.0f, BlockBehaviour.Properties.ofFullCopy(Blocks.POPPY).sound(SoundType.GRASS).noOcclusion())));
             POTTED_POPPY.put(color + "_potted_poppy", registerBlockWithoutBlockItem(color + "_potted_poppy", () ->
-                    new BrightFlowerPot(() -> (FlowerPotBlock) Blocks.FLOWER_POT, POPPY.get(color + "_poppy"), BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_POPPY)
-                    .lightLevel(litBlockEmission()))));
+                    new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, POPPY.get(color + "_poppy"), BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_POPPY))));
 
             //Dirt
             DIRT.put(color + "_dirt", registerBlock(color + "_dirt", () ->
-                    new BrightBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).lightLevel(litBlockEmission()))));
+                    new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DIRT).lightLevel(litBlockEmission()))));
 
             //Grass Blocks
             GRASS_BLOCK.put(color + "_grass_block", registerBlock(color + "_grass_block", () ->
-                    new BrightGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK).lightLevel(litBlockEmission()),
-                            GRASS_BONEMEAL_KEY.get(color),
-                            DIRT.get(color + "_dirt").get(),
-                            SHORT_GRASS.get(color + "_short_grass").get()
-            )));
+                    new GrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK))));
 
             //Crafting Table
             CRAFTING_TABLE.put(color + "_crafting_table", registerBlock(color + "_crafting_table", () ->
-                    new BrightCraftingTable(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission()))));
+                    new CraftingTableBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CRAFTING_TABLE).lightLevel(litBlockEmission()))));
 
             //Planks Blocks
             for (String type : PlankLikeBlocksList.PLANKS) {

@@ -1,6 +1,6 @@
 package com.benbenlaw.colors.data;
 
-import com.benbenlaw.core.block.colored.util.ColorMap;
+import com.benbenlaw.colors.util.ColorMap;
 import com.google.common.hash.Hashing;
 import com.google.common.hash.HashingOutputStream;
 import net.minecraft.data.CachedOutput;

@@ -10,6 +10,7 @@ import com.benbenlaw.colors.maps.StrippedLogMap;
 import com.benbenlaw.colors.util.ColorHandler;
 import com.benbenlaw.colors.worldgen.ColorsWorldGen;
 import net.minecraft.client.renderer.Sheets;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
@@ -62,8 +63,8 @@ public class Colors{
 
     }
 
-    public void registerCapabilities(RegisterCapabilitiesEvent event) {
-        //ClocheBlockEntities.registerCapabilities(event);
+    public static Identifier identifier(String path) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, path);
     }
 
     @EventBusSubscriber(modid = Colors.MOD_ID, value = Dist.CLIENT)

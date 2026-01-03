@@ -3,14 +3,13 @@ package com.benbenlaw.colors.data;
 import com.benbenlaw.colors.Colors;
 import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
-import com.benbenlaw.core.util.ColorList;
+import com.benbenlaw.colors.util.ColorList;
 import net.minecraft.data.PackOutput;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.common.data.LanguageProvider;
 
 
 public class ColorsLangProvider extends LanguageProvider {
-    public ColorsLangProvider(PackOutput output, ExistingFileHelper existingFileHelper) {
+    public ColorsLangProvider(PackOutput output) {
         super(output, Colors.MOD_ID, "en_us");
     }
 

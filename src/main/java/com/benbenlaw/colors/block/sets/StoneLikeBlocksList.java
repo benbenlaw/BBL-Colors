@@ -4,7 +4,7 @@ import java.util.List;
 
 public class StoneLikeBlocksList {
 
-    public static final List<String>  STONE_BLOCKS = List.of(
+    public static final List<String> STONE_BLOCKS = List.of(
             "stone",
             "braid",
             "polished",

@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.util.StringRepresentable;
@@ -25,16 +26,16 @@ import java.util.concurrent.CompletableFuture;
 public class DataGenerators {
 
     @SubscribeEvent
-    public static void gatherData(GatherDataEvent event) {
+    public static void gatherData(GatherDataEvent.Client event) {
 
         DataGenerator generator = event.getGenerator();
         PackOutput packOutput = generator.getPackOutput();
         CompletableFuture<HolderLookup.Provider> lookupProvider = event.getLookupProvider();
-        ExistingFileHelper existingFileHelper = event.getExistingFileHelper();
 
         //Generate Textures FIRST!
-        generator.addProvider(event.includeClient(), new ColorsTextureProvider(packOutput));
+        generator.addProvider(true,  new ColorsTextureProvider(packOutput));
 
+        /*
         String[] baseTextures = new String[] {
                 "apple", "sapling", "bamboo_mosaic_door", "bamboo_plank_door",
                 "asteroid", "asteroid_bricks", "asteroid_tiles", "bamboo",
@@ -60,30 +61,32 @@ public class DataGenerators {
             trackGeneratedTintedTextures(existingFileHelper, ColorMap.COLOR_MAP, base, "item");
         }
 
-        generator.addProvider(event.includeServer(), new ColorsRecipesBuilder(packOutput, event.getLookupProvider()));
+         */
 
-        generator.addProvider(event.includeServer(), new LootTableProvider(packOutput, Collections.emptySet(),
+        generator.addProvider(true, new ColorsRecipesBuilder.Runner (packOutput, event.getLookupProvider()));
+
+        generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
                 List.of(new LootTableProvider.SubProviderEntry(ColorsLootTableProvider::new, LootContextParamSets.BLOCK)), event.getLookupProvider()));
 
-        ColorsBlockTags blockTags = new ColorsBlockTags(packOutput, lookupProvider, event.getExistingFileHelper());
-        generator.addProvider(event.includeServer(), blockTags);
+        ColorsBlockTags blockTags = new ColorsBlockTags(packOutput, lookupProvider);
+        generator.addProvider(true, blockTags);
 
-        ColorsItemTags itemTags = new ColorsItemTags(packOutput, lookupProvider, blockTags, event.getExistingFileHelper());
-        generator.addProvider(event.includeServer(), itemTags);
-        generator.addProvider(event.includeClient(), new ColorsItemModelProvider(packOutput, event.getExistingFileHelper()));
+        ColorsItemTags itemTags = new ColorsItemTags(packOutput, lookupProvider);
+        generator.addProvider(true, itemTags);
+        generator.addProvider(true, new ColorsItemModelProvider(packOutput));
 
-        generator.addProvider(event.includeClient(), new ColorsBlockStatesProvider(packOutput, existingFileHelper));
-        generator.addProvider(event.includeClient(), new ColorsLangProvider(packOutput, event.getExistingFileHelper()));
-        generator.addProvider(event.includeServer(), new ColorsWorldGenProviders(packOutput, lookupProvider));
-        generator.addProvider(event.includeServer(), new ColorsDataMaps(packOutput, lookupProvider));
+        generator.addProvider(true, new ColorsBlockStatesProvider(packOutput));
+        generator.addProvider(true, new ColorsLangProvider(packOutput));
+        generator.addProvider(true, new ColorsWorldGenProviders(packOutput, lookupProvider));
+        generator.addProvider(true, new ColorsDataMaps(packOutput, lookupProvider));
 
 
     }
 
-    private static void trackGeneratedTintedTextures(ExistingFileHelper exHelper, Map<? extends StringRepresentable, Integer> colorMap, String baseTexture, String type) {
+    private static void trackGeneratedTintedTextures(Map<? extends StringRepresentable, Integer> colorMap, String baseTexture, String type) {
         for (var dyeColor : colorMap.keySet()) {
             // The same path that ColorsTextureProvider writes to:
-            ResourceLocation loc = ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, type + "/" + dyeColor.getSerializedName() + "_" + baseTexture);
+            Identifier loc = Identifier.fromNamespaceAndPath(Colors.MOD_ID, type + "/" + dyeColor.getSerializedName() + "_" + baseTexture);
 
             exHelper.trackGenerated(loc, PackType.CLIENT_RESOURCES, ".png", "textures");
         }

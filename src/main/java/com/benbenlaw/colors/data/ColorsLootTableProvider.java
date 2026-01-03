@@ -3,7 +3,7 @@ package com.benbenlaw.colors.data;
 import com.benbenlaw.colors.block.ColorsBlocks;
 import com.benbenlaw.colors.item.ColorsItems;
 import it.unimi.dsi.fastutil.objects.ReferenceOpenHashSet;
-import net.minecraft.advancements.critereon.ItemPredicate;
+import net.minecraft.advancements.criterion.ItemPredicate;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.loot.packs.VanillaBlockLoot;
@@ -32,8 +32,6 @@ import java.util.Map;
 import java.util.Set;
 
 public class ColorsLootTableProvider extends VanillaBlockLoot {
-
-    HolderLookup.RegistryLookup<Enchantment> registrylookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
 
     public ColorsLootTableProvider(HolderLookup.Provider provider) {
         super(provider);
@@ -146,8 +144,8 @@ public class ColorsLootTableProvider extends VanillaBlockLoot {
 
     private static final float[] NORMAL_LEAVES_STICK_CHANCES = new float[]{0.02F, 0.022222223F, 0.025F, 0.033333335F, 0.1F};
 
+    protected final LootItemCondition.Builder HAS_SHEARS = MatchTool.toolMatches(ItemPredicate.Builder.item().of(this.registries.lookupOrThrow(Registries.ITEM), Tags.Items.TOOLS_SHEAR));
 
-    protected static final LootItemCondition.Builder HAS_SHEARS = MatchTool.toolMatches(ItemPredicate.Builder.item().of(Tags.Items.TOOLS_SHEAR));
     private LootItemCondition.Builder hasShearsOrSilkTouch() {
         return HAS_SHEARS.or(this.hasSilkTouch());
     }

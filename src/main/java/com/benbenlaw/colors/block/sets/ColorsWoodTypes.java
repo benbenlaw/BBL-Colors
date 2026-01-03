@@ -1,9 +1,8 @@
 package com.benbenlaw.colors.block.sets;
 
 import com.benbenlaw.colors.Colors;
-import com.benbenlaw.core.util.ColorList;
+import com.benbenlaw.colors.util.ColorList;
 import net.minecraft.client.renderer.Sheets;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -31,12 +30,12 @@ public class ColorsWoodTypes {
 
                 // Register BlockSetType
                 BlockSetType woodSet = BlockSetType.register(
-                        new BlockSetType(ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, setName).toString())
+                        new BlockSetType(Colors.identifier(setName).toString())
                 );
 
                 // Register WoodType (singular)
                 WoodType woodType = WoodType.register(
-                        new WoodType(ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, woodTypeName).toString(), woodSet)
+                        new WoodType(Colors.identifier(woodTypeName).toString(), woodSet)
                 );
 
                 // Put singular name in the map

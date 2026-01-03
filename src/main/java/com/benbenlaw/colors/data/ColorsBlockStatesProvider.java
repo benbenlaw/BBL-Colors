@@ -3,6 +3,7 @@ package com.benbenlaw.colors.data;
 import com.benbenlaw.colors.Colors;
 import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
+import com.benbenlaw.colors.util.ColorList;
 import com.benbenlaw.core.block.brightable.BrightCraftingTable;
 import com.benbenlaw.core.block.brightable.BrightDoublePlantBlock;
 import com.benbenlaw.core.block.brightable.BrightTallGrassBlock;
