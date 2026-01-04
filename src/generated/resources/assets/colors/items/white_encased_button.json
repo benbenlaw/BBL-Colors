@@ -1,0 +1,6 @@
+{
+  "model": {
+    "type": "minecraft:model",
+    "model": "colors:block/white_encased_button_inventory"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": "colors:blue_bamboo_mosaic",
+    "W": "#c:rods/wooden"
+  },
+  "pattern": [
+    "WSW",
+    "WSW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:blue_bamboo_mosaic_fence_gate"
+  }
+}

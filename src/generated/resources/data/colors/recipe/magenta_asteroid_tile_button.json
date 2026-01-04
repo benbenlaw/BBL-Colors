@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "colors:magenta_asteroid_tiles"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:magenta_asteroid_tile_button"
+  }
+}

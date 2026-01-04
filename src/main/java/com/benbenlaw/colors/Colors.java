@@ -87,6 +87,14 @@ public class Colors{
                 DeferredBlock<Block> block = ColorsBlocks.POTTED_DANDELION.get(poppyBlock);
                 ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(entry.getValue().getId(), block);
             }
+
+
+            for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.SAPLINGS.entrySet()) {
+                String poppyBlock = entry.getKey().replace("_sapling", "_potted_sapling");
+                DeferredBlock<Block> block = ColorsBlocks.POTTED_SAPLING.get(poppyBlock);
+                ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(entry.getValue().getId(), block);
+            }
+
          });
 
 

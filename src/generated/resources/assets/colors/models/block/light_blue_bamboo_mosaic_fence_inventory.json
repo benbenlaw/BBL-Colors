@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "texture": "colors:block/light_blue_bamboo_mosaic"
+  }
+}

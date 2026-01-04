@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "colors:yellow_cobblestone_bricks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:yellow_cobblestone_brick_button"
+  }
+}

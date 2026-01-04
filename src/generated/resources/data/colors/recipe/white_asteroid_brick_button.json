@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "colors:white_asteroid_bricks"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:white_asteroid_brick_button"
+  }
+}

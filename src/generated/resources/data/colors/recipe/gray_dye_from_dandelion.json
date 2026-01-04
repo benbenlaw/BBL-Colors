@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "colors:gray_dandelion"
+  ],
+  "result": {
+    "count": 1,
+    "id": "minecraft:gray_dye"
+  }
+}

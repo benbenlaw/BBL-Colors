@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "D": "#c:dyes/lime",
+    "I": "#c:ingots/iron"
+  },
+  "pattern": [
+    " I ",
+    "IDI",
+    "IDI"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:lime_spray_can"
+  }
+}

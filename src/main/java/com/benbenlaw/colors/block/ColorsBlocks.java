@@ -53,6 +53,7 @@ public class ColorsBlocks {
     public static final Map<String, DeferredBlock<Block>> WOOD = new HashMap<>();
     public static final Map<String, DeferredBlock<Block>> BAMBOO = new HashMap<>();
     public static final Map<String, DeferredBlock<Block>> SAPLINGS = new HashMap<>();
+    public static final Map<String, DeferredBlock<Block>> POTTED_SAPLING = new HashMap<>();
 
     static {
 
@@ -61,6 +62,8 @@ public class ColorsBlocks {
             //Sapling
             SAPLINGS.put(color + "_sapling", registerBlock(color + "_sapling", () ->
                     new SaplingBlock(TREE_GROWERS.get(color), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING).setId(createID(color + "_sapling")))));
+            POTTED_SAPLING.put(color + "_potted_sapling", registerBlockWithoutBlockItem(color + "_potted_sapling", () ->
+                    new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT, SAPLINGS.get(color + "_sapling"), BlockBehaviour.Properties.ofFullCopy(Blocks.POTTED_DANDELION).setId(createID(color + "_potted_sapling")))));
 
             //Bamboo
             BAMBOO.put(color + "_bamboo", registerBlock(color + "_bamboo", () ->

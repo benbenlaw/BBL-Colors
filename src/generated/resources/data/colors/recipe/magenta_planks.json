@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "#colors:magenta_logs"
+  ],
+  "result": {
+    "count": 4,
+    "id": "colors:magenta_planks"
+  }
+}

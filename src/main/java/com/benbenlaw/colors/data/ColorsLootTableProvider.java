@@ -108,6 +108,14 @@ public class ColorsLootTableProvider extends VanillaBlockLoot {
             this.add(block.get(), createPotFlowerItemTable(entry.getValue().get()));
         }
 
+        //Potted Saplings
+        for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.SAPLINGS.entrySet()) {
+            this.dropSelf(entry.getValue().get());
+            String sapling = entry.getKey().replace("_sapling", "_potted_sapling");
+            DeferredBlock<Block> saplingBlock = ColorsBlocks.POTTED_SAPLING.get(sapling);
+            this.add(entry.getValue().get(), createPotFlowerItemTable(saplingBlock.get()));
+        }
+
         //Logs
         for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.LOGS.entrySet()) {
             this.dropSelf(entry.getValue().get());

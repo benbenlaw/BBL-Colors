@@ -68,9 +68,6 @@ public class ColorsModelProvider extends ModelProvider {
         for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.TALL_GRASS.entrySet()) {
             itemModels.generateFlatItem(entry.getValue().get().asItem(), ModelTemplates.FLAT_ITEM);
         }
-        for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.SAPLINGS.entrySet()) {
-            itemModels.generateFlatItem(entry.getValue().get().asItem(), ModelTemplates.FLAT_ITEM);
-        }
         for (Map.Entry<String, DeferredItem<Item>> entry : ColorsItems.APPLES.entrySet()) {
             itemModels.generateFlatItem(entry.getValue().get().asItem(), ModelTemplates.FLAT_ITEM);
         }
@@ -78,7 +75,7 @@ public class ColorsModelProvider extends ModelProvider {
         //Blocks
 
         for (String color : ColorList.COLORS) {
-            blockModels.createCrossBlock(SAPLINGS.get(color + "_sapling").get(), PlantType.TINTED);
+            blockModels.createPlantWithDefaultItem(SAPLINGS.get(color + "_sapling").get(), POTTED_SAPLING.get(color + "_potted_sapling").get(), PlantType.NOT_TINTED);
 
             blockModels.woodProvider(LOGS.get(color + "_log").get()).logWithHorizontal(LOGS.get(color + "_log").get()).wood(WOOD.get(color + "_wood").get());
             blockModels.woodProvider(LOGS.get(color + "_stripped_log").get()).logWithHorizontal(LOGS.get(color + "_stripped_log").get()).wood(WOOD.get(color + "_stripped_wood").get());
@@ -91,9 +88,8 @@ public class ColorsModelProvider extends ModelProvider {
 
             blockModels.createDoublePlant(TALL_GRASS.get(color + "_tall_grass").get(), PlantType.TINTED);
 
-            //Maybe needs pots too
-            blockModels.createPlantWithDefaultItem(POPPY.get(color + "_poppy").get(), POTTED_POPPY.get(color + "_potted_poppy").get(), PlantType.TINTED);
-            blockModels.createPlantWithDefaultItem(DANDELION.get(color + "_dandelion").get(), POTTED_DANDELION.get(color + "_potted_dandelion").get(), BlockModelGenerators.PlantType.TINTED);
+            blockModels.createPlantWithDefaultItem(POPPY.get(color + "_poppy").get(), POTTED_POPPY.get(color + "_potted_poppy").get(), PlantType.NOT_TINTED);
+            blockModels.createPlantWithDefaultItem(DANDELION.get(color + "_dandelion").get(), POTTED_DANDELION.get(color + "_potted_dandelion").get(), PlantType.NOT_TINTED);
 
             blockModels.createTrivialCube(DIRT.get(color + "_dirt").get());
 

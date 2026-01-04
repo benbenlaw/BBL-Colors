@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button_inventory",
+  "textures": {
+    "texture": "colors:block/orange_cracked_stone_bricks"
+  }
+}

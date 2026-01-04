@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "colors:orange_chaotic"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:orange_chaotic_button"
+  }
+}

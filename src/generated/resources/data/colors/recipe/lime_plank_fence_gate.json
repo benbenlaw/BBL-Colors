@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": "colors:lime_planks",
+    "W": "#c:rods/wooden"
+  },
+  "pattern": [
+    "WSW",
+    "WSW"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:lime_plank_fence_gate"
+  }
+}
