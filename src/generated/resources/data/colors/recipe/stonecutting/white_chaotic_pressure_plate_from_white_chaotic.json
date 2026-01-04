@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:white_chaotic"
-  },
+  "ingredient": "colors:white_chaotic",
   "result": {
     "count": 1,
     "id": "colors:white_chaotic_pressure_plate"

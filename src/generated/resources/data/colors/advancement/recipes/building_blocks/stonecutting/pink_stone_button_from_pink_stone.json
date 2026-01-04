@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pink_stone": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:pink_stone"
+            "items": "colors:pink_stone_button"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_pink_stone"
+      "has_"
     ]
   ],
   "rewards": {

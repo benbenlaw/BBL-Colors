@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_red_asteroid_tiles": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:red_asteroid_tiles"
+            "items": "colors:red_asteroid_tile_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_red_asteroid_tiles"
+      "has_"
     ]
   ],
   "rewards": {

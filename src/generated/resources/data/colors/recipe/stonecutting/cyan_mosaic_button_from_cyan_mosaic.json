@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:cyan_mosaic"
-  },
+  "ingredient": "colors:cyan_mosaic",
   "result": {
     "count": 1,
     "id": "colors:cyan_mosaic_button"

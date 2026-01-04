@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_light_blue_triple": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:light_blue_triple"
+            "items": "colors:light_blue_triple_pressure_plate"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_light_blue_triple"
+      "has_"
     ]
   ],
   "rewards": {

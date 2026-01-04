@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_red_stone_bricks": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:red_stone_bricks"
+            "items": "colors:red_stone_brick_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_red_stone_bricks"
+      "has_"
     ]
   ],
   "rewards": {

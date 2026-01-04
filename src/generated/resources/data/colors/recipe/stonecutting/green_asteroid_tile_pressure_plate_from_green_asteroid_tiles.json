@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:green_asteroid_tiles"
-  },
+  "ingredient": "colors:green_asteroid_tiles",
   "result": {
     "count": 1,
     "id": "colors:green_asteroid_tile_pressure_plate"

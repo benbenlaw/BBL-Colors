@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:lime_encased"
-  },
+  "ingredient": "colors:lime_encased",
   "result": {
     "count": 1,
     "id": "colors:lime_encased_stairs"

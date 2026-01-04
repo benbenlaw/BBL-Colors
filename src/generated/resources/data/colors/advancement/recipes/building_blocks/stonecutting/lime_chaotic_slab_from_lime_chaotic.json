@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lime_chaotic": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:lime_chaotic"
+            "items": "colors:lime_chaotic_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lime_chaotic"
+      "has_"
     ]
   ],
   "rewards": {

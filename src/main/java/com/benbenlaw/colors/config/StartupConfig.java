@@ -11,9 +11,9 @@ public class StartupConfig  {
 
     static {
 
-        // Caveopolis Configs
-        BUILDER.comment("Caveopolis Startup Config")
-                .push("Caveopolis");
+        //Colors Configs
+        BUILDER.comment("Colors Startup Config")
+                .push("Colors");
 
         sprayCanDurability = BUILDER.comment("Spray can durability, default = 2048")
                 .define("Max Spray Can Durability", 2048);
@@ -22,7 +22,6 @@ public class StartupConfig  {
                 .define("Light Block Emission", 15);
 
         BUILDER.pop();
-
 
 
         //LAST

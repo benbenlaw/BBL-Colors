@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blue_tiles": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:blue_tiles"
+            "items": "colors:blue_tile_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_blue_tiles"
+      "has_"
     ]
   ],
   "rewards": {

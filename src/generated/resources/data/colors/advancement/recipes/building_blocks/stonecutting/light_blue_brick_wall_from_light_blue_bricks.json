@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_light_blue_bricks": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:light_blue_bricks"
+            "items": "colors:light_blue_brick_wall"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_light_blue_bricks"
+      "has_"
     ]
   ],
   "rewards": {

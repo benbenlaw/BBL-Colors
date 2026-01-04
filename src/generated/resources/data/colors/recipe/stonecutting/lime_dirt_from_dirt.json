@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:dirt"
-  },
+  "ingredient": "minecraft:dirt",
   "result": {
     "count": 1,
     "id": "colors:lime_dirt"

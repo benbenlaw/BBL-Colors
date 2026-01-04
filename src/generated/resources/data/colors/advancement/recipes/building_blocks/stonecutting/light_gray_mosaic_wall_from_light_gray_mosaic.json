@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_light_gray_mosaic": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:light_gray_mosaic"
+            "items": "colors:light_gray_mosaic_wall"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_light_gray_mosaic"
+      "has_"
     ]
   ],
   "rewards": {

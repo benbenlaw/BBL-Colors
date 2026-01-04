@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_purple_mosaic": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:purple_mosaic"
+            "items": "colors:purple_mosaic_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_purple_mosaic"
+      "has_"
     ]
   ],
   "rewards": {

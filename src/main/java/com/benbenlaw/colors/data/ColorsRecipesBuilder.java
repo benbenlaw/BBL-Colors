@@ -7,6 +7,7 @@ import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
 import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.util.ColorList;
 import com.benbenlaw.colors.util.ColorsTags;
+import net.minecraft.advancements.criterion.InventoryChangeTrigger;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -189,32 +190,19 @@ public class ColorsRecipesBuilder extends RecipeProvider {
                     .save(output);
 
             //Flower to Dye
-            ItemLike dye = (ItemLike) BuiltInRegistries.ITEM.get(Identifier.parse("minecraft:" + color + "_dye")).orElse(null);
+            ItemLike dye = BuiltInRegistries.ITEM.getValue(Identifier.parse("minecraft:" + color + "_dye"));
             shapeless(RecipeCategory.MISC, dye, 1)
                     .requires(ColorsBlocks.POPPY.get(color + "_poppy"))
                     .unlockedBy("has_item", has(ColorsBlocks.POPPY.get(color + "_poppy")))
-                    .save(output);
+                    .save(output, Colors.identifier(color + "_dye_from_poppy").toString());
 
             shapeless(RecipeCategory.MISC, dye, 1)
                     .requires(ColorsBlocks.DANDELION.get(color + "_dandelion"))
                     .unlockedBy("has_item", has(ColorsBlocks.DANDELION.get(color + "_dandelion")))
-                    .save(output);
+                    .save(output, Colors.identifier(color + "_dye_from_dandelion").toString());
 
 
         }
-
-        //Glowstone Spray Can
-        ItemLike glowstoneSprayCan = ColorsItems.GLOWSTONE_SPRAY_CAN;
-        shaped(RecipeCategory.TOOLS, glowstoneSprayCan, 1)
-                .pattern(" G ")
-                .pattern("GSG")
-                .pattern("GSG")
-                .define('G', Tags.Items.DUSTS_GLOWSTONE)
-                .define('S', Tags.Items.INGOTS_IRON)
-                .unlockedBy("has_item", has(Tags.Items.DUSTS_GLOWSTONE))
-                .save(output);
-
-
     }
 
     public void createPlankLikeCraftingRecipes(RecipeOutput output, ItemLike plank, ItemLike stairs, ItemLike slab, ItemLike fence, ItemLike fence_gate, ItemLike pressure_plate, ItemLike button, ItemLike trapdoor, ItemLike door, ItemLike sign, ItemLike hangingSign) {
@@ -316,7 +304,7 @@ public class ColorsRecipesBuilder extends RecipeProvider {
     }
 
     protected static void stonecutterResultFromBase(@NotNull RecipeOutput output, ItemLike itemLike, ItemLike itemLike1, int i) {
-        SingleItemRecipeBuilder.stonecutting(Ingredient.of(itemLike1), RecipeCategory.BUILDING_BLOCKS, itemLike, i).save(output, Colors.identifier("stonecutting/" + getConversionRecipeName(itemLike, itemLike1)).toString());
+        SingleItemRecipeBuilder.stonecutting(Ingredient.of(itemLike1), RecipeCategory.BUILDING_BLOCKS, itemLike, i).unlockedBy("has_", InventoryChangeTrigger.TriggerInstance.hasItems(itemLike)) .save(output, Colors.identifier("stonecutting/" + getConversionRecipeName(itemLike, itemLike1)).toString());
     }
 
     public void createStairsRecipe(RecipeOutput consumer, ItemLike input, ItemLike output) {

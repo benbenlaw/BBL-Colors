@@ -33,7 +33,6 @@
         "state": {
           "Name": "colors:cyan_sapling",
           "Properties": {
-            "lit": "false",
             "stage": "0"
           }
         }

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:light_blue_asteroid"
-  },
+  "ingredient": "colors:light_blue_asteroid",
   "result": {
     "count": 1,
     "id": "colors:light_blue_asteroid_button"

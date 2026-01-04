@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cyan_encased": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:cyan_encased"
+            "items": "colors:cyan_encased_wall"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cyan_encased"
+      "has_"
     ]
   ],
   "rewards": {

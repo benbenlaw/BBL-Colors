@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:purple_cobblestone"
-  },
+  "ingredient": "colors:purple_cobblestone",
   "result": {
     "count": 1,
     "id": "colors:purple_cobblestone_pressure_plate"

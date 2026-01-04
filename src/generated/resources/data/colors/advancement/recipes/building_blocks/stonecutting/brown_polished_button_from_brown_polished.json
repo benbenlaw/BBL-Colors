@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_brown_polished": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:brown_polished"
+            "items": "colors:brown_polished_button"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_brown_polished"
+      "has_"
     ]
   ],
   "rewards": {

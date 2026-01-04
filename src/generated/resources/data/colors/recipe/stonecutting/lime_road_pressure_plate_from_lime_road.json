@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:lime_road"
-  },
+  "ingredient": "colors:lime_road",
   "result": {
     "count": 1,
     "id": "colors:lime_road_pressure_plate"

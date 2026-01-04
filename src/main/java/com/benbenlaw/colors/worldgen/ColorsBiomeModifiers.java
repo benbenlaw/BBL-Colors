@@ -1,12 +1,11 @@
 package com.benbenlaw.colors.worldgen;
 
 import com.benbenlaw.colors.Colors;
-import com.benbenlaw.core.util.ColorList;
+import com.benbenlaw.colors.util.ColorList;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.biome.Biomes;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.neoforged.neoforge.common.Tags;
@@ -141,11 +140,8 @@ public class ColorsBiomeModifiers {
         }
 
     }
-
-
-
         private static ResourceKey<BiomeModifier> registerKey(String name) {
-        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ResourceLocation.fromNamespaceAndPath(Colors.MOD_ID, name));
+        return ResourceKey.create(NeoForgeRegistries.Keys.BIOME_MODIFIERS, Colors.identifier(name));
     }
 }
 

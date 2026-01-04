@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:black_tiles"
-  },
+  "ingredient": "colors:black_tiles",
   "result": {
     "count": 1,
     "id": "colors:black_tile_pressure_plate"

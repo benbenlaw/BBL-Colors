@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pink_marble": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:pink_marble"
+            "items": "colors:pink_marble_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_pink_marble"
+      "has_"
     ]
   ],
   "rewards": {

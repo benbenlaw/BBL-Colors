@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:lime_asteroid"
-  },
+  "ingredient": "colors:lime_asteroid",
   "result": {
     "count": 1,
     "id": "colors:lime_asteroid_wall"

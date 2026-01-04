@@ -1,7 +1,0 @@
-{
-  "parent": "colors:block/tintable_flower_pot_cross",
-  "render_type": "minecraft:cutout",
-  "textures": {
-    "plant": "colors:block/dandelion"
-  }
-}

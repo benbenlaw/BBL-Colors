@@ -1,7 +1,7 @@
 package com.benbenlaw.colors.worldgen.tree;
 
 import com.benbenlaw.colors.Colors;
-import com.benbenlaw.core.util.ColorList;
+import com.benbenlaw.colors.util.ColorList;
 import net.minecraft.world.level.block.grower.TreeGrower;
 
 import java.util.HashMap;

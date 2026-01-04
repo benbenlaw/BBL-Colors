@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:white_braid"
-  },
+  "ingredient": "colors:white_braid",
   "result": {
     "count": 1,
     "id": "colors:white_braid_wall"

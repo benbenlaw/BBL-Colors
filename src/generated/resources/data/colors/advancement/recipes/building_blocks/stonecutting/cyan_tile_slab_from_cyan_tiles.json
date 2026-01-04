@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cyan_tiles": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:cyan_tiles"
+            "items": "colors:cyan_tile_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cyan_tiles"
+      "has_"
     ]
   ],
   "rewards": {

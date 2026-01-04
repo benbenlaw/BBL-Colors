@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:blue_asteroid_tiles"
-  },
+  "ingredient": "colors:blue_asteroid_tiles",
   "result": {
     "count": 2,
     "id": "colors:blue_asteroid_tile_slab"

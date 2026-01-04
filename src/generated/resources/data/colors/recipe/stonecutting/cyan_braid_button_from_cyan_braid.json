@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:cyan_braid"
-  },
+  "ingredient": "colors:cyan_braid",
   "result": {
     "count": 1,
     "id": "colors:cyan_braid_button"

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cyan_polished": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:cyan_polished"
+            "items": "colors:cyan_polished_wall"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cyan_polished"
+      "has_"
     ]
   ],
   "rewards": {

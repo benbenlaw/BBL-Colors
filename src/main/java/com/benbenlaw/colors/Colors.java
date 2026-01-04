@@ -7,14 +7,11 @@ import com.benbenlaw.colors.config.WorldGenConfig;
 import com.benbenlaw.colors.item.ColorsCreativeTab;
 import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.maps.StrippedLogMap;
-import com.benbenlaw.colors.util.ColorHandler;
 import com.benbenlaw.colors.worldgen.ColorsWorldGen;
-import net.minecraft.client.renderer.Sheets;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -22,10 +19,8 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
-import net.neoforged.neoforge.capabilities.RegisterCapabilitiesEvent;
 import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.apache.logging.log4j.LogManager;
@@ -51,14 +46,12 @@ public class Colors{
         modContainer.registerConfig(ModConfig.Type.STARTUP, WorldGenConfig.SPEC, "bbl/colors/worldgen.toml");
         modContainer.registerConfig(ModConfig.Type.STARTUP, StartupConfig.SPEC, "bbl/colors/startup.toml");
 
-        modEventBus.addListener(this::registerCapabilities);
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(ColorsBlocks::addPlanksToSigns);
 
 
-        if (FMLEnvironment.dist == Dist.CLIENT) {
+        if (FMLEnvironment.getDist() == Dist.CLIENT) {
             modEventBus.addListener(ColorsWoodTypes::clientSetup);
-            modEventBus.register(new ColorHandler());
         }
 
     }

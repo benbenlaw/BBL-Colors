@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:white_mosaic"
-  },
+  "ingredient": "colors:white_mosaic",
   "result": {
     "count": 1,
     "id": "colors:white_mosaic_stairs"

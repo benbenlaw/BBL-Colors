@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_purple_encased": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:purple_encased"
+            "items": "colors:purple_encased_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_purple_encased"
+      "has_"
     ]
   ],
   "rewards": {

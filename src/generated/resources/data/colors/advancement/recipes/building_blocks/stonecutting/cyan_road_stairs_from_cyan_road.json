@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_cyan_road": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:cyan_road"
+            "items": "colors:cyan_road_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_cyan_road"
+      "has_"
     ]
   ],
   "rewards": {

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:orange_prismarine"
-  },
+  "ingredient": "colors:orange_prismarine",
   "result": {
     "count": 1,
     "id": "colors:orange_prismarine_pressure_plate"

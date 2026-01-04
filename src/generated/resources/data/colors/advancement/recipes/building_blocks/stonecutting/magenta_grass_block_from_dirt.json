@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_dirt": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:dirt"
+            "items": "colors:magenta_grass_block"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_dirt"
+      "has_"
     ]
   ],
   "rewards": {

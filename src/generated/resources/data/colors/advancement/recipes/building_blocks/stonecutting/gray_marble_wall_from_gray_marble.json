@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gray_marble": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:gray_marble"
+            "items": "colors:gray_marble_wall"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_gray_marble"
+      "has_"
     ]
   ],
   "rewards": {

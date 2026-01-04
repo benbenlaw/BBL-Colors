@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_magenta_stone_bricks": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:magenta_stone_bricks"
+            "items": "colors:magenta_stone_brick_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_magenta_stone_bricks"
+      "has_"
     ]
   ],
   "rewards": {

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:orange_encased"
-  },
+  "ingredient": "colors:orange_encased",
   "result": {
     "count": 1,
     "id": "colors:orange_encased_wall"

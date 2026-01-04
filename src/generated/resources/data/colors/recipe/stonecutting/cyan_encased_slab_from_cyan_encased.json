@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:cyan_encased"
-  },
+  "ingredient": "colors:cyan_encased",
   "result": {
     "count": 2,
     "id": "colors:cyan_encased_slab"

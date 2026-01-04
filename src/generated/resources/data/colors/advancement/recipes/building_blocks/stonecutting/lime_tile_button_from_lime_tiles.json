@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lime_tiles": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:lime_tiles"
+            "items": "colors:lime_tile_button"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lime_tiles"
+      "has_"
     ]
   ],
   "rewards": {

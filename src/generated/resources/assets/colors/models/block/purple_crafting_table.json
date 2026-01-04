@@ -3,9 +3,10 @@
   "textures": {
     "down": "colors:block/purple_planks",
     "east": "colors:block/purple_crafting_table_side",
-    "north": "colors:block/purple_crafting_table",
+    "north": "colors:block/purple_crafting_table_front",
+    "particle": "colors:block/purple_crafting_table_front",
     "south": "colors:block/purple_crafting_table_side",
     "up": "colors:block/purple_crafting_table_top",
-    "west": "colors:block/purple_crafting_table"
+    "west": "colors:block/purple_crafting_table_front"
   }
 }

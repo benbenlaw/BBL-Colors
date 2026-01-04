@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lime_road": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:lime_road"
+            "items": "colors:lime_road_pressure_plate"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lime_road"
+      "has_"
     ]
   ],
   "rewards": {

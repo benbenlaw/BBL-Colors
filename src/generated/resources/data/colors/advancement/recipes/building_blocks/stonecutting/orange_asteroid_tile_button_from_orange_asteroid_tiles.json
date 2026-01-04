@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_orange_asteroid_tiles": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:orange_asteroid_tiles"
+            "items": "colors:orange_asteroid_tile_button"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_orange_asteroid_tiles"
+      "has_"
     ]
   ],
   "rewards": {

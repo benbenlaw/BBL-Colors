@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_green_chaotic": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:green_chaotic"
+            "items": "colors:green_chaotic_wall"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_green_chaotic"
+      "has_"
     ]
   ],
   "rewards": {

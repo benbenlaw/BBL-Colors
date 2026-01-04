@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_green_braid": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:green_braid"
+            "items": "colors:green_braid_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_green_braid"
+      "has_"
     ]
   ],
   "rewards": {

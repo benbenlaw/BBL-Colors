@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:lime_tiles"
-  },
+  "ingredient": "colors:lime_tiles",
   "result": {
     "count": 1,
     "id": "colors:lime_tile_wall"

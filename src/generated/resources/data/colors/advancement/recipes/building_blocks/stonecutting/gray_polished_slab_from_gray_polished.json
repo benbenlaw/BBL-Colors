@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gray_polished": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:gray_polished"
+            "items": "colors:gray_polished_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_gray_polished"
+      "has_"
     ]
   ],
   "rewards": {

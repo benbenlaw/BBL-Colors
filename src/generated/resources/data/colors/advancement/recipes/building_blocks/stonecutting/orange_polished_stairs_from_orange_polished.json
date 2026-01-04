@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_orange_polished": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:orange_polished"
+            "items": "colors:orange_polished_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_orange_polished"
+      "has_"
     ]
   ],
   "rewards": {

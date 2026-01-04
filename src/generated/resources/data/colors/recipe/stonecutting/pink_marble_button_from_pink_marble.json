@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:pink_marble"
-  },
+  "ingredient": "colors:pink_marble",
   "result": {
     "count": 1,
     "id": "colors:pink_marble_button"

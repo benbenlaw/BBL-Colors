@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:pink_asteroid_tiles"
-  },
+  "ingredient": "colors:pink_asteroid_tiles",
   "result": {
     "count": 1,
     "id": "colors:pink_asteroid_tile_wall"

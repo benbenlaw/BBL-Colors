@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_magenta_asteroid_bricks": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:magenta_asteroid_bricks"
+            "items": "colors:magenta_asteroid_brick_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_magenta_asteroid_bricks"
+      "has_"
     ]
   ],
   "rewards": {

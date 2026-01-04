@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:pink_mosaic"
-  },
+  "ingredient": "colors:pink_mosaic",
   "result": {
     "count": 2,
     "id": "colors:pink_mosaic_slab"

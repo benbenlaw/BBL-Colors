@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:magenta_road"
-  },
+  "ingredient": "colors:magenta_road",
   "result": {
     "count": 1,
     "id": "colors:magenta_road_stairs"

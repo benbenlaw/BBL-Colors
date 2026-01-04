@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:pink_braid"
-  },
+  "ingredient": "colors:pink_braid",
   "result": {
     "count": 1,
     "id": "colors:pink_braid_stairs"

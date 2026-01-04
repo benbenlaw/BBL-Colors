@@ -1,20 +1,16 @@
 package com.benbenlaw.colors.data;
 
 import com.benbenlaw.colors.Colors;
-import com.benbenlaw.core.block.colored.util.ColorMap;
-import com.benbenlaw.core.util.ColorList;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.resources.Identifier;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.packs.PackType;
 import net.minecraft.util.StringRepresentable;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.common.data.ExistingFileHelper;
 import net.neoforged.neoforge.data.event.GatherDataEvent;
 
 import java.util.Collections;
@@ -73,9 +69,7 @@ public class DataGenerators {
 
         ColorsItemTags itemTags = new ColorsItemTags(packOutput, lookupProvider);
         generator.addProvider(true, itemTags);
-        generator.addProvider(true, new ColorsItemModelProvider(packOutput));
-
-        generator.addProvider(true, new ColorsBlockStatesProvider(packOutput));
+        generator.addProvider(true, new ColorsModelProvider(packOutput));
         generator.addProvider(true, new ColorsLangProvider(packOutput));
         generator.addProvider(true, new ColorsWorldGenProviders(packOutput, lookupProvider));
         generator.addProvider(true, new ColorsDataMaps(packOutput, lookupProvider));
@@ -88,7 +82,7 @@ public class DataGenerators {
             // The same path that ColorsTextureProvider writes to:
             Identifier loc = Identifier.fromNamespaceAndPath(Colors.MOD_ID, type + "/" + dyeColor.getSerializedName() + "_" + baseTexture);
 
-            exHelper.trackGenerated(loc, PackType.CLIENT_RESOURCES, ".png", "textures");
+            //exHelper.trackGenerated(loc, PackType.CLIENT_RESOURCES, ".png", "textures");
         }
     }
 

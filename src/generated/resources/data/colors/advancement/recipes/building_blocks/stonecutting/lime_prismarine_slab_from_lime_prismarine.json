@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lime_prismarine": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:lime_prismarine"
+            "items": "colors:lime_prismarine_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lime_prismarine"
+      "has_"
     ]
   ],
   "rewards": {

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_purple_asteroid": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:purple_asteroid"
+            "items": "colors:purple_asteroid_wall"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_purple_asteroid"
+      "has_"
     ]
   ],
   "rewards": {

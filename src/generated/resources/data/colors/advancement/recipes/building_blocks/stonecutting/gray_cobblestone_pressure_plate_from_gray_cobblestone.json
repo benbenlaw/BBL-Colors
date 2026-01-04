@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gray_cobblestone": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:gray_cobblestone"
+            "items": "colors:gray_cobblestone_pressure_plate"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_gray_cobblestone"
+      "has_"
     ]
   ],
   "rewards": {

@@ -1,7 +1,7 @@
 {
   "variants": {
     "": {
-      "model": "colors:block/potted_dandelion"
+      "model": "colors:block/red_potted_dandelion"
     }
   }
 }

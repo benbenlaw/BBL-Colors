@@ -1,6 +1,5 @@
 {
   "parent": "minecraft:block/door_bottom_left_open",
-  "render_type": "minecraft:cutout",
   "textures": {
     "bottom": "colors:block/brown_plank_door_bottom",
     "top": "colors:block/brown_plank_door_top"

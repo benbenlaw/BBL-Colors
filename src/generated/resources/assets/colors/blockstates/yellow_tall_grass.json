@@ -1,15 +1,9 @@
 {
   "variants": {
-    "half=lower,lit=false": {
+    "half=lower": {
       "model": "colors:block/yellow_tall_grass_bottom"
     },
-    "half=lower,lit=true": {
-      "model": "colors:block/yellow_tall_grass_bottom"
-    },
-    "half=upper,lit=false": {
-      "model": "colors:block/yellow_tall_grass_top"
-    },
-    "half=upper,lit=true": {
+    "half=upper": {
       "model": "colors:block/yellow_tall_grass_top"
     }
   }

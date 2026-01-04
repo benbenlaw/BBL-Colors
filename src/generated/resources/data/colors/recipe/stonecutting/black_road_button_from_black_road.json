@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:black_road"
-  },
+  "ingredient": "colors:black_road",
   "result": {
     "count": 1,
     "id": "colors:black_road_button"

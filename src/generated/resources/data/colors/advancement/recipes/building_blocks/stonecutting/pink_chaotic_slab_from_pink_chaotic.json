@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pink_chaotic": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:pink_chaotic"
+            "items": "colors:pink_chaotic_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_pink_chaotic"
+      "has_"
     ]
   ],
   "rewards": {

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gray_chaotic": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:gray_chaotic"
+            "items": "colors:gray_chaotic_button"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_gray_chaotic"
+      "has_"
     ]
   ],
   "rewards": {

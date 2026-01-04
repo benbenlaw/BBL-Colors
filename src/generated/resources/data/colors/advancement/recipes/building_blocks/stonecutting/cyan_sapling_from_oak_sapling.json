@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_oak_sapling": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "minecraft:oak_sapling"
+            "items": "colors:cyan_sapling"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_oak_sapling"
+      "has_"
     ]
   ],
   "rewards": {

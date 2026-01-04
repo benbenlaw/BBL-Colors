@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:yellow_encased"
-  },
+  "ingredient": "colors:yellow_encased",
   "result": {
     "count": 1,
     "id": "colors:yellow_encased_stairs"

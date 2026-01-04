@@ -1,27 +1,27 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
+    "has_": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:white_cobblestone_stairs"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
     "has_the_recipe": {
       "conditions": {
         "recipe": "colors:stonecutting/white_cobblestone_stairs_from_white_cobblestone"
       },
       "trigger": "minecraft:recipe_unlocked"
-    },
-    "has_white_cobblestone": {
-      "conditions": {
-        "items": [
-          {
-            "items": "colors:white_cobblestone"
-          }
-        ]
-      },
-      "trigger": "minecraft:inventory_changed"
     }
   },
   "requirements": [
     [
       "has_the_recipe",
-      "has_white_cobblestone"
+      "has_"
     ]
   ],
   "rewards": {

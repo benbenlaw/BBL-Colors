@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_lime_braid": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:lime_braid"
+            "items": "colors:lime_braid_pressure_plate"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_lime_braid"
+      "has_"
     ]
   ],
   "rewards": {

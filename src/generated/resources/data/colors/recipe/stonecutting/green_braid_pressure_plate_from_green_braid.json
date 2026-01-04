@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:green_braid"
-  },
+  "ingredient": "colors:green_braid",
   "result": {
     "count": 1,
     "id": "colors:green_braid_pressure_plate"

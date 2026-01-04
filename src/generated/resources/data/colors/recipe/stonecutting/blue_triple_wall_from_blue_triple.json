@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:blue_triple"
-  },
+  "ingredient": "colors:blue_triple",
   "result": {
     "count": 1,
     "id": "colors:blue_triple_wall"

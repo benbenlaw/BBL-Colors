@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_orange_road": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:orange_road"
+            "items": "colors:orange_road_wall"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_orange_road"
+      "has_"
     ]
   ],
   "rewards": {

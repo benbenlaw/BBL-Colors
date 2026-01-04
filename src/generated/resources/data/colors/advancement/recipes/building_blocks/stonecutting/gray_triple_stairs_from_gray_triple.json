@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_gray_triple": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:gray_triple"
+            "items": "colors:gray_triple_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_gray_triple"
+      "has_"
     ]
   ],
   "rewards": {

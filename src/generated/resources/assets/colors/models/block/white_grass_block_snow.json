@@ -2,7 +2,8 @@
   "parent": "minecraft:block/cube_bottom_top",
   "textures": {
     "bottom": "colors:block/white_dirt",
+    "particle": "colors:block/white_dirt",
     "side": "colors:block/white_grass_block_side_snow",
-    "top": "colors:block/white_grass_block_top"
+    "top": "colors:block/white_grass_block_top_snow"
   }
 }

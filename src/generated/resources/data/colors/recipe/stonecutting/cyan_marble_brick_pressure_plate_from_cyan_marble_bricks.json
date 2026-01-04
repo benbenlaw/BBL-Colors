@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:cyan_marble_bricks"
-  },
+  "ingredient": "colors:cyan_marble_bricks",
   "result": {
     "count": 1,
     "id": "colors:cyan_marble_brick_pressure_plate"

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:lime_mosaic"
-  },
+  "ingredient": "colors:lime_mosaic",
   "result": {
     "count": 1,
     "id": "colors:lime_mosaic_wall"

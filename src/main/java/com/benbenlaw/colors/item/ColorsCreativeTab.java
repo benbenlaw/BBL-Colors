@@ -164,9 +164,6 @@ public class ColorsCreativeTab {
                             Item sprayCan = SPRAY_CANS.get(color).get();
                             output.accept(sprayCan);
                         });
-                output.accept(GLOWSTONE_SPRAY_CAN.get());
-
-
 
             }).build());
 

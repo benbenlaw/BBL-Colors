@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:gray_marble"
-  },
+  "ingredient": "colors:gray_marble",
   "result": {
     "count": 1,
     "id": "colors:gray_marble_wall"

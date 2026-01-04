@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:pink_prismarine"
-  },
+  "ingredient": "colors:pink_prismarine",
   "result": {
     "count": 1,
     "id": "colors:pink_prismarine_stairs"

@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "colors:block/cyan_sapling"
+    "layer0": "colors:item/cyan_sapling"
   }
 }

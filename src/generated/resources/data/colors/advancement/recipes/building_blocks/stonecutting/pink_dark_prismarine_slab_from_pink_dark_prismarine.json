@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pink_dark_prismarine": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:pink_dark_prismarine"
+            "items": "colors:pink_dark_prismarine_slab"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_pink_dark_prismarine"
+      "has_"
     ]
   ],
   "rewards": {

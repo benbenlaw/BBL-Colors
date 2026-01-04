@@ -6,28 +6,19 @@
       "entries": [
         {
           "data": {
-            "Name": "colors:purple_dandelion",
-            "Properties": {
-              "lit": "false"
-            }
+            "Name": "colors:purple_dandelion"
           },
           "weight": 10
         },
         {
           "data": {
-            "Name": "colors:purple_poppy",
-            "Properties": {
-              "lit": "false"
-            }
+            "Name": "colors:purple_poppy"
           },
           "weight": 10
         },
         {
           "data": {
-            "Name": "colors:purple_short_grass",
-            "Properties": {
-              "lit": "false"
-            }
+            "Name": "colors:purple_short_grass"
           },
           "weight": 40
         },
@@ -35,8 +26,7 @@
           "data": {
             "Name": "colors:purple_tall_grass",
             "Properties": {
-              "half": "lower",
-              "lit": "false"
+              "half": "lower"
             }
           },
           "weight": 5

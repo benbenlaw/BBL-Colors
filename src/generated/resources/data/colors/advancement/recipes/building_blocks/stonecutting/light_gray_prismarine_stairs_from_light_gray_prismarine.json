@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_light_gray_prismarine": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:light_gray_prismarine"
+            "items": "colors:light_gray_prismarine_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_light_gray_prismarine"
+      "has_"
     ]
   ],
   "rewards": {

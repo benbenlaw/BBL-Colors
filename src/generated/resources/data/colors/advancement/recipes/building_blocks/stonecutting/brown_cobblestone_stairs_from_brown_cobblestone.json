@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_brown_cobblestone": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:brown_cobblestone"
+            "items": "colors:brown_cobblestone_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_brown_cobblestone"
+      "has_"
     ]
   ],
   "rewards": {

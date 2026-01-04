@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:lime_asteroid_tiles"
-  },
+  "ingredient": "colors:lime_asteroid_tiles",
   "result": {
     "count": 1,
     "id": "colors:lime_asteroid_tile_button"

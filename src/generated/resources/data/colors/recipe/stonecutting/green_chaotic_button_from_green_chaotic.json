@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "colors:green_chaotic"
-  },
+  "ingredient": "colors:green_chaotic",
   "result": {
     "count": 1,
     "id": "colors:green_chaotic_button"

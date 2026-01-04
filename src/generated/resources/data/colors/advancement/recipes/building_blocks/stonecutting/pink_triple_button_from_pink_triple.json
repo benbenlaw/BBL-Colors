@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_pink_triple": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:pink_triple"
+            "items": "colors:pink_triple_button"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_pink_triple"
+      "has_"
     ]
   ],
   "rewards": {

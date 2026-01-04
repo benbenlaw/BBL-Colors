@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_black_braid": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:black_braid"
+            "items": "colors:black_braid_stairs"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_black_braid"
+      "has_"
     ]
   ],
   "rewards": {

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blue_chaotic": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:blue_chaotic"
+            "items": "colors:blue_chaotic_pressure_plate"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_blue_chaotic"
+      "has_"
     ]
   ],
   "rewards": {

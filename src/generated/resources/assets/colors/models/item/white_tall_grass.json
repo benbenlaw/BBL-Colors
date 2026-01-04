@@ -1,7 +1,6 @@
 {
   "parent": "minecraft:item/generated",
-  "render_type": "minecraft:cutout",
   "textures": {
-    "layer0": "colors:block/white_tall_grass_top"
+    "layer0": "colors:item/white_tall_grass"
   }
 }

@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_blue_triple": {
+    "has_": {
       "conditions": {
         "items": [
           {
-            "items": "colors:blue_triple"
+            "items": "colors:blue_triple_wall"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_blue_triple"
+      "has_"
     ]
   ],
   "rewards": {
