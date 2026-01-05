@@ -11,6 +11,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.random.WeightedList;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.world.level.block.LeavesBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
@@ -46,12 +47,8 @@ public class ColorsConfiguredFeatures {
 
     static {
         for (String color : ColorList.COLORS) {
-            GRASS_BONEMEAL_KEY.put(color, registerKey("bonemeal_" + color + "_grass_key"));
-            //public static final ResourceKey<ConfiguredFeature<?, ?>> BONEMEAL_BLACK_GRASS_KEY = registerKey("bonemeal_black_grass_key");
-
+            GRASS_BONEMEAL_KEY.put(color, registerKey( color + "_grass_bonemeal"));
             TREES_KEY.put(color, registerKey(color + "_tree"));
-            //public static final ResourceKey<ConfiguredFeature<?, ?>> BLACK_TREE_KEY = registerKey("black_tree");
-
             STONE_KEY.put(color, registerKey(color + "_stone"));
 
         }
@@ -84,12 +81,14 @@ public class ColorsConfiguredFeatures {
                     .build());
 
             //Stone
-
             RuleTest stoneReplaceables = new TagMatchTest(BlockTags.STONE_ORE_REPLACEABLES);
             RuleTest deepslateReplaceables = new TagMatchTest(BlockTags.DEEPSLATE_ORE_REPLACEABLES);
 
-            register(context, STONE_KEY.get(color), Feature.ORE, new OreConfiguration(deepslateReplaceables, ColorsBlocks.STONE_BLOCKS.get(color + "_stone").get().defaultBlockState(), 48));
-
+            if (color.equals("magenta") || color.equals("pink") || color.equals("purple") || color.equals("orange") || color.equals("white") || color.equals("yellow") || color.equals("green") || color.equals("lime")) {
+                register(context, STONE_KEY.get(color), Feature.ORE, new OreConfiguration(stoneReplaceables, ColorsBlocks.STONE_BLOCKS.get(color + "_stone").get().defaultBlockState(), 48));
+            } else {
+                register(context, STONE_KEY.get(color), Feature.ORE, new OreConfiguration(deepslateReplaceables, ColorsBlocks.STONE_BLOCKS.get(color + "_stone").get().defaultBlockState(), 48));
+            }
         }
     }
 

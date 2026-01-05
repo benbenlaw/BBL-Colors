@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    "colors:gray_sandstone"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:gray_sandstone_button"
+  }
+}

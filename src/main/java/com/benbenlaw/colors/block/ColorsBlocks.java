@@ -1,7 +1,8 @@
 package com.benbenlaw.colors.block;
 
 import com.benbenlaw.colors.Colors;
-import com.benbenlaw.colors.block.sets.ColorsWoodTypes;
+import com.benbenlaw.colors.block.custom.ColoredGrassBlock;
+import com.benbenlaw.colors.block.custom.ColoredTallGrassBlock;
 import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
 import com.benbenlaw.colors.item.ColorsItems;
@@ -11,25 +12,19 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import java.awt.*;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.Supplier;
-import java.util.function.ToIntFunction;
 
-import static com.benbenlaw.colors.block.sets.ColorsWoodTypes.WOOD_TYPES;
 import static com.benbenlaw.colors.block.sets.ColorsWoodTypes.getWoodType;
 import static com.benbenlaw.colors.worldgen.ColorsConfiguredFeatures.GRASS_BONEMEAL_KEY;
 import static com.benbenlaw.colors.worldgen.tree.ColorsTreeGrowers.TREE_GROWERS;
@@ -54,10 +49,23 @@ public class ColorsBlocks {
     public static final Map<String, DeferredBlock<Block>> BAMBOO = new HashMap<>();
     public static final Map<String, DeferredBlock<Block>> SAPLINGS = new HashMap<>();
     public static final Map<String, DeferredBlock<Block>> POTTED_SAPLING = new HashMap<>();
+    public static final Map<String, DeferredBlock<Block>> CHESTS = new HashMap<>();
+    public static final Map<String, DeferredBlock<Block>> SAND = new HashMap<>();
 
     static {
 
         for (String color : ColorList.COLORS) {
+
+            //Sand
+            SAND.put(color + "_sand", registerBlock(color + "_sand", () ->
+                    new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).setId(createID(color + "_sand")))));
+
+            //Chest
+            CHESTS.put(color + "_chest", registerBlock(color + "_chest", () ->
+                    new ChestBlock(() -> BlockEntityType.CHEST,
+                            SoundEvents.CHEST_OPEN,
+                            SoundEvents.CHEST_CLOSE,
+                            BlockBehaviour.Properties.ofFullCopy(Blocks.CHEST).setId(createID(color + "_chest")))));
 
             //Sapling
             SAPLINGS.put(color + "_sapling", registerBlock(color + "_sapling", () ->
@@ -85,7 +93,7 @@ public class ColorsBlocks {
 
             //Leaves
             LEAVES.put(color + "_leaves", registerBlock(color + "_leaves", () ->
-                    new TintedParticleLeavesBlock(0.02F, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(createID(color + "_leaves"))) {
+                    new TintedParticleLeavesBlock(0.01F, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(createID(color + "_leaves"))) {
                     }));
 
             //Tall Grass
@@ -94,7 +102,7 @@ public class ColorsBlocks {
 
             //Short Grass
             SHORT_GRASS.put(color + "_short_grass", registerBlock(color + "_short_grass", () ->
-                    new TallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).setId(createID(color + "_short_grass")))));
+                    new ColoredTallGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SHORT_GRASS).setId(createID(color + "_short_grass")))));
 
             //Dandelion
             DANDELION.put(color + "_dandelion", registerBlock(color + "_dandelion", () ->
@@ -114,7 +122,8 @@ public class ColorsBlocks {
 
             //Grass Blocks
             GRASS_BLOCK.put(color + "_grass_block", registerBlock(color + "_grass_block", () ->
-                    new GrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK).setId(createID(color + "_grass_block")))));
+                    new ColoredGrassBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.GRASS_BLOCK).setId(createID(color + "_grass_block")),
+                            GRASS_BONEMEAL_KEY.get(color), DIRT.get(color + "_dirt").get(), SHORT_GRASS.get(color + "_short_grass").get())));
 
             //Crafting Table
             CRAFTING_TABLE.put(color + "_crafting_table", registerBlock(color + "_crafting_table", () ->
@@ -196,6 +205,8 @@ public class ColorsBlocks {
 
             event.modify(BlockEntityType.SIGN, PLANKS.get(color + "_bamboo_mosaic_sign").get(), PLANKS.get(color +"_bamboo_mosaic_wall_sign").get());
             event.modify(BlockEntityType.HANGING_SIGN, PLANKS.get(color + "_bamboo_mosaic_hanging_sign").get(), PLANKS.get(color + "_bamboo_mosaic_wall_hanging_sign").get());
+
+            event.modify(BlockEntityType.CHEST, CHESTS.get(color + "_chest").get());
 
         }
     }

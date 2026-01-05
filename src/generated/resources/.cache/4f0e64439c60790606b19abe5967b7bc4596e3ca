@@ -1,4 +1,21 @@
-// 1.21.11	2026-01-04T10:45:25.3735445	Tags for minecraft:item mod id colors
+// 1.21.11	2026-01-05T14:08:57.3964374	Tags for minecraft:item mod id colors
+23fb374f19e2a8d047374413bca0bdc8f80c3f50 data/colors/tags/item/black_logs.json
+e3ce7c81e98a945cc617df1a4c128fee0a9ef06b data/colors/tags/item/blue_logs.json
+d0cdb80f4cc11e503ea334d46ddfb4c3a5811b6a data/colors/tags/item/brown_logs.json
+7215476b824cd7b0949e94e0f9137688e4cbc239 data/colors/tags/item/cyan_logs.json
+f88ba21aa8d408f0ecbdf455cf34f1ba3161c2ce data/colors/tags/item/gray_logs.json
+c2aa1bb60ef4954feab675ca2f3d737fe0e05379 data/colors/tags/item/green_logs.json
+ef1d72ddb4f63633c8767d3d7d406ae764cfdec0 data/colors/tags/item/light_blue_logs.json
+5b16da0d8bd5a0121fe1afebb375c8f676e804b8 data/colors/tags/item/light_gray_logs.json
+bc244cedeafecbad58a5a467b417be86eda04685 data/colors/tags/item/lime_logs.json
+7582e55f71b25dba5c00f67c7958ce0597cc1c98 data/colors/tags/item/magenta_logs.json
+13e514e3047578cdfa235e69415c92972b131ce5 data/colors/tags/item/orange_logs.json
+fb3660a70af88464c1e511a5d4216a0601b2d023 data/colors/tags/item/pink_logs.json
+d21501f04d8a429221d55745ae3b7d1a5b23bd04 data/colors/tags/item/purple_logs.json
+4fb752e6afba7c251ea573d3cc44583e7298de27 data/colors/tags/item/red_logs.json
+68093293f14d5631368d8ef0d833395729b66777 data/colors/tags/item/white_logs.json
+1d263f554859337bd8d95343bb0a50d1a38e332f data/colors/tags/item/yellow_logs.json
+d691e051325dfc748fa4b2402ffa1db05f7533e1 data/c/tags/item/chests/wooden.json
 0b192f0d5a327e106ba0164092f0d321b51b12a5 data/c/tags/item/dyes/black.json
 59371772888a01d517e89096d7e4f0fb7315b7be data/c/tags/item/dyes/blue.json
 285efb00cb096cbac270bb014fdb069c4b0322ac data/c/tags/item/dyes/brown.json
@@ -15,3 +32,24 @@ c99191af09b784d83f5c3ecd150e7ed69ff44d0c data/c/tags/item/dyes/purple.json
 273cffccd3c60dce2f6d6088fc309e05a5eb845c data/c/tags/item/dyes/red.json
 8bf816a3e1cee214209c53244364b5f67b7f6931 data/c/tags/item/dyes/white.json
 b7f21c7936f71127c0bd3b19c89175426ae06731 data/c/tags/item/dyes/yellow.json
+4a113bad07cde517ad6b8823a4f252984111af3f data/c/tags/item/player_workstations/crafting_tables.json
+f7678cf152d4c292b79a8830db09b170e44ee387 data/c/tags/item/stripped_logs.json
+e1cbc3f23a6381049e9a7ab3f37a11d5dd5a4934 data/c/tags/item/stripped_woods.json
+f492794df06d7a68c666c509860f344e6264d978 data/minecraft/tags/item/buttons.json
+a7fdbfeb3c1107fa9dde64b1c5f1b0389d52be57 data/minecraft/tags/item/dirt.json
+b502d69e9d5c30424e19a09c46a0501137315b82 data/minecraft/tags/item/fence_gates.json
+25ec7e8d8b4c574c3f82984dbdcfcc1b3e045ff2 data/minecraft/tags/item/leaves.json
+82025d3d3eed82eaab2b6aa1022248d5947da625 data/minecraft/tags/item/logs_that_burn.json
+cb7d4e1adcb6dd3c5b1dc58fa0f42d1c96944de8 data/minecraft/tags/item/planks.json
+e6462c0e28f0198479cc0d6b53890d90b5e45d17 data/minecraft/tags/item/saplings.json
+908221d1c3c4d6bfc315cb1557418f68e4cf8d4a data/minecraft/tags/item/slabs.json
+3eab9466d75d8082ef7a29c81d66274c5132a51b data/minecraft/tags/item/small_flowers.json
+e27b51b122aeefa1984ce280ff25528ebf458d29 data/minecraft/tags/item/stairs.json
+7cb98b8794b0a393bad8f0bea22a61c2ece0861f data/minecraft/tags/item/walls.json
+b187d2d215441a9fea13e9cf1c09e58c0980da23 data/minecraft/tags/item/wooden_buttons.json
+fcdf1edac502f0d326a495a0d14495d9a194da6c data/minecraft/tags/item/wooden_doors.json
+cf475dc4d2c15ea6b3d6d0887ec2ce48226616e5 data/minecraft/tags/item/wooden_fences.json
+f0ffa2d64e4a4fcaaca91c3ea838bb02d9ca89e5 data/minecraft/tags/item/wooden_pressure_plates.json
+cd9a4065420cd40f924d078b9fe72b1bcf7d9189 data/minecraft/tags/item/wooden_slabs.json
+3f5f5f1d62db0af070eb2f089a8739c38a5bf035 data/minecraft/tags/item/wooden_stairs.json
+7799ea2af39205c5f23e8cecb486a7855299677f data/minecraft/tags/item/wooden_trapdoors.json

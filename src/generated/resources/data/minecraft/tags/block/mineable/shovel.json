@@ -31,6 +31,22 @@
     "colors:black_grass_block",
     "colors:light_blue_grass_block",
     "colors:lime_grass_block",
-    "colors:gray_grass_block"
+    "colors:gray_grass_block",
+    "colors:light_blue_sand",
+    "colors:purple_sand",
+    "colors:red_sand",
+    "colors:lime_sand",
+    "colors:cyan_sand",
+    "colors:brown_sand",
+    "colors:yellow_sand",
+    "colors:orange_sand",
+    "colors:pink_sand",
+    "colors:white_sand",
+    "colors:light_gray_sand",
+    "colors:gray_sand",
+    "colors:green_sand",
+    "colors:magenta_sand",
+    "colors:black_sand",
+    "colors:blue_sand"
   ]
 }

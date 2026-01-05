@@ -50,10 +50,10 @@ public class ColorsLangProvider extends LanguageProvider {
                 addBlockTranslation(keyPrefix + "_button", formatName(color) + " " + formatName(singularType) + " Button");
                 addBlockTranslation(keyPrefix + "_trapdoor", formatName(color) + " " + formatName(singularType) + " Trapdoor");
                 addBlockTranslation(keyPrefix + "_door", formatName(color) + " " + formatName(singularType) + " Door");
-                addBlockTranslation(keyPrefix + "_sign", formatName(color) + " " + formatName(singularType) + " Sign");
-                addBlockTranslation(keyPrefix + "_wall_sign", formatName(color) + " " + formatName(singularType) + " Sign");
-                addBlockTranslation(keyPrefix + "_hanging_sign", formatName(color) + " " + formatName(singularType) + " Hanging Sign");
-                addBlockTranslation(keyPrefix + "_wall_hanging_sign", formatName(color) + " " + formatName(singularType) + " Hanging Sign");
+                addItemTranslation(keyPrefix + "_sign", formatName(color) + " " + formatName(singularType) + " Sign");
+                addItemTranslation(keyPrefix + "_wall_sign", formatName(color) + " " + formatName(singularType) + " Sign");
+                addItemTranslation(keyPrefix + "_hanging_sign", formatName(color) + " " + formatName(singularType) + " Hanging Sign");
+                addItemTranslation(keyPrefix + "_wall_hanging_sign", formatName(color) + " " + formatName(singularType) + " Hanging Sign");
 
 
             }
@@ -76,6 +76,8 @@ public class ColorsLangProvider extends LanguageProvider {
             addBlockTranslation(color + "_sapling", formatName(color) + " Sapling");
             addItemTranslation(color + "_spray_can", formatName(color) + " Spray Can");
             addItemTranslation(color + "_apple", formatName(color) + " Apple");
+            addBlockTranslation(color + "_chest", formatName(color) + " Chest");
+            addBlockTranslation(color + "_sand", formatName(color) + " Sand");
 
 
         }

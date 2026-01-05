@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "colors:block/lime_sandstone",
+    "side": "colors:block/lime_sandstone",
+    "top": "colors:block/lime_sandstone"
+  }
+}

@@ -30,3 +30,6 @@ type="required"
 versionRange="1.21-1.1.24"
 ordering="NONE"
 side="BOTH"
+
+[[mixins]]
+config="${mod_id}.mixins.json"

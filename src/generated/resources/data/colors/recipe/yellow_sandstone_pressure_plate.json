@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "S": "colors:yellow_sandstone"
+  },
+  "pattern": [
+    "SS"
+  ],
+  "result": {
+    "count": 1,
+    "id": "colors:yellow_sandstone_pressure_plate"
+  }
+}

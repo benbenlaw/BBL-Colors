@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_": {
+      "conditions": {
+        "items": [
+          {
+            "items": "colors:gray_sandstone_wall"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "colors:stonecutting/gray_sandstone_wall_from_gray_sandstone"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "colors:stonecutting/gray_sandstone_wall_from_gray_sandstone"
+    ]
+  }
+}

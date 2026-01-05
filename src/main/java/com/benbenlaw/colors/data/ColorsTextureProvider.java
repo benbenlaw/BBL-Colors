@@ -42,7 +42,8 @@ public class ColorsTextureProvider implements DataProvider {
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "bamboo_mosaic_sign", "item");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "bamboo_mosaic_hanging_sign", "item");
 
-
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "tall_grass", "item");
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "short_grass", "item");
 
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "asteroid", "block");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "asteroid_bricks", "block");
@@ -65,6 +66,7 @@ public class ColorsTextureProvider implements DataProvider {
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "cobblestone_bricks", "block");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "cracked_stone_bricks", "block");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "crafting_table", "block");
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "crafting_table_front", "block");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "crafting_table_side", "block");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "crafting_table_top", "block");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "dandelion", "block");
@@ -104,6 +106,8 @@ public class ColorsTextureProvider implements DataProvider {
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "tall_grass_top", "block");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "tiles", "block");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "triple", "block");
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "sand", "block");
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "sandstone", "block");
 
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "plank_sign", "entity/signs/hanging");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "bamboo_plank_sign", "entity/signs/hanging");
@@ -117,9 +121,9 @@ public class ColorsTextureProvider implements DataProvider {
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "bamboo_plank_sign", "gui/hanging_signs");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "bamboo_mosaic_sign", "gui/hanging_signs");
 
-
-
-
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "chest", "entity/chest");
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "chest_left", "entity/chest");
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "chest_right", "entity/chest");
 
 
         });

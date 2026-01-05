@@ -6,28 +6,21 @@ import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
 import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.util.ColorList;
-import net.minecraft.client.color.item.GrassColorSource;
+import com.benbenlaw.colors.util.ColoredChestSpecialRenderer;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.MultiVariant;
-import net.minecraft.client.data.models.blockstates.MultiVariantGenerator;
-import net.minecraft.client.data.models.blockstates.PropertyDispatch;
 import net.minecraft.client.data.models.model.*;
 import net.minecraft.client.renderer.block.model.Variant;
 import net.minecraft.data.BlockFamily;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
-import net.minecraft.util.random.Weighted;
-import net.minecraft.util.random.WeightedList;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.properties.BlockStateProperties;
-import net.minecraft.world.level.block.state.properties.DoubleBlockHalf;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
 
-import java.util.Arrays;
 import java.util.Map;
 
 import static com.benbenlaw.colors.block.ColorsBlocks.*;
@@ -46,22 +39,9 @@ public class ColorsModelProvider extends ModelProvider {
     protected void registerModels(BlockModelGenerators blockModels, ItemModelGenerators itemModels) {
 
         //Items
-
-
         for (String color : ColorList.COLORS) {
             itemModels.generateFlatItem(ColorsItems.SPRAY_CANS.get(color + "_spray_can").get(), ModelTemplates.FLAT_ITEM);
         }
-
-        //for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.PLANKS.entrySet()) {
-        //    if (entry.getKey().endsWith("_bamboo_mosaic_door")) {
-        //        itemModels.generateFlatItem(entry.getValue().get().asItem(), ModelTemplates.FLAT_ITEM);
-        //    } else if (entry.getKey().endsWith("_bamboo_plank_door")) {
-        //        itemModels.generateFlatItem(entry.getValue().get().asItem(), ModelTemplates.FLAT_ITEM);
-        //    } else if (entry.getKey().endsWith("_plank_door")) {
-        //        itemModels.generateFlatItem(entry.getValue().get().asItem(), ModelTemplates.FLAT_ITEM);
-        //    }
-        //}
-
         for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.SHORT_GRASS.entrySet()) {
             itemModels.generateFlatItem(entry.getValue().get().asItem(), ModelTemplates.FLAT_ITEM);
         }
@@ -97,6 +77,9 @@ public class ColorsModelProvider extends ModelProvider {
 
             blockModels.createCraftingTableLike(CRAFTING_TABLE.get(color + "_crafting_table").get(), PLANKS.get(color + "_planks").get(), TextureMapping::craftingTable );
 
+            blockModels.createChest(CHESTS.get(color + "_chest").get(), PLANKS.get(color + "_planks").get(), ColoredChestSpecialRenderer.TEXTURES.get(color), false);
+
+            blockModels.createTrivialCube(SAND.get(color + "_sand").get());
 
             //Stone Blocks
             for (String type : StoneLikeBlocksList.STONE_BLOCKS) {
@@ -111,6 +94,8 @@ public class ColorsModelProvider extends ModelProvider {
                         .pressurePlate(STONE_BLOCKS.get(keyPrefix + "_pressure_plate").get())
                         .button(STONE_BLOCKS.get(keyPrefix + "_button").get());
             }
+
+
 
             //Plank Blocks
             for (String type : PlankLikeBlocksList.PLANKS) {
@@ -134,7 +119,6 @@ public class ColorsModelProvider extends ModelProvider {
                 blockModels.family(PLANKS.get(color + "_" + type).get()).generateFor(plankFamily);
 
                 blockModels.createHangingSign(LOGS.get(color + "_stripped_log").get(), PLANKS.get(keyPrefix + "_hanging_sign").get(), PLANKS.get(keyPrefix + "_wall_hanging_sign").get());
-
 
             }
         }

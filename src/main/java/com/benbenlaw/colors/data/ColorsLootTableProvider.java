@@ -63,6 +63,7 @@ public class ColorsLootTableProvider extends VanillaBlockLoot {
             }
         }
 
+
         //Dirt
         for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.DIRT.entrySet()) {
             this.dropSelf(entry.getValue().get());
@@ -145,6 +146,16 @@ public class ColorsLootTableProvider extends VanillaBlockLoot {
             this.add(entry.getValue().get(), block ->
                     createBrightLeavesDrops(block, saplingBlock.get(), appleItem.get(), NORMAL_LEAVES_SAPLING_CHANCES));
 
+        }
+
+        //Chest
+        for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.CHESTS.entrySet()) {
+            this.dropSelf(entry.getValue().get());
+        }
+
+        //Sand
+        for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.SAND.entrySet()) {
+            this.dropSelf(entry.getValue().get());
         }
 
 

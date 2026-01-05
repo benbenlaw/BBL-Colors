@@ -1,0 +1,10 @@
+{
+  "model": {
+    "type": "minecraft:special",
+    "base": "colors:item/gray_chest",
+    "model": {
+      "type": "minecraft:chest",
+      "texture": "colors:gray_chest"
+    }
+  }
+}

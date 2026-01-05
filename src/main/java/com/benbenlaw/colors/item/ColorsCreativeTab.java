@@ -50,6 +50,15 @@ public class ColorsCreativeTab {
                             output.accept(item);
                         });
 
+                //Sand
+                SAND.keySet().stream()
+                        .sorted(Comparator.naturalOrder())
+                        .forEach(color -> {
+                            Block block = SAND.get(color).get();
+                            Item item = block.asItem();
+                            output.accept(item);
+                        });
+
                 //Grass Block
                 GRASS_BLOCK.keySet().stream()
                         .sorted(Comparator.naturalOrder())
@@ -154,6 +163,14 @@ public class ColorsCreativeTab {
                         .sorted(Comparator.naturalOrder())
                         .forEach(color -> {
                             Item apple = APPLES.get(color).get();
+                            output.accept(apple);
+                        });
+
+                //Chests
+                CHESTS.keySet().stream()
+                        .sorted(Comparator.naturalOrder())
+                        .forEach(color -> {
+                            Item apple = CHESTS.get(color).get().asItem();
                             output.accept(apple);
                         });
 

@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "package": "com.benbenlaw.colors.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "ColoredCraftingTableValidForPlayer"
+  ],
+  "client": [
+    "ChestRendererMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

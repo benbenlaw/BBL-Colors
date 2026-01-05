@@ -1,5 +1,17 @@
 Changelog BBL Colors
 
+Re add colored craftingChestSpecialRenderer
+
+2.1.0
+- Readded all missing tags that were removed by mistake
+- Fixed bone meal not working on colored grass
+- Falling leaf particles are now colored
+- Crafting Tables now work again
+- Signs now have the correct names
+- Bone Meal short grass now grows the correct tall grass
+- Added Colored Chests
+- Added Colored Sand and Colored Sandstone
+
 2.0.0
 - Updated to Minecraft 1.21.11
 - Colored Saplings can now go into flower pots

@@ -14,9 +14,6 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
 import net.minecraft.resources.Identifier;
-import net.minecraft.server.packs.resources.Resource;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.ItemTags;
 import net.minecraft.tags.TagKey;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
@@ -136,6 +133,9 @@ public class ColorsRecipesBuilder extends RecipeProvider {
             //Dirt
             stonecutterResultFromBase(output, ColorsBlocks.DIRT.get(color + "_dirt"), Blocks.DIRT, 1);
 
+            //Sand
+            stonecutterResultFromBase(output, ColorsBlocks.SAND.get(color + "_sand"), Blocks.SAND, 1);
+
             //Spray Cans
             ItemLike sprayCan = ColorsItems.SPRAY_CANS.get(color + "_spray_can");
             shaped(RecipeCategory.TOOLS, sprayCan, 1)
@@ -201,6 +201,15 @@ public class ColorsRecipesBuilder extends RecipeProvider {
                     .unlockedBy("has_item", has(ColorsBlocks.DANDELION.get(color + "_dandelion")))
                     .save(output, Colors.identifier(color + "_dye_from_dandelion").toString());
 
+            //Chest
+            ItemLike chest = ColorsBlocks.CHESTS.get(color + "_chest");
+            shaped(RecipeCategory.DECORATIONS, chest, 1)
+                    .pattern("SSS")
+                    .pattern("S S")
+                    .pattern("SSS")
+                    .define('S', ColorsBlocks.PLANKS.get(color + "_planks"))
+                    .unlockedBy("has_item", has(ColorsBlocks.PLANKS.get(color + "_planks")))
+                    .save(output);
 
         }
     }

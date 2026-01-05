@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "colors:purple_sandstone",
+  "result": {
+    "count": 1,
+    "id": "colors:purple_sandstone_button"
+  }
+}

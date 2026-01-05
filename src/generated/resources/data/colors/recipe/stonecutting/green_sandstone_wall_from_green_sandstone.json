@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "colors:green_sandstone",
+  "result": {
+    "count": 1,
+    "id": "colors:green_sandstone_wall"
+  }
+}

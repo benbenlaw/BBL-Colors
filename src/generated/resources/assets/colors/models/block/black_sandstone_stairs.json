@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "colors:block/black_sandstone",
+    "side": "colors:block/black_sandstone",
+    "top": "colors:block/black_sandstone"
+  }
+}

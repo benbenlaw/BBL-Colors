@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": "colors:blue_sandstone",
+  "result": {
+    "count": 1,
+    "id": "colors:blue_sandstone_pressure_plate"
+  }
+}

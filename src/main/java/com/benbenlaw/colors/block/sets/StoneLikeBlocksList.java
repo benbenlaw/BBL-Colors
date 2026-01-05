@@ -26,7 +26,8 @@ public class StoneLikeBlocksList {
             "road",
             "asteroid",
             "asteroid_bricks",
-            "asteroid_tiles"
+            "asteroid_tiles",
+            "sandstone"
     );
 
 

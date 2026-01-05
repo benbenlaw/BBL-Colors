@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "colors:block/light_blue_sandstone",
+    "side": "colors:block/light_blue_sandstone",
+    "top": "colors:block/light_blue_sandstone"
+  }
+}
