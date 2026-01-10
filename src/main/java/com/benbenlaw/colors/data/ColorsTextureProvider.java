@@ -117,11 +117,6 @@ public class ColorsTextureProvider implements DataProvider {
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "bamboo_plank_sign", "gui/hanging_signs");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "bamboo_mosaic_sign", "gui/hanging_signs");
 
-
-
-
-
-
         });
     }
 
