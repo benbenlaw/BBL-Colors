@@ -6,13 +6,13 @@ import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
 import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.util.ColorList;
-import com.benbenlaw.colors.util.ColoredChestSpecialRenderer;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
 import net.minecraft.client.data.models.MultiVariant;
 import net.minecraft.client.data.models.model.*;
-import net.minecraft.client.renderer.block.model.Variant;
+import net.minecraft.client.renderer.block.dispatch.Variant;
+import net.minecraft.client.resources.model.sprite.Material;
 import net.minecraft.data.BlockFamily;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.Identifier;
@@ -77,7 +77,7 @@ public class ColorsModelProvider extends ModelProvider {
 
             blockModels.createCraftingTableLike(CRAFTING_TABLE.get(color + "_crafting_table").get(), PLANKS.get(color + "_planks").get(), TextureMapping::craftingTable );
 
-            blockModels.createChest(CHESTS.get(color + "_chest").get(), PLANKS.get(color + "_planks").get(), ColoredChestSpecialRenderer.TEXTURES.get(color), false);
+            //blockModels.createChest(CHESTS.get(color + "_chest").get(), PLANKS.get(color + "_planks").get(), ColoredChestSpecialRenderer.TEXTURES.get(color), false);
 
             blockModels.createTrivialCube(SAND.get(color + "_sand").get());
 
@@ -128,26 +128,26 @@ public class ColorsModelProvider extends ModelProvider {
 
     public void createColoredGrassLikeBlock(Block block, Block dirtBlock, BlockModelGenerators blockModels) {
 
-        Identifier dirt = TextureMapping.getBlockTexture(dirtBlock);
+        Identifier dirt = TextureMapping.getBlockTexture(dirtBlock).sprite();
 
         TextureMapping base = new TextureMapping()
-                .put(TextureSlot.BOTTOM, dirt)
+                .put(TextureSlot.BOTTOM, new Material(dirt))
                 .copyForced(TextureSlot.BOTTOM, TextureSlot.PARTICLE)
                 .put(TextureSlot.TOP, TextureMapping.getBlockTexture(block, "_top"))
                 .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(block, "_side"));
 
         TextureMapping snowy = base.copy()
-                .put(TextureSlot.BOTTOM, dirt)
+                .put(TextureSlot.BOTTOM, new Material(dirt))
                 .copyForced(TextureSlot.BOTTOM, TextureSlot.PARTICLE)
                 .put(TextureSlot.TOP, TextureMapping.getBlockTexture(block, "_top_snow"))
                 .put(TextureSlot.SIDE, TextureMapping.getBlockTexture(block, "_side_snow"));
 
-        MultiVariant normal = createRotatedVariants(
+        MultiVariant normal = BlockModelGenerators.createRotatedVariants(
                 plainModel(ModelTemplates.CUBE_BOTTOM_TOP.create(block, base, blockModels.modelOutput))
         );
 
 
-        MultiVariant snow = createRotatedVariants(
+        MultiVariant snow = BlockModelGenerators.createRotatedVariants(
                 plainModel(ModelTemplates.CUBE_BOTTOM_TOP.createWithSuffix(block, "_snow", snowy, blockModels.modelOutput))
         );
 

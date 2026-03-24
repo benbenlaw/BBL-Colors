@@ -12,6 +12,7 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.SignItem;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.bus.api.IEventBus;
@@ -34,8 +35,9 @@ public class ColorsItems {
         for (String color : ColorList.COLORS) {
             APPLES.put(color + "_apple", ITEMS.register(color + "_apple", () -> new Item(new Item.Properties().food(Foods.APPLE).setId(createID(color + "_apple")))));
 
-            SPRAY_CANS.put(color + "_spray_can", ITEMS.register(color + "_spray_can", () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get()).setId(createID(color + "_spray_can"))
-                    .craftRemainder(BuiltInRegistries.ITEM.getValue(Identifier.parse("colors:" + color + "_spray_can"))), ColorMap.getDyeColor(color))));
+            SPRAY_CANS.put(color + "_spray_can", ITEMS.register(color + "_spray_can", () -> new ColoringItem(new Item.Properties().durability(StartupConfig.sprayCanDurability.get()).setId(createID(color + "_spray_can")),
+                    //.craftRemainder(new ItemStackTemplate(SPRAY_CANS.get("colors:" + color + "_spray_can"))),
+                    ColorMap.getDyeColor(color))));
 
             PLANKS.put(color + "_plank_sign", ITEMS.register(color + "_plank_sign", () -> new SignItem(
                     ColorsBlocks.PLANKS.get(color + "_plank_sign").get(),

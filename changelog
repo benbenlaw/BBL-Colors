@@ -2,6 +2,9 @@ Changelog BBL Colors
 
 Re add colored craftingChestSpecialRenderer
 
+#3.0.0
+- Updated to Minecraft 26.1
+
 2.1.0
 - Readded all missing tags that were removed by mistake
 - Fixed bone meal not working on colored grass

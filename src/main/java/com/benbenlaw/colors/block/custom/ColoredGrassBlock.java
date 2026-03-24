@@ -47,7 +47,7 @@ public class ColoredGrassBlock extends GrassBlock implements BonemealableBlock {
         } else if (blockstate.getFluidState().getAmount() == 8) {
             return false;
         } else {
-            int i = LightEngine.getLightBlockInto(state, blockstate, Direction.UP, blockstate.getLightBlock());
+            int i = LightEngine.getLightBlockInto(state, blockstate, Direction.UP, 1);
             return i < 15;
         }
     }

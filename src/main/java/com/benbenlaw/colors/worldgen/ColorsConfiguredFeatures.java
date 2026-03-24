@@ -77,7 +77,7 @@ public class ColorsConfiguredFeatures {
                     BlockStateProvider.simple(ColorsBlocks.LEAVES.get(color + "_leaves").get().defaultBlockState()),
                     new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(0), 3),
                     new TwoLayersFeatureSize(1, 0, 1))
-                    .dirt(BlockStateProvider.simple(ColorsBlocks.DIRT.get(color + "_dirt").get().defaultBlockState()))
+                    .belowTrunkProvider(BlockStateProvider.simple(ColorsBlocks.DIRT.get(color + "_dirt").get().defaultBlockState()))
                     .build());
 
             //Stone
