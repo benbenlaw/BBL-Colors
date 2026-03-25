@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:brown_asteroid",
   "result": {
-    "count": 1,
     "id": "colors:brown_asteroid_wall"
   }
 }

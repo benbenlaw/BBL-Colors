@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:yellow_cobblestone",
   "result": {
-    "count": 1,
     "id": "colors:yellow_cobblestone_button"
   }
 }

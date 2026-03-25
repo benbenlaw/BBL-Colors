@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "minecraft:grass_block",
   "result": {
-    "count": 1,
     "id": "colors:green_grass_block"
   }
 }

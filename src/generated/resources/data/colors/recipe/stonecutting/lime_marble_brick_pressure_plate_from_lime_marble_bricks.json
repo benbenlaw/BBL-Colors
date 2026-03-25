@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:lime_marble_bricks",
   "result": {
-    "count": 1,
     "id": "colors:lime_marble_brick_pressure_plate"
   }
 }

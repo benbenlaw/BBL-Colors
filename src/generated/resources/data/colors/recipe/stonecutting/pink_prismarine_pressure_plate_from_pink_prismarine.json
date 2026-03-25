@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:pink_prismarine",
   "result": {
-    "count": 1,
     "id": "colors:pink_prismarine_pressure_plate"
   }
 }

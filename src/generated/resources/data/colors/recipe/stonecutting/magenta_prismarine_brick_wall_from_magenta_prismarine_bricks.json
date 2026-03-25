@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:magenta_prismarine_bricks",
   "result": {
-    "count": 1,
     "id": "colors:magenta_prismarine_brick_wall"
   }
 }

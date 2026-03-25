@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:gray_cobblestone",
   "result": {
-    "count": 1,
     "id": "colors:gray_cobblestone_pressure_plate"
   }
 }

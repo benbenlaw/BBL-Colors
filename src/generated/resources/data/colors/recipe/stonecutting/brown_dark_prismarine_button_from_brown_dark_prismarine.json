@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:brown_dark_prismarine",
   "result": {
-    "count": 1,
     "id": "colors:brown_dark_prismarine_button"
   }
 }

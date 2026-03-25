@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:black_triple",
   "result": {
-    "count": 1,
     "id": "colors:black_triple_wall"
   }
 }

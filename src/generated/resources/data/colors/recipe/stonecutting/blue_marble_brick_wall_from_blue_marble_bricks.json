@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:blue_marble_bricks",
   "result": {
-    "count": 1,
     "id": "colors:blue_marble_brick_wall"
   }
 }

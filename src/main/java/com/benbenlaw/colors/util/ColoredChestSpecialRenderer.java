@@ -14,6 +14,8 @@ import net.minecraft.client.renderer.rendertype.RenderTypes;
 import net.minecraft.client.renderer.special.NoDataSpecialModelRenderer;
 import net.minecraft.client.renderer.special.SpecialModelRenderer;
 import net.minecraft.client.resources.model.sprite.Material;
+import net.minecraft.client.resources.model.sprite.SpriteGetter;
+import net.minecraft.client.resources.model.sprite.SpriteId;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.item.ItemDisplayContext;
 import net.neoforged.api.distmarker.Dist;
@@ -25,28 +27,27 @@ import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-/*
 public class ColoredChestSpecialRenderer implements NoDataSpecialModelRenderer {
 
     public static final Map<String, Identifier> TEXTURES = ColorList.getColors().stream().collect(
             Collectors.toMap(Function.identity(), color -> Colors.identifier(color + "_chest"))
     );
 
-    private final MaterialSet materials;
+    private final SpriteGetter sprites;
     private final ChestModel model;
-    private final Material material;
+    private final SpriteId sprite;
     private final float openness;
 
-    public ColoredChestSpecialRenderer( p_434968_, ChestModel p_479602_, Material p_388350_, float p_386750_) {
-        this.materials = p_434968_;
-        this.model = p_479602_;
-        this.material = p_388350_;
-        this.openness = p_386750_;
+    public ColoredChestSpecialRenderer(SpriteGetter sprites, ChestModel model, SpriteId sprite, float openness) {
+        this.sprites = sprites;
+        this.model = model;
+        this.sprite = sprite;
+        this.openness = openness;
     }
 
     @Override
-    public void submit(PoseStack poseStack, SubmitNodeCollector submitNodeCollector, int packedLight, int packedOverlay, boolean b, int i2) {
-        submitNodeCollector.submitModel(this.model, this.openness, poseStack, this.material.renderType(RenderTypes::entitySolid), packedLight, packedOverlay, -1, this.materials.get(this.material), outlineColor, (ModelFeatureRenderer.CrumblingOverlay)null);
+    public void submit(PoseStack poseStack, SubmitNodeCollector submitNodeCollector, int lightCoords, int overlayCoords, boolean hasFoil, int outlineColor) {
+        submitNodeCollector.submitModel(this.model, this.openness, poseStack, lightCoords, overlayCoords, -1, this.sprite, this.sprites, outlineColor, (ModelFeatureRenderer.CrumblingOverlay)null);
     }
 
     public void getExtents(Consumer<Vector3fc> p_470834_) {
@@ -54,7 +55,4 @@ public class ColoredChestSpecialRenderer implements NoDataSpecialModelRenderer {
         this.model.setupAnim(this.openness);
         this.model.root().getExtentsForGui(posestack, p_470834_);
     }
-
 }
-
- */

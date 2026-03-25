@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:green_polished",
   "result": {
-    "count": 1,
     "id": "colors:green_polished_wall"
   }
 }

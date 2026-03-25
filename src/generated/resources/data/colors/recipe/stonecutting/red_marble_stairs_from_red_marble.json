@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:red_marble",
   "result": {
-    "count": 1,
     "id": "colors:red_marble_stairs"
   }
 }

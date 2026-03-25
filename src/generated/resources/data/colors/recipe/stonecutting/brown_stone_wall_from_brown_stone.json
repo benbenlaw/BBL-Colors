@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:brown_stone",
   "result": {
-    "count": 1,
     "id": "colors:brown_stone_wall"
   }
 }

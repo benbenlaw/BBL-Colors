@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:white_cracked_stone_bricks",
   "result": {
-    "count": 1,
     "id": "colors:white_cracked_stone_brick_stairs"
   }
 }

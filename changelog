@@ -1,6 +1,12 @@
 Changelog BBL Colors
 
-Re add colored craftingChestSpecialRenderer
+
+# 3.0.1
+- Re run data gen to insure that all recipes, loottable and everything else is up to date with 26.1
+- Cleaned up spray can code, added noise to the spray can
+- Prevent Spray Can working on blocks that are alread the same color as the spray can
+- Added Particle on spray can use
+- Chests no longer crash the game
 
 #3.0.0
 - Updated to Minecraft 26.1

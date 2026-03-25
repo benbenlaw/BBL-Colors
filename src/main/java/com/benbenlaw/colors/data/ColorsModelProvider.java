@@ -6,6 +6,7 @@ import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
 import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.util.ColorList;
+import com.benbenlaw.colors.util.ColoredChestSpecialRenderer;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
 import net.minecraft.client.data.models.ModelProvider;
@@ -77,7 +78,7 @@ public class ColorsModelProvider extends ModelProvider {
 
             blockModels.createCraftingTableLike(CRAFTING_TABLE.get(color + "_crafting_table").get(), PLANKS.get(color + "_planks").get(), TextureMapping::craftingTable );
 
-            //blockModels.createChest(CHESTS.get(color + "_chest").get(), PLANKS.get(color + "_planks").get(), ColoredChestSpecialRenderer.TEXTURES.get(color), false);
+            blockModels.createChest(CHESTS.get(color + "_chest").get(), PLANKS.get(color + "_planks").get(), ColoredChestSpecialRenderer.TEXTURES.get(color), false);
 
             blockModels.createTrivialCube(SAND.get(color + "_sand").get());
 

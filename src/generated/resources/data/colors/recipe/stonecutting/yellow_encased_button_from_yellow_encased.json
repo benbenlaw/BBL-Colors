@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:yellow_encased",
   "result": {
-    "count": 1,
     "id": "colors:yellow_encased_button"
   }
 }

@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:gray_sandstone",
   "result": {
-    "count": 1,
     "id": "colors:gray_sandstone_wall"
   }
 }

@@ -7,17 +7,11 @@ import com.benbenlaw.colors.config.WorldGenConfig;
 import com.benbenlaw.colors.item.ColorsCreativeTab;
 import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.maps.StrippedLogMap;
-import com.benbenlaw.colors.util.ColorList;
-import com.benbenlaw.colors.util.ColorMap;
-import com.benbenlaw.colors.util.ColorsMaterials;
 import com.benbenlaw.colors.worldgen.ColorsWorldGen;
-import net.minecraft.client.renderer.chunk.ChunkSectionLayer;
 import net.minecraft.resources.Identifier;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
-import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -27,15 +21,11 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.client.event.RegisterMenuScreensEvent;
+import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import org.apache.logging.log4j.LogManager;
 
 import java.util.Map;
-
-import static com.benbenlaw.colors.block.ColorsBlocks.*;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(Colors.MOD_ID)
@@ -72,52 +62,8 @@ public class Colors{
 
     @EventBusSubscriber(modid = Colors.MOD_ID, value = Dist.CLIENT)
     public static class ClientModEvents {
-        @SubscribeEvent
-        public static void registerScreens(RegisterMenuScreensEvent event) {
-            //event.register(ClocheMenus.CLOCHE_MENU.get(), ClocheScreen::new);
-        }
 
-        @SubscribeEvent
-        private static void onClientSetup(final FMLCommonSetupEvent event) {
-
-            for (String color : ColorList.COLORS) {
-
-                //ItemBlockRenderTypes.setRenderLayer(SAPLINGS.get(color + "_sapling").get(), ChunkSectionLayer.CUTOUT);
-                //ItemBlockRenderTypes.setRenderLayer(POPPY.get(color + "_poppy").get(), ChunkSectionLayer.CUTOUT);
-                //ItemBlockRenderTypes.setRenderLayer(DANDELION.get(color + "_dandelion").get(), ChunkSectionLayer.CUTOUT);
-                //ItemBlockRenderTypes.setRenderLayer(SHORT_GRASS.get(color + "_short_grass").get(), ChunkSectionLayer.CUTOUT);
-                //ItemBlockRenderTypes.setRenderLayer(TALL_GRASS.get(color + "_tall_grass").get(), ChunkSectionLayer.CUTOUT);
-                //ItemBlockRenderTypes.setRenderLayer(POTTED_DANDELION.get(color + "_potted_dandelion").get(), ChunkSectionLayer.CUTOUT);
-                //ItemBlockRenderTypes.setRenderLayer(POTTED_POPPY.get(color + "_potted_poppy").get(), ChunkSectionLayer.CUTOUT);
-                //ItemBlockRenderTypes.setRenderLayer(POTTED_SAPLING.get(color + "_potted_sapling").get(), ChunkSectionLayer.CUTOUT);
-
-            }
-
-            ColorsMaterials.bootstrap();                //Not sure what the correct way of doing this is but this works for the current version of Minecraft
-
-
-
-        }
-
-        //@SubscribeEvent
-        //private static void registerBlockColors(RegisterColorHandlersEvent.Block event) {
-//
-        //    for (String color : ColorList.COLORS) {
-        //        event.register(leavesColor, LEAVES.get(color + "_leaves").get());
-        //    }
-        //}
     }
-
-    //private static final BlockColor leavesColor = (state, world, pos, tintIndex) -> {
-//
-    //    for (DyeColor dyeColor : DyeColor.values()) {
-    //        if (state.is(LEAVES.get(dyeColor.getName() + "_leaves"))) {
-    //            return ColorMap.COLOR_MAP.get(dyeColor);
-    //        }
-    //    }
-//
-    //    return -1;
-    //};
 
 
     public void commonSetup(final FMLCommonSetupEvent event) {
@@ -147,10 +93,5 @@ public class Colors{
             }
 
         });
-
-
     }
-
-
-
 }

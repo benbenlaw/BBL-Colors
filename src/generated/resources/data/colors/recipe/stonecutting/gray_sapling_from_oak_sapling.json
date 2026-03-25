@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "minecraft:oak_sapling",
   "result": {
-    "count": 1,
     "id": "colors:gray_sapling"
   }
 }

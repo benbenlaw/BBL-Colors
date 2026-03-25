@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "minecraft:stone",
   "result": {
-    "count": 1,
     "id": "colors:light_gray_polished"
   }
 }

@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:black_stone",
   "result": {
-    "count": 1,
     "id": "colors:black_stone_pressure_plate"
   }
 }

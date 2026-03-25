@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:magenta_polished",
   "result": {
-    "count": 1,
     "id": "colors:magenta_polished_pressure_plate"
   }
 }

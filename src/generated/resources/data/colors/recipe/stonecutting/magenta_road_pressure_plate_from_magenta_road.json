@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:magenta_road",
   "result": {
-    "count": 1,
     "id": "colors:magenta_road_pressure_plate"
   }
 }

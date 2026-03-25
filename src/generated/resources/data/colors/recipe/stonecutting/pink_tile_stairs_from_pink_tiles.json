@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:pink_tiles",
   "result": {
-    "count": 1,
     "id": "colors:pink_tile_stairs"
   }
 }

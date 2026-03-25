@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:cyan_prismarine_bricks",
   "result": {
-    "count": 1,
     "id": "colors:cyan_prismarine_brick_pressure_plate"
   }
 }

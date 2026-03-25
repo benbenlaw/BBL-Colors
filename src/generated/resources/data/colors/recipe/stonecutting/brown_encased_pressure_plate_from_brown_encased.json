@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:brown_encased",
   "result": {
-    "count": 1,
     "id": "colors:brown_encased_pressure_plate"
   }
 }

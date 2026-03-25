@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:cyan_stone",
   "result": {
-    "count": 1,
     "id": "colors:cyan_stone_pressure_plate"
   }
 }

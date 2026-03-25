@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:black_cobblestone_bricks",
   "result": {
-    "count": 1,
     "id": "colors:black_cobblestone_brick_button"
   }
 }

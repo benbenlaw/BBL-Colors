@@ -2,7 +2,6 @@
   "type": "minecraft:stonecutting",
   "ingredient": "colors:red_mosaic",
   "result": {
-    "count": 1,
     "id": "colors:red_mosaic_pressure_plate"
   }
 }
