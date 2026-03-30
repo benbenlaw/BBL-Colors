@@ -147,11 +147,9 @@ public class ColorsModelProvider extends ModelProvider {
                 plainModel(ModelTemplates.CUBE_BOTTOM_TOP.create(block, base, blockModels.modelOutput))
         );
 
-
         MultiVariant snow = BlockModelGenerators.createRotatedVariants(
                 plainModel(ModelTemplates.CUBE_BOTTOM_TOP.createWithSuffix(block, "_snow", snowy, blockModels.modelOutput))
         );
-
 
         blockModels.createGrassLikeBlock(block, normal, snow);
 

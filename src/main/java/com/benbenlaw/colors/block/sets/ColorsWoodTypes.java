@@ -40,13 +40,10 @@ public class ColorsWoodTypes {
 
                 // Put singular name in the map
                 WOOD_TYPES.put(baseName, woodType);
-
-                System.out.println("[Colors] Added wood type: " + woodTypeName); // debug
             }
         }
     }
 
-    // --- FIX: getWoodType now only uses singular keys ---
     public static WoodType getWoodType(String color, String plank) {
         return WOOD_TYPES.get(color + "_" + plank);
     }
@@ -55,7 +52,6 @@ public class ColorsWoodTypes {
         event.enqueueWork(() -> {
             for (WoodType type : WOOD_TYPES.values()) {
                 Sheets.addWoodType(type);
-                System.out.println("[Colors] Added wood type to Sheets: " + type.name());
             }
         });
     }
