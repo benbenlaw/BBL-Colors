@@ -4,6 +4,7 @@ import com.benbenlaw.colors.block.ColorsBlocks;
 import com.benbenlaw.colors.block.sets.ColorsWoodTypes;
 import com.benbenlaw.colors.config.StartupConfig;
 import com.benbenlaw.colors.config.WorldGenConfig;
+import com.benbenlaw.colors.datamaps.ColorsCustomDataMaps;
 import com.benbenlaw.colors.item.ColorsCreativeTab;
 import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.maps.StrippedLogMap;
@@ -14,15 +15,14 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.fml.loading.FMLEnvironment;
-import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.registries.DeferredBlock;
+import net.neoforged.neoforge.registries.datamaps.RegisterDataMapTypesEvent;
 import org.apache.logging.log4j.LogManager;
 
 import java.util.Map;
@@ -48,7 +48,7 @@ public class Colors{
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(ColorsBlocks::addPlanksToSigns);
-
+        modEventBus.addListener(this::registerDataMaps);
 
         if (FMLEnvironment.getDist() == Dist.CLIENT) {
             modEventBus.addListener(ColorsWoodTypes::clientSetup);
@@ -93,5 +93,10 @@ public class Colors{
             }
 
         });
+    }
+
+
+    public void registerDataMaps(RegisterDataMapTypesEvent event) {
+        event.register(ColorsCustomDataMaps.UNCOLORED_TO_COLORED_BLOCKS);
     }
 }

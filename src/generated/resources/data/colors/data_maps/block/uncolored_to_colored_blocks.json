@@ -1,0 +1,12 @@
+{
+  "values": {
+    "minecraft:cobblestone": "colors:%d_cobblstone",
+    "minecraft:dirt": "colors:%d_dirt",
+    "minecraft:glass": "minecraft:%d_stained_glass",
+    "minecraft:glass_pane": "minecraft:%d_stained_glass",
+    "minecraft:grass_block": "colors:%d_grass_block",
+    "minecraft:sand": "colors:%d_sand",
+    "minecraft:stone": "colors:%d_stone",
+    "minecraft:stone_bricks": "colors:%d_stone_bricks"
+  }
+}

@@ -1,13 +1,18 @@
 package com.benbenlaw.colors.data;
 
 import com.benbenlaw.colors.block.ColorsBlocks;
+import com.benbenlaw.colors.datamaps.ColorsCustomDataMaps;
 import com.benbenlaw.colors.item.ColorsItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockTags;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.DataMapProvider;
 import net.neoforged.neoforge.registries.datamaps.builtin.Compostable;
 import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
 
+import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
 import static com.benbenlaw.colors.block.ColorsBlocks.*;
@@ -49,6 +54,19 @@ public class ColorsDataMaps extends DataMapProvider {
         for (String type : ColorsItems.APPLES.keySet()) {
             compostables.add(ColorsItems.APPLES.get(type).get().asItem().builtInRegistryHolder(), new Compostable(0.65f), false);
         }
+
+        builder(ColorsCustomDataMaps.UNCOLORED_TO_COLORED_BLOCKS)
+                .add(Blocks.STONE.builtInRegistryHolder().key(),"colors:%d_stone", false)
+                .add(Blocks.COBBLESTONE.builtInRegistryHolder().key(),"colors:%d_cobblstone", false)
+                .add(Blocks.GRASS_BLOCK.builtInRegistryHolder().key(),"colors:%d_grass_block", false)
+                .add(Blocks.DIRT.builtInRegistryHolder().key(),"colors:%d_dirt", false)
+                .add(Blocks.SAND.builtInRegistryHolder().key(),"colors:%d_sand", false)
+                .add(Blocks.STONE_BRICKS.builtInRegistryHolder().key(),"colors:%d_stone_bricks", false)
+
+                //Vanilla Blocks
+                .add(Blocks.GLASS.builtInRegistryHolder().key(),"minecraft:%d_stained_glass", false)
+                .add(Blocks.GLASS_PANE.builtInRegistryHolder().key(),"minecraft:%d_stained_glass", false);
+
 
 
 
