@@ -18,5 +18,4 @@ public class ColorsCustomDataMaps {
     public static final DataMapType<Block, String> UNCOLORED_TO_COLORED_BLOCKS = DataMapType.builder(
             Colors.identifier("uncolored_to_colored_blocks"), Registries.BLOCK, Codec.STRING)
             .synced(Codec.STRING, true).build();
-
 }
