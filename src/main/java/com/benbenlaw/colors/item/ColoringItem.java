@@ -45,7 +45,7 @@ public class ColoringItem extends Item {
             return InteractionResult.SUCCESS;
         }
 
-        String template = state.getBlock().builtInRegistryHolder().getData(ColorsCustomDataMaps.UNCOLORED_TO_COLORED_BLOCKS);
+        String template = state.typeHolder().getData(ColorsCustomDataMaps.UNCOLORED_TO_COLORED_BLOCKS);
 
         if (template != null && template.contains("%s")) {
             String colorName = color.getName();

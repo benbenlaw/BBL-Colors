@@ -46,12 +46,6 @@ public class ColorsBlockTags extends BlockTagsProvider {
                 }
             }
 
-            for (String type : GRASS_BLOCK.keySet()) {
-                if (type.startsWith(color + "_")) {
-                    tag(BlockTags.DIRT).add(GRASS_BLOCK.get(type).get());
-                }
-            }
-
             for (String type : CRAFTING_TABLE.keySet()) {
                 if (type.startsWith(color + "_")) {
                     tag(Tags.Blocks.PLAYER_WORKSTATIONS_CRAFTING_TABLES).add(CRAFTING_TABLE.get(type).get());
