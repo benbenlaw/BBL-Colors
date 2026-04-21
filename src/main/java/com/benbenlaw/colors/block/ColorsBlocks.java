@@ -134,12 +134,13 @@ public class ColorsBlocks {
 
                 String singularType = type.endsWith("s") ? type.substring(0, type.length() - 1) : type;
                 String keyPrefix = color + "_" + singularType;
+                String base = color + "_" + type;
 
                 PLANKS.put(color + "_" + type, registerBlock(color + "_" + type, () ->
-                        new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).setId(createID(keyPrefix + "_" + type)))));
+                        new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).setId(createID(base)))));
                 PLANKS.put(keyPrefix + "_stairs", registerBlock(keyPrefix + "_stairs", () -> {
                     BlockState baseState = PLANKS.get(color + "_" + type).get().defaultBlockState();
-                    return new StairBlock(baseState, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS).setId(createID(keyPrefix + "_" + type)));
+                    return new StairBlock(baseState, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_STAIRS).setId(createID(keyPrefix + "_stairs")));
                 }));
                 PLANKS.put(keyPrefix + "_slab", registerBlock(keyPrefix + "_slab", () ->
                         new SlabBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SLAB).setId(createID(keyPrefix + "_slab")))));
