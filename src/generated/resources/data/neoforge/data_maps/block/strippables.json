@@ -1,0 +1,100 @@
+{
+  "values": {
+    "colors:black_log": {
+      "stripped_block": "colors:black_stripped_log"
+    },
+    "colors:black_wood": {
+      "stripped_block": "colors:black_stripped_wood"
+    },
+    "colors:blue_log": {
+      "stripped_block": "colors:blue_stripped_log"
+    },
+    "colors:blue_wood": {
+      "stripped_block": "colors:blue_stripped_wood"
+    },
+    "colors:brown_log": {
+      "stripped_block": "colors:brown_stripped_log"
+    },
+    "colors:brown_wood": {
+      "stripped_block": "colors:brown_stripped_wood"
+    },
+    "colors:cyan_log": {
+      "stripped_block": "colors:cyan_stripped_log"
+    },
+    "colors:cyan_wood": {
+      "stripped_block": "colors:cyan_stripped_wood"
+    },
+    "colors:gray_log": {
+      "stripped_block": "colors:gray_stripped_log"
+    },
+    "colors:gray_wood": {
+      "stripped_block": "colors:gray_stripped_wood"
+    },
+    "colors:green_log": {
+      "stripped_block": "colors:green_stripped_log"
+    },
+    "colors:green_wood": {
+      "stripped_block": "colors:green_stripped_wood"
+    },
+    "colors:light_blue_log": {
+      "stripped_block": "colors:light_blue_stripped_log"
+    },
+    "colors:light_blue_wood": {
+      "stripped_block": "colors:light_blue_stripped_wood"
+    },
+    "colors:light_gray_log": {
+      "stripped_block": "colors:light_gray_stripped_log"
+    },
+    "colors:light_gray_wood": {
+      "stripped_block": "colors:light_gray_stripped_wood"
+    },
+    "colors:lime_log": {
+      "stripped_block": "colors:lime_stripped_log"
+    },
+    "colors:lime_wood": {
+      "stripped_block": "colors:lime_stripped_wood"
+    },
+    "colors:magenta_log": {
+      "stripped_block": "colors:magenta_stripped_log"
+    },
+    "colors:magenta_wood": {
+      "stripped_block": "colors:magenta_stripped_wood"
+    },
+    "colors:orange_log": {
+      "stripped_block": "colors:orange_stripped_log"
+    },
+    "colors:orange_wood": {
+      "stripped_block": "colors:orange_stripped_wood"
+    },
+    "colors:pink_log": {
+      "stripped_block": "colors:pink_stripped_log"
+    },
+    "colors:pink_wood": {
+      "stripped_block": "colors:pink_stripped_wood"
+    },
+    "colors:purple_log": {
+      "stripped_block": "colors:purple_stripped_log"
+    },
+    "colors:purple_wood": {
+      "stripped_block": "colors:purple_stripped_wood"
+    },
+    "colors:red_log": {
+      "stripped_block": "colors:red_stripped_log"
+    },
+    "colors:red_wood": {
+      "stripped_block": "colors:red_stripped_wood"
+    },
+    "colors:white_log": {
+      "stripped_block": "colors:white_stripped_log"
+    },
+    "colors:white_wood": {
+      "stripped_block": "colors:white_stripped_wood"
+    },
+    "colors:yellow_log": {
+      "stripped_block": "colors:yellow_stripped_log"
+    },
+    "colors:yellow_wood": {
+      "stripped_block": "colors:yellow_stripped_wood"
+    }
+  }
+}

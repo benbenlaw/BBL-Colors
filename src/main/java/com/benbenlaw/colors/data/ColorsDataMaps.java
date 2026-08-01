@@ -10,9 +10,12 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.neoforge.common.data.DataMapProvider;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.datamaps.builtin.Compostable;
 import net.neoforged.neoforge.registries.datamaps.builtin.NeoForgeDataMaps;
+import net.neoforged.neoforge.registries.datamaps.builtin.Strippable;
 
+import java.util.Map;
 import java.util.Optional;
 import java.util.concurrent.CompletableFuture;
 
@@ -54,6 +57,31 @@ public class ColorsDataMaps extends DataMapProvider {
 
         for (String type : ColorsItems.APPLES.keySet()) {
             compostables.add(ColorsItems.APPLES.get(type).get().asItem().builtInRegistryHolder(), new Compostable(0.65f), false);
+        }
+
+        for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.LOGS.entrySet()) {
+            String key = entry.getKey();
+
+            if (!key.endsWith("_log") || key.contains("stripped"))
+                continue;
+
+            builder(NeoForgeDataMaps.STRIPPABLES).add(
+                    entry.getValue(),
+                    new Strippable(ColorsBlocks.LOGS.get(key.replace("_log", "_stripped_log")).get()),
+                    false
+            );
+        }
+        for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.WOOD.entrySet()) {
+            String key = entry.getKey();
+
+            if (!key.endsWith("_wood") || key.contains("stripped"))
+                continue;
+
+            builder(NeoForgeDataMaps.STRIPPABLES).add(
+                    entry.getValue(),
+                    new Strippable(ColorsBlocks.WOOD.get(key.replace("_wood", "_stripped_wood")).get()),
+                    false
+            );
         }
 
         addColoredDataMap(Blocks.STONE, "colors:%s_stone");

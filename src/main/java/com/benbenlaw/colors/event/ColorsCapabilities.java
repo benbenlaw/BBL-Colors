@@ -2,9 +2,11 @@ package com.benbenlaw.colors.event;
 
 import com.benbenlaw.colors.Colors;
 import com.benbenlaw.colors.block.ColorsBlocks;
+import net.minecraft.client.Minecraft;
 import net.minecraft.core.Direction;
 import net.minecraft.world.Container;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.ChestBlock;
 import net.minecraft.world.level.block.DoubleBlockCombiner;
 import net.minecraft.world.level.block.entity.ChestBlockEntity;
@@ -21,7 +23,6 @@ import javax.annotation.Nullable;
 
 @EventBusSubscriber(modid = Colors.MOD_ID)
 public class ColorsCapabilities {
-
 
     private static final DoubleBlockCombiner.Combiner<ChestBlockEntity, ResourceHandler<ItemResource>> CHEST_COMBINER_HANDLER = new DoubleBlockCombiner.Combiner<>() {
         @Override
