@@ -1,4 +1,4 @@
-// 26.1.2	2026-04-10T16:14:40.1103401	Tags for minecraft:block mod id colors
+// 26.1.2	2026-08-01T18:30:02.6827833	Tags for minecraft:block mod id colors
 d691e051325dfc748fa4b2402ffa1db05f7533e1 data/c/tags/block/chests/wooden.json
 4a113bad07cde517ad6b8823a4f252984111af3f data/c/tags/block/player_workstations/crafting_tables.json
 f7678cf152d4c292b79a8830db09b170e44ee387 data/c/tags/block/stripped_logs.json
@@ -12,7 +12,7 @@ d4e7d0c95f462b3677fe5fb76dda9956df83c7dd data/minecraft/tags/block/flower_pots.j
 5e529ca560ab6912aa5d891c787742350b90b2e6 data/minecraft/tags/block/mineable/axe.json
 688074c69bf589b78244d5f14d7dc887d317cc7a data/minecraft/tags/block/mineable/pickaxe.json
 8841f832d11f01aeb152eed3e16182a7657df94e data/minecraft/tags/block/mineable/shovel.json
-039211044593c2752d431f122808982c72b4b0ed data/minecraft/tags/block/planks.json
+cf3634baa0d12ea3dc6bad61f0b6c22aeb4701bc data/minecraft/tags/block/planks.json
 e6462c0e28f0198479cc0d6b53890d90b5e45d17 data/minecraft/tags/block/saplings.json
 65b0ad876d1d1ae1510d3af07d2309d502672423 data/minecraft/tags/block/slabs.json
 3eab9466d75d8082ef7a29c81d66274c5132a51b data/minecraft/tags/block/small_flowers.json

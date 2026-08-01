@@ -42,9 +42,9 @@ public class ColorsItemTags extends ItemTagsProvider {
                 else if (type.endsWith(color + "_sign")) {
                     tag(ItemTags.SIGNS).add(ColorsItems.PLANKS.get(type).get().asItem());
                 }
-
-                tag(ItemTags.PLANKS).add(PLANKS.get(color + "_planks").get().asItem());
             }
+
+            tag(ItemTags.PLANKS).add(PLANKS.get(color + "_planks").get().asItem());
 
             for (String type : DIRT.keySet()) {
                 if (type.startsWith(color + "_")) {

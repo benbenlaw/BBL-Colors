@@ -1,4 +1,4 @@
-// 26.1.2	2026-04-10T16:14:40.1113406	Tags for minecraft:item mod id colors
+// 26.1.2	2026-08-01T18:30:02.6848035	Tags for minecraft:item mod id colors
 23fb374f19e2a8d047374413bca0bdc8f80c3f50 data/colors/tags/item/black_logs.json
 e3ce7c81e98a945cc617df1a4c128fee0a9ef06b data/colors/tags/item/blue_logs.json
 d0cdb80f4cc11e503ea334d46ddfb4c3a5811b6a data/colors/tags/item/brown_logs.json
@@ -40,7 +40,7 @@ a7fdbfeb3c1107fa9dde64b1c5f1b0389d52be57 data/minecraft/tags/item/dirt.json
 b502d69e9d5c30424e19a09c46a0501137315b82 data/minecraft/tags/item/fence_gates.json
 25ec7e8d8b4c574c3f82984dbdcfcc1b3e045ff2 data/minecraft/tags/item/leaves.json
 82025d3d3eed82eaab2b6aa1022248d5947da625 data/minecraft/tags/item/logs_that_burn.json
-cb7d4e1adcb6dd3c5b1dc58fa0f42d1c96944de8 data/minecraft/tags/item/planks.json
+7aa2964a197cf4a15a5909f0ff90b4bc2517361c data/minecraft/tags/item/planks.json
 e6462c0e28f0198479cc0d6b53890d90b5e45d17 data/minecraft/tags/item/saplings.json
 908221d1c3c4d6bfc315cb1557418f68e4cf8d4a data/minecraft/tags/item/slabs.json
 3eab9466d75d8082ef7a29c81d66274c5132a51b data/minecraft/tags/item/small_flowers.json

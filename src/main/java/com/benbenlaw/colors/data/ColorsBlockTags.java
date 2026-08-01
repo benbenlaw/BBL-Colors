@@ -35,7 +35,7 @@ public class ColorsBlockTags extends BlockTagsProvider {
             }
 
             for (String type : PLANKS.keySet()) {
-                if (type.startsWith(color + "_")) {
+                if (type.equals(color + "_planks") || type.equals(color + "_bamboo_planks")) {
                     tag(BlockTags.PLANKS).add(PLANKS.get(type).get());
                 }
             }
