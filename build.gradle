@@ -78,6 +78,9 @@ dependencies {
     implementation("mezz.jei:jei-${jei_mc_version}-neoforge:${jei_version}")
     //BBL Core
     implementation("curse.maven:bblcore-1135181:${core_version}")
+    //Fusion
+    implementation("curse.maven:fusion-connected-textures-854949:8536640")
+
 }
 
 tasks.withType(ProcessResources).configureEach {

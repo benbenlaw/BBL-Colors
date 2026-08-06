@@ -109,6 +109,11 @@ public class ColorsTextureProvider implements DataProvider {
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "sand", "block");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "sandstone", "block");
 
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "road_connected", "block");
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "encased_connected", "block");
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "polished_connected", "block");
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "mosaic_connected", "block");
+
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "plank_sign", "entity/signs/hanging");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "bamboo_plank_sign", "entity/signs/hanging");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "bamboo_mosaic_sign", "entity/signs/hanging");

@@ -87,16 +87,16 @@ public class ColorsModelProvider extends ModelProvider {
 
                 String singularType = type.endsWith("s") ? type.substring(0, type.length() - 1) : type;
                 String keyPrefix = color + "_" + singularType;
+                Block baseBlock = STONE_BLOCKS.get(color + "_" + type).get();
 
-                blockModels.family(STONE_BLOCKS.get(color + "_" + type).get())
+                blockModels.family(baseBlock)
                         .slab(STONE_BLOCKS.get(keyPrefix + "_slab").get())
                         .stairs(STONE_BLOCKS.get(keyPrefix + "_stairs").get())
                         .wall(STONE_BLOCKS.get(keyPrefix + "_wall").get())
                         .pressurePlate(STONE_BLOCKS.get(keyPrefix + "_pressure_plate").get())
                         .button(STONE_BLOCKS.get(keyPrefix + "_button").get());
+
             }
-
-
 
             //Plank Blocks
             for (String type : PlankLikeBlocksList.PLANKS) {

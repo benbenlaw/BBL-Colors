@@ -41,22 +41,10 @@ public class DataGenerators {
         ColorsItemTags itemTags = new ColorsItemTags(packOutput, lookupProvider);
         generator.addProvider(true, itemTags);
         generator.addProvider(true, new ColorsModelProvider(packOutput));
+        generator.addProvider(true, new FusionConnectedTextureOverridesProvider(packOutput));
         generator.addProvider(true, new ColorsLangProvider(packOutput));
         generator.addProvider(true, new ColorsWorldGenProviders(packOutput, lookupProvider));
         generator.addProvider(true, new ColorsDataMaps(packOutput, lookupProvider));
         generator.addProvider(true, new ColorsRecipePriorities(packOutput, lookupProvider));
-
-
     }
-
-    private static void trackGeneratedTintedTextures(Map<? extends StringRepresentable, Integer> colorMap, String baseTexture, String type) {
-        for (var dyeColor : colorMap.keySet()) {
-            // The same path that ColorsTextureProvider writes to:
-            Identifier loc = Identifier.fromNamespaceAndPath(Colors.MOD_ID, type + "/" + dyeColor.getSerializedName() + "_" + baseTexture);
-
-            //exHelper.trackGenerated(loc, PackType.CLIENT_RESOURCES, ".png", "textures");
-        }
-    }
-
-
 }

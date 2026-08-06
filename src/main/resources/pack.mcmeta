@@ -1,0 +1,10 @@
+{
+  "pack": {
+    "min_format": 84,
+    "max_format": 88,
+    "description": "Colors"
+  },
+  "fusion": {
+    "overrides_folder": "fusion-overrides"
+  }
+}
