@@ -68,9 +68,6 @@ public class Colors{
 
     public void commonSetup(final FMLCommonSetupEvent event) {
 
-        StrippedLogMap logMap = new StrippedLogMap();
-        logMap.updateLogMaps();
-
         event.enqueueWork(() -> {
 
             for (Map.Entry<String, DeferredBlock<Block>> entry : ColorsBlocks.POPPY.entrySet()) {
