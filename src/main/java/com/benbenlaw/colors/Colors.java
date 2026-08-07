@@ -7,7 +7,6 @@ import com.benbenlaw.colors.config.WorldGenConfig;
 import com.benbenlaw.colors.datamaps.ColorsCustomDataMaps;
 import com.benbenlaw.colors.item.ColorsCreativeTab;
 import com.benbenlaw.colors.item.ColorsItems;
-import com.benbenlaw.colors.maps.StrippedLogMap;
 import com.benbenlaw.colors.worldgen.ColorsWorldGen;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
