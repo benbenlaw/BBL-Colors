@@ -108,7 +108,7 @@ jobs:
           java-version: ${{ steps.meta.outputs.java_version }}
 
       - name: Set up Gradle
-        uses: gradle/actions/setup-gradle@v3
+        uses: gradle/actions/setup-gradle@v4
 
       - name: Make gradlew executable
         run: chmod +x ./gradlew
