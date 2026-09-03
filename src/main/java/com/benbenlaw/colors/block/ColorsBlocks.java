@@ -8,6 +8,7 @@ import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
 import com.benbenlaw.colors.item.ColorsItems;
 import com.benbenlaw.colors.util.ColorList;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.effect.MobEffects;
@@ -17,12 +18,14 @@ import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.storage.loot.LootTable;
 import net.neoforged.neoforge.event.BlockEntityTypeAddBlocksEvent;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Optional;
 import java.util.function.Supplier;
 
 import static com.benbenlaw.colors.block.sets.ColorsWoodTypes.getWoodType;
@@ -160,15 +163,34 @@ public class ColorsBlocks {
 
 
                 PLANKS.put(keyPrefix + "_sign", registerBlockWithoutBlockItem(keyPrefix + "_sign", () ->
-                        new StandingSignBlock(getWoodType(color, singularType), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN).setId(createID(keyPrefix + "_sign")))));
-                PLANKS.put(keyPrefix + "_wall_sign", registerBlockWithoutBlockItem(keyPrefix + "_wall_sign", () ->
-                        new WallSignBlock(getWoodType(color, singularType), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN).setId(createID(keyPrefix + "_wall_sign")))));
+                        new StandingSignBlock(getWoodType(color, singularType),
+                                BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SIGN).setId(createID(keyPrefix + "_sign")))));
+
+                PLANKS.put(keyPrefix + "_wall_sign", registerBlockWithoutBlockItem(keyPrefix + "_wall_sign", () -> {
+                    ResourceKey<Block> signId = createID(keyPrefix + "_sign");
+                    ResourceKey<LootTable> signLootTable = ResourceKey.create(Registries.LOOT_TABLE,
+                            Identifier.fromNamespaceAndPath(signId.identifier().getNamespace(), "blocks/" + signId.identifier().getPath()));
+
+                    return new WallSignBlock(getWoodType(color, singularType),
+                            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_SIGN)
+                                    .setId(createID(keyPrefix + "_wall_sign"))
+                                    .overrideLootTable(Optional.of(signLootTable)));
+                }));
 
                 PLANKS.put(keyPrefix + "_hanging_sign", registerBlockWithoutBlockItem(keyPrefix + "_hanging_sign", () ->
-                        new CeilingHangingSignBlock(getWoodType(color, singularType), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN).setId(createID(keyPrefix + "_hanging_sign")))));
-                PLANKS.put(keyPrefix + "_wall_hanging_sign", registerBlockWithoutBlockItem(keyPrefix + "_wall_hanging_sign", () ->
-                        new WallHangingSignBlock(getWoodType(color, singularType), BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN).setId(createID(keyPrefix + "_wall_hanging_sign")))));
+                        new CeilingHangingSignBlock(getWoodType(color, singularType),
+                                BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_HANGING_SIGN).setId(createID(keyPrefix + "_hanging_sign")))));
 
+                PLANKS.put(keyPrefix + "_wall_hanging_sign", registerBlockWithoutBlockItem(keyPrefix + "_wall_hanging_sign", () -> {
+                    ResourceKey<Block> hangingSignId = createID(keyPrefix + "_hanging_sign");
+                    ResourceKey<LootTable> hangingSignLootTable = ResourceKey.create(Registries.LOOT_TABLE,
+                            Identifier.fromNamespaceAndPath(hangingSignId.identifier().getNamespace(), "blocks/" + hangingSignId.identifier().getPath()));
+
+                    return new WallHangingSignBlock(getWoodType(color, singularType),
+                            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WALL_HANGING_SIGN)
+                                    .setId(createID(keyPrefix + "_wall_hanging_sign"))
+                                    .overrideLootTable(Optional.of(hangingSignLootTable)));
+                }));
             }
 
             //Stone Blocks

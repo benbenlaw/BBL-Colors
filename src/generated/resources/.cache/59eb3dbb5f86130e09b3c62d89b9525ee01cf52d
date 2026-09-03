@@ -1,4 +1,4 @@
-// 26.1.2	2026-04-21T18:54:37.5234852	Loot Tables
+// 26.1.2	2026-09-03T13:08:32.5234087	Loot Tables
 06a4dd7d20ba78de0f952a2a815fc0131808c4be data/colors/loot_table/blocks/black_asteroid.json
 fdb67b77563f8e5b652d521cef0d31c22f0d1cf2 data/colors/loot_table/blocks/black_asteroid_asteroid.json
 7c5e7a7337b1f2eb0ad6eb3878eaff7ba0556e65 data/colors/loot_table/blocks/black_asteroid_bricks.json
@@ -3039,5 +3039,3 @@ be0f3f67ec679aa036ddfd7c6edbb11b49e732e3 data/colors/loot_table/blocks/yellow_tr
 4d473745b89ce84eb06dcd8d989fc730c6b6aa76 data/colors/loot_table/blocks/yellow_triple_triple.json
 88c68eb0683b1e7c19a584e586f2c998002ce020 data/colors/loot_table/blocks/yellow_triple_wall.json
 c2e61027d2e26ace8477c315a769bb985252b198 data/colors/loot_table/blocks/yellow_wood.json
-97a6f44365773de5d0f9d62c43e78fd050affee5 data/minecraft/loot_table/blocks/oak_hanging_sign.json
-8c5191948360163ade7bc21c13797a4f438ab77c data/minecraft/loot_table/blocks/oak_sign.json
