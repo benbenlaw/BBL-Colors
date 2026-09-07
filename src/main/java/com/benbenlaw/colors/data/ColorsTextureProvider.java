@@ -130,6 +130,8 @@ public class ColorsTextureProvider implements DataProvider {
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "chest_left", "entity/chest");
             generateTintedTextures(cache, ColorMap.COLOR_MAP, "chest_right", "entity/chest");
 
+            generateTintedTextures(cache, ColorMap.COLOR_MAP, "leaf", "particle");
+
 
         });
     }

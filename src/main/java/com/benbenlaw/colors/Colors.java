@@ -7,6 +7,7 @@ import com.benbenlaw.colors.config.WorldGenConfig;
 import com.benbenlaw.colors.datamaps.ColorsCustomDataMaps;
 import com.benbenlaw.colors.item.ColorsCreativeTab;
 import com.benbenlaw.colors.item.ColorsItems;
+import com.benbenlaw.colors.particles.ColorsParticles;
 import com.benbenlaw.colors.worldgen.ColorsWorldGen;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.block.Block;
@@ -38,6 +39,7 @@ public class Colors{
         ColorsBlocks.BLOCKS.register(modEventBus);
         ColorsItems.ITEMS.register(modEventBus);
         ColorsCreativeTab.CREATIVE_TABS.register(modEventBus);
+        ColorsParticles.PARTICLE_TYPES.register(modEventBus);
 
         ColorsWorldGen.PLACEMENTS.register(modEventBus);
         ColorsWorldGen.FEATURES.register(modEventBus);

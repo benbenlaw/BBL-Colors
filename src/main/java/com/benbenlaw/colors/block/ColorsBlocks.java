@@ -6,6 +6,7 @@ import com.benbenlaw.colors.block.custom.ColoredTallGrassBlock;
 import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.block.sets.StoneLikeBlocksList;
 import com.benbenlaw.colors.item.ColorsItems;
+import com.benbenlaw.colors.particles.ColorsParticles;
 import com.benbenlaw.colors.util.ColorList;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
@@ -96,7 +97,8 @@ public class ColorsBlocks {
 
             //Leaves
             LEAVES.put(color + "_leaves", registerBlock(color + "_leaves", () ->
-                    new TintedParticleLeavesBlock(0.01F, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(createID(color + "_leaves"))) {
+                    new UntintedParticleLeavesBlock(0.01F, ColorsParticles.LEAF_PARTICLES.get(color).get(),
+                            BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES).setId(createID(color + "_leaves"))) {
                     }));
 
             //Tall Grass

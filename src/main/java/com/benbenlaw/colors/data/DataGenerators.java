@@ -46,5 +46,6 @@ public class DataGenerators {
         generator.addProvider(true, new ColorsWorldGenProviders(packOutput, lookupProvider));
         generator.addProvider(true, new ColorsDataMaps(packOutput, lookupProvider));
         generator.addProvider(true, new ColorsRecipePriorities(packOutput, lookupProvider));
+        generator.addProvider(true, new ColorsParticleProvide(packOutput));
     }
 }

@@ -1,4 +1,4 @@
-// 26.1.2	2026-08-06T17:53:27.9951514	Colors Texture Provider
+// 26.1.2	2026-09-07T14:33:22.0478105	Colors Texture Provider
 0b8af9c00b8df14f8da98f15b3f278f4b1f9dc89 assets/colors/textures/block/black_asteroid.png
 21c625699de6314972f6ea2123392700307a1657 assets/colors/textures/block/black_asteroid_bricks.png
 ce35bb03dc44d3c0385959bb56fc2fa4b66ab789 assets/colors/textures/block/black_asteroid_tiles.png
@@ -1407,3 +1407,19 @@ beec70da77a9d8419279c1d20a2a3bec12c93879 assets/colors/textures/item/yellow_plan
 8b83701a884ce82bfb77b62017587f4d48f9f3d3 assets/colors/textures/item/yellow_plank_sign.png
 dce7d0fa93dc6348fda2c3b44c445339619a3555 assets/colors/textures/item/yellow_short_grass.png
 000a51689d03266e9f717e0fc7546fad208240a1 assets/colors/textures/item/yellow_tall_grass.png
+a29e52fadd093338fb0e6510622198bfb299d137 assets/colors/textures/particle/black_leaf.png
+1191afe9ccc850422838ed5d7b7628c24ed1a812 assets/colors/textures/particle/blue_leaf.png
+596b7c498fcb77f186c4b1e6c53c63b70c07b1c7 assets/colors/textures/particle/brown_leaf.png
+3c6ef6b0532f60133d691d3dc4611558813ba7a9 assets/colors/textures/particle/cyan_leaf.png
+ff38ff0150494c4f6728c7f1751afe4e73846b3e assets/colors/textures/particle/gray_leaf.png
+d357bf128dcafc2cb9b051748a568d63e6b5b842 assets/colors/textures/particle/green_leaf.png
+b4405ad1054590072c9560d5411851ac600a0263 assets/colors/textures/particle/light_blue_leaf.png
+64ad53655f4fc9583ab997c98df7283d9c5862f4 assets/colors/textures/particle/light_gray_leaf.png
+ec23e2c8bc0e1e262f8db22e9de9dac0e6cf4d9e assets/colors/textures/particle/lime_leaf.png
+302a507dca09ed59dff3f5dbb365bed0cadb9bc2 assets/colors/textures/particle/magenta_leaf.png
+730da4918025609385738ea0594428f995f69339 assets/colors/textures/particle/orange_leaf.png
+ebbaad387ed3f40f3ad213a56610501249e6a12f assets/colors/textures/particle/pink_leaf.png
+f4054c9d3748835fb74cc18b9b4daa157d640f25 assets/colors/textures/particle/purple_leaf.png
+428fd8de09f579ea385f4529390b3cbf459b9918 assets/colors/textures/particle/red_leaf.png
+c85489e98be4e60a5de56d51cd458f46b8a3a195 assets/colors/textures/particle/white_leaf.png
+df826cf345b0a38e082eeedfa0192fb607015bae assets/colors/textures/particle/yellow_leaf.png
