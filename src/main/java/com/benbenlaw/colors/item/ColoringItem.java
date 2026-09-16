@@ -11,14 +11,17 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.item.ItemInstance;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.ItemStackTemplate;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.BaseEntityBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.Property;
+import org.jetbrains.annotations.Nullable;
 
 public class ColoringItem extends Item {
 
@@ -31,6 +34,23 @@ public class ColoringItem extends Item {
 
     public DyeColor getColor() {
         return color;
+    }
+
+    //Have the can take damage instead of being consumed on craft
+    @Override
+    public @Nullable ItemStackTemplate getCraftingRemainder(ItemInstance instance) {
+        if (!(instance instanceof ItemStack stack) || !stack.isDamageableItem()) {
+            return null;
+        }
+
+        int damage = stack.getDamageValue() + 1;
+        if (damage >= stack.getMaxDamage()) {
+            return null; // spent on this craft, so it is consumed
+        }
+
+        ItemStack remainder = stack.copy();
+        remainder.setDamageValue(damage);
+        return ItemStackTemplate.fromNonEmptyStack(remainder).withCount(1);
     }
 
     @Override

@@ -1,4 +1,4 @@
-// 26.1.2	2026-08-01T18:30:02.6827833	Tags for minecraft:block mod id colors
+// 26.1.2	2026-09-15T12:17:47.8282736	Tags for minecraft:block mod id colors
 d691e051325dfc748fa4b2402ffa1db05f7533e1 data/c/tags/block/chests/wooden.json
 4a113bad07cde517ad6b8823a4f252984111af3f data/c/tags/block/player_workstations/crafting_tables.json
 f7678cf152d4c292b79a8830db09b170e44ee387 data/c/tags/block/stripped_logs.json
@@ -7,6 +7,7 @@ e1cbc3f23a6381049e9a7ab3f37a11d5dd5a4934 data/c/tags/block/stripped_woods.json
 776d287a7c142f06b1307b85edddc265f723cdbd data/minecraft/tags/block/dirt.json
 4586cfc6aca96bb00b3ca9be3b704f8dc9d37ed7 data/minecraft/tags/block/fence_gates.json
 d4e7d0c95f462b3677fe5fb76dda9956df83c7dd data/minecraft/tags/block/flower_pots.json
+6f25424e7b15a622429ad47e43a8da7501c57ab2 data/minecraft/tags/block/grass_blocks.json
 25ec7e8d8b4c574c3f82984dbdcfcc1b3e045ff2 data/minecraft/tags/block/leaves.json
 82025d3d3eed82eaab2b6aa1022248d5947da625 data/minecraft/tags/block/logs_that_burn.json
 5e529ca560ab6912aa5d891c787742350b90b2e6 data/minecraft/tags/block/mineable/axe.json

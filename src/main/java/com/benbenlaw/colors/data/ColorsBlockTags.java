@@ -144,6 +144,13 @@ public class ColorsBlockTags extends BlockTagsProvider {
                         .toArray(Block[]::new)
         );
 
+        //Grass Blocks, so plants can survive on colored grass
+        tag(BlockTags.GRASS_BLOCKS)
+                .add(GRASS_BLOCK.values().stream()
+                        .map(Supplier::get)
+                        .toArray(Block[]::new)
+        );
+
         //Mineable With Shovel
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(DIRT.values().stream()
