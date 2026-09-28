@@ -35,15 +35,19 @@ public class ColorsItemTags extends ItemTagsProvider {
                 }
             }
 
-            for (String type : ColorsItems.PLANKS.keySet()) {
-                if (type.endsWith(color + "_hanging_sign")) {
-                    tag(ItemTags.HANGING_SIGNS).add(ColorsItems.PLANKS.get(type).get().asItem());
-                }
-                else if (type.endsWith(color + "_sign")) {
-                    tag(ItemTags.SIGNS).add(ColorsItems.PLANKS.get(type).get().asItem());
-                }
-            }
+            tag(ItemTags.HANGING_SIGNS).add(
+                    ColorsItems.PLANKS.entrySet().stream()
+                            .filter(e -> e.getKey().endsWith("_hanging_sign") && !e.getKey().contains("_wall_"))
+                            .map(e -> e.getValue().get().asItem())
+                            .toArray(Item[]::new));
 
+            tag(ItemTags.SIGNS).add(
+                    ColorsItems.PLANKS.entrySet().stream()
+                            .filter(e -> e.getKey().endsWith("_sign")
+                                    && !e.getKey().endsWith("_hanging_sign")
+                                    && !e.getKey().contains("_wall_"))
+                            .map(e -> e.getValue().get().asItem())
+                            .toArray(Item[]::new));
             tag(ItemTags.PLANKS).add(PLANKS.get(color + "_planks").get().asItem());
 
             for (String type : DIRT.keySet()) {

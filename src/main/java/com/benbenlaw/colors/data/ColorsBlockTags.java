@@ -1,6 +1,7 @@
 package com.benbenlaw.colors.data;
 
 import com.benbenlaw.colors.Colors;
+import com.benbenlaw.colors.block.ColorsBlocks;
 import com.benbenlaw.colors.block.sets.PlankLikeBlocksList;
 import com.benbenlaw.colors.util.ColorList;
 import net.minecraft.core.HolderLookup;
@@ -22,8 +23,28 @@ public class ColorsBlockTags extends BlockTagsProvider {
         super(output, lookupProvider, Colors.MOD_ID);
     }
 
+    private Block[] signBlocks(java.util.function.Predicate<String> keyFilter) {
+        return ColorsBlocks.PLANKS.entrySet().stream()
+                .filter(e -> keyFilter.test(e.getKey()))
+                .map(e -> e.getValue().get())
+                .toArray(Block[]::new);
+    }
+
+
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
+
+        tag(BlockTags.STANDING_SIGNS).add(signBlocks(k ->
+                k.endsWith("_sign") && !k.contains("_wall_") && !k.contains("_hanging_")));
+
+        tag(BlockTags.WALL_SIGNS).add(signBlocks(k ->
+                k.endsWith("_wall_sign")));
+
+        tag(BlockTags.CEILING_HANGING_SIGNS).add(signBlocks(k ->
+                k.endsWith("_hanging_sign") && !k.contains("_wall_")));
+
+        tag(BlockTags.WALL_HANGING_SIGNS).add(signBlocks(k ->
+                k.endsWith("_wall_hanging_sign")));
 
         //Color Tags
         for (String color : ColorList.COLORS) {
